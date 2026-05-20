@@ -1,0 +1,44 @@
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router";
+
+import { Button } from "@/components/ui/button";
+import PATHS from "@/paths";
+
+function App() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <header className="sticky top-0 z-50 w-full bg-background">
+        <div className="px-4 mx-auto container md:px-6">
+          <div className="flex items-center h-14">
+            <Button size="lg" variant="ghost">Neverness to Everness Guides</Button>
+          </div>
+        </div>
+      </header>
+      <main className="flex-1 bg-muted">
+        <div className="p-4 mx-auto container md:px-6 md:py-10">
+          <Suspense>
+            <Routes>
+              <Route index path={PATHS.Home} Component={lazy(() => import("@/pages/home/page"))} />
+              <Route path={PATHS.Characters} Component={lazy(() => import("@/pages/characters/page"))} />
+            </Routes>
+          </Suspense>
+        </div>
+      </main>
+      <footer className="flex flex-col gap-4 justify-center items-center py-4 text-sm text-muted-foreground bg-muted border-t">
+        <p className="uppercase">Неофициальный фанатский проект</p>
+        <div className="flex gap-2 justify-center items-center">
+          <p>Смотрите также:</p>
+          <ul className="flex gap-1 justify-center items-center">
+            <li>
+              <Button asChild size="xs" variant="link">
+                <a href="https://neondoll.github.io/genshin-guides/" target="_blank">Genshin Impact Guides</a>
+              </Button>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
