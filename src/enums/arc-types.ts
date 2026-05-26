@@ -1,7 +1,7 @@
 export const ArcTypeIds = {
-  Gas: "gas",
-  Liquid: "liquid",
-  Plasma: "plasma",
-  Solid: "solid",
-  Synthesis: "synthesis",
+  Gas: "gas", // Газовый
+  Liquid: "liquid", // Жидкий
+  Plasma: "plasma", // Плазменный
+  Solid: "solid", // Твёрдый
+  Synthesis: "synthesis", // Гибридный
 } as const;

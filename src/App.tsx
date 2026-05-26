@@ -19,6 +19,9 @@ function App() {
           <Suspense>
             <Routes>
               <Route index path={PATHS.Home} Component={lazy(() => import("@/pages/home/page"))} />
+              <Route path={PATHS.Arcs} Component={lazy(() => import("@/pages/arcs/page"))} />
+              <Route path={PATHS.Cartridges} Component={lazy(() => import("@/pages/cartridges/page"))} />
+              <Route path={PATHS.Cartridge(":cartridgeId")} Component={lazy(() => import("@/pages/cartridge/page"))} />
               <Route path={PATHS.Characters} Component={lazy(() => import("@/pages/characters/page"))} />
             </Routes>
           </Suspense>

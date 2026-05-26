@@ -1,1 +1,1 @@
-export const RankIds = { A: "a", S: "s" } as const;
+export const RankIds = { A: "a", B: "b", S: "s" } as const;

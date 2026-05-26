@@ -16,7 +16,7 @@ export const useArcTypes = () => {
       setData(data.sort((a, b) => a.name.localeCompare(b.name)));
     }
     catch (error) {
-      console.error("Ошибка при получении списка arc-types:", error);
+      console.error("Ошибка при получении списка типов дуг:", error);
     }
     finally {
       setLoading(false);

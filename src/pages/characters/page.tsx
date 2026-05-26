@@ -45,18 +45,18 @@ const CharactersPage: FC = () => {
 
   return (
     <CharactersLayout>
-      <div className="grid grid-cols-[repeat(auto-fit,--spacing(47.5))] gap-4 justify-center md:gap-6">
+      <div className="grid grid-cols-[repeat(auto-fit,--spacing(35.5))] gap-4 justify-center md:gap-6">
         {data.map(item => (
           <Card key={item.id} size="sm">
             <CardContent>
               <img
                 alt={item.name}
-                className="aspect-square size-37.5"
+                className="aspect-square size-25.5"
                 src={item.imageWithElementAndRank ?? item.image}
               />
             </CardContent>
             <CardHeader>
-              <CardTitle className="text-base text-center whitespace-nowrap">{item.name}</CardTitle>
+              <CardTitle className="text-base text-center whitespace-normal">{item.name}</CardTitle>
             </CardHeader>
           </Card>
         ))}

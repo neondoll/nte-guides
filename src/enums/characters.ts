@@ -1,20 +1,20 @@
 export const CharacterIds = {
-  Adler: "adler",
-  Aurelia: "aurelia",
-  Baicang: "baicang",
+  Adler: "adler", // Адлер
+  Aurelia: "aurelia", // Аурелия
+  Baicang: "baicang", // Байканг
   Chaos: "chaos",
-  Chiz: "chiz",
-  Daffodill: "daffodill",
-  Edgar: "edgar",
-  EsperZero: "esper-zero",
-  Fadia: "fadia",
-  Haniel: "haniel",
-  Hathor: "hathor",
-  Hotori: "hotori",
-  Jiuyuan: "jiuyuan",
+  Chiz: "chiz", // Чиз
+  Daffodill: "daffodill", // Даффодил
+  Edgar: "edgar", // Эдгар
+  EsperZero: "esper-zero", // Нулевой эспер
+  Fadia: "fadia", // Фадия
+  Haniel: "haniel", // Ханиэль
+  Hathor: "hathor", // Хатор
+  Hotori: "hotori", // Хотори
+  Jiuyuan: "jiuyuan", // Цзююань
   Lacrimosa: "lacrimosa",
-  Mint: "mint",
-  Nanally: "nanally",
-  Sakiri: "sakiri",
-  Skia: "skia",
+  Mint: "mint", // Минт
+  Nanally: "nanally", // Наналли
+  Sakiri: "sakiri", // Сакири
+  Skia: "skia", // Ския
 } as const;

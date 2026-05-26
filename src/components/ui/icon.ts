@@ -9,6 +9,7 @@ export {
   EyeOffIcon as EyeOffIcon,
   MoreHorizontalIcon as MoreHorizontalIcon,
   PuzzleIcon as PuzzleIcon,
+  ShieldIcon as ShieldIcon,
   SwordsIcon as SwordsIcon,
   UsersRoundIcon as UsersRoundIcon,
 } from "lucide-react";
