@@ -4,6 +4,7 @@ import { loadEnv } from "vite";
 
 import { ArcTypeIds } from "../src/enums/arc-types";
 import { ArcIds } from "../src/enums/arcs";
+import { CartridgeIds } from "../src/enums/cartridges";
 import { CharacterRoleIds } from "../src/enums/character-roles";
 import { CharacterIds } from "../src/enums/characters";
 import { ElementIds } from "../src/enums/elements";
@@ -17,7 +18,6 @@ import type { Character, CharacterListItem } from "../src/types/characters";
 import type { Element, ElementListItem } from "../src/types/elements";
 import type { Module } from "../src/types/modules";
 import type { Rank, RankListItem } from "../src/types/ranks";
-import { CartridgeIds } from "../src/enums/cartridges.ts";
 
 type CategoryType = "arc-types" | "arcs" | "cartridges" | "character-roles" | "characters" | "elements" | "modules"
   | "ranks";

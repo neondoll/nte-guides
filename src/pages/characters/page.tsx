@@ -1,39 +1,14 @@
-import { type FC, type ReactNode, useEffect } from "react";
+import type { FC } from "react";
 import { Link } from "react-router";
 
-import {
-  Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import { useCharacters } from "./hooks";
+import CharactersLayout from "./layout";
+import { CharacterImage } from "@/components/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useCharacters } from "@/hooks/use-characters";
 import PATHS from "@/paths";
 
-const CharactersLayout: FC<{ children?: ReactNode }> = ({ children }) => {
-  return (
-    <div className="space-y-4 md:space-y-6">
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link to={PATHS.Home}>Главная</Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>Персонажи</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
-      {children}
-    </div>
-  );
-};
 const CharactersPage: FC = () => {
-  const { data, fetch, loading } = useCharacters();
-
-  useEffect(() => {
-    fetch();
-  }, []);
+  const { characters, loading } = useCharacters();
 
   if (loading) {
     return (
@@ -45,18 +20,28 @@ const CharactersPage: FC = () => {
 
   return (
     <CharactersLayout>
-      <div className="grid grid-cols-[repeat(auto-fit,--spacing(35.5))] gap-4 justify-center md:gap-6">
-        {data.map(item => (
-          <Card key={item.id} size="sm">
+      <div className="grid grid-cols-[repeat(auto-fit,--spacing(42))] gap-4 justify-center md:gap-6">
+        {characters.map(character => (
+          <Card
+            className="relative z-0 transition-colors duration-100 pointer-events-none has-[a:focus-visible]:ring-[3px] has-[a:focus-visible]:ring-ring/50 has-[a:hover]:bg-card/50"
+            key={character.id}
+            size="sm"
+          >
             <CardContent>
-              <img
-                alt={item.name}
-                className="aspect-square size-25.5"
-                src={item.imageWithElementAndRank ?? item.image}
+              <CharacterImage
+                alt={character.name}
+                className="mx-auto size-32"
+                src={character.imageWithElementAndRank ?? character.image}
               />
             </CardContent>
             <CardHeader>
-              <CardTitle className="text-base text-center whitespace-normal">{item.name}</CardTitle>
+              <CardTitle className="text-sm text-center whitespace-normal">
+                <Link
+                  children={character.name}
+                  className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
+                  to={PATHS.Character(character.id)}
+                />
+              </CardTitle>
             </CardHeader>
           </Card>
         ))}

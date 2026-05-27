@@ -1,39 +1,15 @@
-import { type FC, type ReactNode, useEffect } from "react";
+import type { FC } from "react";
 import { Link } from "react-router";
 
-import {
-  Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import { useCartridges } from "./hooks";
+import CartridgesLayout from "./layout";
+import { CartridgeImage /* ModuleImage */ } from "@/components/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useCartridges } from "@/hooks/use-cartridges";
+// import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import PATHS from "@/paths";
 
-const CartridgesLayout: FC<{ children?: ReactNode }> = ({ children }) => {
-  return (
-    <div className="space-y-4 md:space-y-6">
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link to={PATHS.Home}>Главная</Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>Картриджи</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
-      {children}
-    </div>
-  );
-};
 const CartridgesPage: FC = () => {
-  const { data, fetch, loading } = useCartridges();
-
-  useEffect(() => {
-    fetch();
-  }, []);
+  const { cartridges, loading /* modules */ } = useCartridges();
 
   if (loading) {
     return (
@@ -45,19 +21,73 @@ const CartridgesPage: FC = () => {
 
   return (
     <CartridgesLayout>
-      <div className="grid grid-cols-[repeat(auto-fit,--spacing(45.5))] gap-4 justify-center md:gap-6">
-        {data.map(item => (
-          <Card key={item.id} size="sm">
+      {/* <Table containerClassName="text-card-foreground bg-card shadow-sm ring-1 ring-foreground/5">
+        <TableHeader>
+          <TableRow>
+            <TableHead className="text-center">Картридж</TableHead>
+            <TableHead className="text-center">Эффекты набора</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {cartridges.map((cartridge) => {
+            const requiredModules = cartridge.requiredModuleIds.map(requiredModuleId => modules.find(module => module.id === requiredModuleId)!);
+
+            return (
+              <TableRow
+                className="relative z-0 pointer-events-none has-[a:focus-visible]:bg-muted/50"
+                key={cartridge.id}
+              >
+                <TableHead className="p-3 space-y-1 text-center">
+                  <CartridgeImage alt={cartridge.name} className="mx-auto size-15" src={cartridge.image} />
+                  <Link
+                    children={cartridge.name}
+                    className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
+                    to={PATHS.Cartridge(cartridge.id)}
+                  />
+                  <hr className="my-2 border-dashed" />
+                  <div className="flex gap-1 justify-center items-center">
+                    {requiredModules.map(requiredModule => (
+                      <ModuleImage
+                        alt={requiredModule.id}
+                        className="shrink-0 size-7.5"
+                        key={requiredModule.id}
+                        src={requiredModule.image}
+                      />
+                    ))}
+                  </div>
+                </TableHead>
+                <TableCell className="space-y-1 whitespace-normal">
+                  <p>
+                    <span className="font-medium tracking-wider text-muted-foreground uppercase">Эпический (2):</span>
+                    {` ${cartridge.setEffects["2"]}`}
+                  </p>
+                  <p>
+                    <span className="font-medium tracking-wider text-muted-foreground uppercase">Легендарный (4):</span>
+                    {` ${cartridge.setEffects["4"]}`}
+                  </p>
+                </TableCell>
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table> */}
+      <div className="grid grid-cols-[repeat(auto-fit,--spacing(42))] gap-4 justify-center md:gap-6">
+        {cartridges.map(cartridge => (
+          <Card
+            className="relative z-0 transition-colors duration-100 pointer-events-none has-[a:focus-visible]:ring-[3px] has-[a:focus-visible]:ring-ring/50 has-[a:hover]:bg-card/50"
+            key={cartridge.id}
+            size="sm"
+          >
             <CardContent>
-              <img
-                alt={item.name}
-                className="aspect-square mx-auto size-35.5 max-w-22 max-h-22"
-                src={item.image ?? "images/currently-unavailable.png"}
-              />
+              <CartridgeImage alt={cartridge.name} className="mx-auto size-32" src={cartridge.image} />
             </CardContent>
             <CardHeader>
-              <CardTitle className="text-base text-center whitespace-normal">
-                <Link to={PATHS.Cartridge(item.id)}>{item.name}</Link>
+              <CardTitle className="text-sm text-center whitespace-normal">
+                <Link
+                  children={cartridge.name}
+                  className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
+                  to={PATHS.Cartridge(cartridge.id)}
+                />
               </CardTitle>
             </CardHeader>
           </Card>

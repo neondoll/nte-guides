@@ -20,9 +20,11 @@ function App() {
             <Routes>
               <Route index path={PATHS.Home} Component={lazy(() => import("@/pages/home/page"))} />
               <Route path={PATHS.Arcs} Component={lazy(() => import("@/pages/arcs/page"))} />
+              <Route path={PATHS.Arc(":arcId")} Component={lazy(() => import("@/pages/arc/page"))} />
               <Route path={PATHS.Cartridges} Component={lazy(() => import("@/pages/cartridges/page"))} />
               <Route path={PATHS.Cartridge(":cartridgeId")} Component={lazy(() => import("@/pages/cartridge/page"))} />
               <Route path={PATHS.Characters} Component={lazy(() => import("@/pages/characters/page"))} />
+              <Route path={PATHS.Character(":characterId")} Component={lazy(() => import("@/pages/character/page"))} />
             </Routes>
           </Suspense>
         </div>
