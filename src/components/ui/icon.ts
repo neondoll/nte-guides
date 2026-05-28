@@ -6,6 +6,7 @@ export {
   ChevronLeftIcon as ChevronLeftIcon,
   ChevronRightIcon as ChevronRightIcon,
   ChevronsUpDownIcon as ChevronsUpDownIcon,
+  ExternalLinkIcon as ExternalLinkIcon,
   EyeOffIcon as EyeOffIcon,
   MoreHorizontalIcon as MoreHorizontalIcon,
   PuzzleIcon as PuzzleIcon,

@@ -18,3 +18,9 @@ export const CharacterIds = {
   Sakiri: "sakiri", // Сакири
   Skia: "skia", // Ския
 } as const;
+export const CharacterSkillKeys = {
+  BasicAttack: "Базовая атака",
+  Skill: "Навык",
+  Ultimate: "Сверхспособность",
+  SupportSkill: "Навык поддержки",
+} as const;

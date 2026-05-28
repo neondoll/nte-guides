@@ -2,10 +2,14 @@ import { useEffect, useMemo } from "react";
 
 import { useAppDispatch, useAppSelector } from "@/store";
 import { fetchArcType } from "@/store/arc-types";
+import { fetchArcList } from "@/store/arcs";
+import { fetchCartridgeList } from "@/store/cartridges";
 import { fetchCharacterRole } from "@/store/character-roles";
-import { fetchCharacter } from "@/store/characters";
+import { fetchCharacter, fetchCharacterList } from "@/store/characters";
+import { fetchCharacterBuildGuide, fetchCharacterBuildGuideList } from "@/store/characters-build-guide";
 import { fetchElement } from "@/store/elements";
 import { fetchRank } from "@/store/ranks";
+import { fetchVideoSourceList } from "@/store/video-sources";
 import type { Character } from "@/types/characters";
 
 export const useCharacter = (id: Character["id"]) => {
@@ -51,4 +55,33 @@ export const useCharacter = (id: Character["id"]) => {
   }, [character, dispatch]);
 
   return { arcType, character, characterRole, element, loading, rank };
+};
+export const useCharacterBuildGuide = (id: Character["id"]) => {
+  const dispatch = useAppDispatch();
+
+  const charactersBuildGuideDetails = useAppSelector(state => state.charactersBuildGuide.details);
+  const charactersBuildGuideDetailsLoading = useAppSelector(state => state.charactersBuildGuide.detailsLoading);
+  const charactersBuildGuideList = useAppSelector(state => state.charactersBuildGuide.list);
+  const charactersBuildGuideListLoading = useAppSelector(state => state.charactersBuildGuide.listLoading);
+
+  const characterBuildGuide = useMemo(() => charactersBuildGuideDetails[id], [charactersBuildGuideDetails, id]);
+  const loading = useMemo(() => {
+    return charactersBuildGuideDetailsLoading || charactersBuildGuideListLoading;
+  }, [charactersBuildGuideDetailsLoading, charactersBuildGuideListLoading]);
+
+  useEffect(() => {
+    dispatch(fetchCharacterBuildGuideList());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (charactersBuildGuideList.findIndex(item => item.id === id) !== -1) {
+      dispatch(fetchCharacterBuildGuide(id));
+      dispatch(fetchArcList());
+      dispatch(fetchCartridgeList());
+      dispatch(fetchCharacterList());
+      dispatch(fetchVideoSourceList());
+    }
+  }, [charactersBuildGuideList, dispatch, id]);
+
+  return { characterBuildGuide, loading };
 };

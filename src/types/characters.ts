@@ -1,4 +1,4 @@
-import { CharacterIds } from "@/enums/characters";
+import { CharacterIds, CharacterSkillKeys } from "@/enums/characters";
 import type { ArcType } from "@/types/arc-types";
 import type { CharacterRole } from "@/types/character-roles";
 import type { Element } from "@/types/elements";
@@ -14,6 +14,10 @@ export interface Character {
   version?: string;
   image: string;
   imageWithElementAndRank?: string;
+  awakeningSkills?: Record<CharacterAwakeningSkillKey, string>;
+  skills?: Record<CharacterSkillKey, string>;
 }
 
+export type CharacterAwakeningSkillKey = "1" | "2" | "3" | "4" | "5" | "6";
 export type CharacterListItem = Character;
+export type CharacterSkillKey = keyof typeof CharacterSkillKeys;

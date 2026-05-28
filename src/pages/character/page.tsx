@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { useParams } from "react-router";
 
+import CharacterBuildGuide from "./build-guide";
 import { useCharacter } from "./hooks";
 import CharacterLayout from "./layout";
 import { ArcTypeImage, CharacterImage, CharacterRoleImage, ElementImage, RankImage } from "@/components/image";
@@ -76,6 +77,7 @@ const CharacterPage: FC = () => {
           </TableRow>
         </TableBody>
       </Table>
+      <CharacterBuildGuide character={character} />
     </CharacterLayout>
   );
 };

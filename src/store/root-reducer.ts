@@ -5,9 +5,11 @@ import { arcsReducer } from "./arcs";
 import { cartridgesReducer } from "./cartridges";
 import { characterRolesReducer } from "./character-roles";
 import { charactersReducer } from "./characters";
+import { charactersBuildGuideReducer } from "./characters-build-guide";
 import { elementsReducer } from "./elements";
 import { modulesReducer } from "./modules";
 import { ranksReducer } from "./ranks";
+import { videoSourcesReducer } from "./video-sources";
 
 const rootReducer = combineReducers({
   arcTypes: arcTypesReducer,
@@ -15,9 +17,11 @@ const rootReducer = combineReducers({
   cartridges: cartridgesReducer,
   characterRoles: characterRolesReducer,
   characters: charactersReducer,
+  charactersBuildGuide: charactersBuildGuideReducer,
   elements: elementsReducer,
   modules: modulesReducer,
   ranks: ranksReducer,
+  videoSources: videoSourcesReducer,
 });
 
 export default rootReducer;

@@ -10,6 +10,7 @@ export interface Arc {
   baseATK80: number;
   substat: string;
   substat80: string | number;
+  effect?: { title: string; text: string };
   image?: string;
 }
 
