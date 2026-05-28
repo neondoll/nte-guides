@@ -55,6 +55,19 @@ const ArcPage: FC = () => {
               <span children={type.name} />
             </TableCell>
           </TableRow>
+          {arc.effect && (
+            <>
+              <TableRow>
+                <TableHead className="text-center" colSpan={2}>Эффект</TableHead>
+              </TableRow>
+              <TableRow>
+                <TableCell className="space-y-2 divide-y divide-dashed *:pb-2 [&>*:last-child]:pb-0" colSpan={2}>
+                  <p className="font-medium tracking-wider text-center text-muted-foreground uppercase">{arc.effect.title}</p>
+                  <p className="whitespace-pre-line">{arc.effect.text}</p>
+                </TableCell>
+              </TableRow>
+            </>
+          )}
         </TableBody>
       </Table>
     </ArcLayout>

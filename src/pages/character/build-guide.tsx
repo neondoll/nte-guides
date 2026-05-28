@@ -87,12 +87,12 @@ const CharacterBuildGuideBestTeams: FC<{ buildGuide: BuildGuide }> = ({ buildGui
         {buildGuide.bestTeams.map(team => (
           <TableRow key={team.title}>
             <TableHead className="text-center">{team.title}</TableHead>
-            <TableCell className="space-y-2 text-center divide-y divide-dashed">
+            <TableCell className="text-center divide-y divide-dashed">
               {team.slot1.map((value) => {
                 const character = characters.find(c => c.id == value)!;
 
                 return (
-                  <div className="pb-2 space-y-1 last:pb-0" key={value}>
+                  <div className="p-2 space-y-1" key={value}>
                     <CharacterImage
                       alt={character.name}
                       className="mx-auto size-12.5"
@@ -103,12 +103,12 @@ const CharacterBuildGuideBestTeams: FC<{ buildGuide: BuildGuide }> = ({ buildGui
                 );
               })}
             </TableCell>
-            <TableCell className="space-y-2 text-center divide-y divide-dashed">
+            <TableCell className="text-center divide-y divide-dashed">
               {team.slot2.map((value) => {
                 const character = characters.find(c => c.id == value)!;
 
                 return (
-                  <div className="pb-2 space-y-1 last:pb-0" key={value}>
+                  <div className="p-2 space-y-1" key={value}>
                     <CharacterImage
                       alt={character.name}
                       className="mx-auto size-12.5"
@@ -119,12 +119,12 @@ const CharacterBuildGuideBestTeams: FC<{ buildGuide: BuildGuide }> = ({ buildGui
                 );
               })}
             </TableCell>
-            <TableCell className="space-y-2 text-center divide-y divide-dashed">
+            <TableCell className="text-center divide-y divide-dashed">
               {team.slot3.map((value) => {
                 const character = characters.find(c => c.id == value)!;
 
                 return (
-                  <div className="pb-2 space-y-1 last:pb-0" key={value}>
+                  <div className="p-2 space-y-1" key={value}>
                     <CharacterImage
                       alt={character.name}
                       className="mx-auto size-12.5"
@@ -135,12 +135,12 @@ const CharacterBuildGuideBestTeams: FC<{ buildGuide: BuildGuide }> = ({ buildGui
                 );
               })}
             </TableCell>
-            <TableCell className="space-y-2 text-center divide-y divide-dashed">
+            <TableCell className="text-center divide-y divide-dashed">
               {team.slot4.map((value) => {
                 const character = characters.find(c => c.id == value)!;
 
                 return (
-                  <div className="pb-2 space-y-1 last:pb-0" key={value}>
+                  <div className="p-2 space-y-1" key={value}>
                     <CharacterImage
                       alt={character.name}
                       className="mx-auto size-12.5"
