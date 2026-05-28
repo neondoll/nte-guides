@@ -20,7 +20,7 @@ const CharactersPage: FC = () => {
 
   return (
     <CharactersLayout>
-      <div className="grid grid-cols-[repeat(auto-fit,--spacing(42))] gap-4 justify-center md:gap-6">
+      <div className="grid grid-cols-[repeat(auto-fit,--spacing(45.5))] gap-4 justify-center md:gap-6">
         {characters.map(character => (
           <Card
             className="relative z-0 transition-colors duration-100 pointer-events-none has-[a:focus-visible]:ring-[3px] has-[a:focus-visible]:ring-ring/50 has-[a:hover]:bg-card/50"
@@ -30,7 +30,7 @@ const CharactersPage: FC = () => {
             <CardContent>
               <CharacterImage
                 alt={character.name}
-                className="mx-auto size-32"
+                className="mx-auto size-35.5"
                 src={character.imageWithElementAndRank ?? character.image}
               />
             </CardContent>

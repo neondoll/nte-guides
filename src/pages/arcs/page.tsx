@@ -49,13 +49,21 @@ const ArcsPage: FC = () => {
                   <span children={arcType.name} />
                 </TableCell>
                 <TableCell children={`${arc.substat} +${arc.substat80}`} className="space-y-1 text-center" />
-                <TableCell />
+                <TableCell className="whitespace-pre-line">
+                  {arc.effect && (
+                    <>
+                      <span className="font-medium tracking-wider text-muted-foreground uppercase">{arc.effect.title}</span>
+                      <br />
+                      {arc.effect.text}
+                    </>
+                  )}
+                </TableCell>
               </TableRow>
             );
           })}
         </TableBody>
       </Table> */}
-      <div className="grid grid-cols-[repeat(auto-fit,--spacing(42))] gap-4 justify-center md:gap-6">
+      <div className="grid grid-cols-[repeat(auto-fit,--spacing(45.5))] gap-4 justify-center md:gap-6">
         {arcs.map(arc => (
           <Card
             className="relative z-0 transition-colors duration-100 pointer-events-none has-[a:focus-visible]:ring-[3px] has-[a:focus-visible]:ring-ring/50 has-[a:hover]:bg-card/50"
@@ -63,7 +71,7 @@ const ArcsPage: FC = () => {
             size="sm"
           >
             <CardContent>
-              <ArcImage alt={arc.name} className="mx-auto size-32" src={arc.image} />
+              <ArcImage alt={arc.name} className="mx-auto size-35.5" src={arc.image} />
             </CardContent>
             <CardHeader>
               <CardTitle className="text-sm text-center whitespace-normal">

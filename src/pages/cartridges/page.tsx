@@ -71,7 +71,7 @@ const CartridgesPage: FC = () => {
           })}
         </TableBody>
       </Table> */}
-      <div className="grid grid-cols-[repeat(auto-fit,--spacing(42))] gap-4 justify-center md:gap-6">
+      <div className="grid grid-cols-[repeat(auto-fit,--spacing(45.5))] gap-4 justify-center md:gap-6">
         {cartridges.map(cartridge => (
           <Card
             className="relative z-0 transition-colors duration-100 pointer-events-none has-[a:focus-visible]:ring-[3px] has-[a:focus-visible]:ring-ring/50 has-[a:hover]:bg-card/50"
@@ -79,7 +79,7 @@ const CartridgesPage: FC = () => {
             size="sm"
           >
             <CardContent>
-              <CartridgeImage alt={cartridge.name} className="mx-auto size-32" src={cartridge.image} />
+              <CartridgeImage alt={cartridge.name} className="mx-auto size-35.5" src={cartridge.image} />
             </CardContent>
             <CardHeader>
               <CardTitle className="text-sm text-center whitespace-normal">
