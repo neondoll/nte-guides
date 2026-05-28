@@ -1,39 +1,15 @@
-import { type FC, type ReactNode, useEffect } from "react";
+import type { FC } from "react";
 import { Link } from "react-router";
 
-import {
-  Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import { useArcs } from "./hooks";
+import ArcsLayout from "./layout";
+import { ArcImage /* ArcTypeImage */ } from "@/components/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useArcs } from "@/hooks/use-arcs";
+// import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import PATHS from "@/paths";
 
-const ArcsLayout: FC<{ children?: ReactNode }> = ({ children }) => {
-  return (
-    <div className="space-y-4 md:space-y-6">
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link to={PATHS.Home}>Главная</Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>Дуги</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
-      {children}
-    </div>
-  );
-};
 const ArcsPage: FC = () => {
-  const { data, fetch, loading } = useArcs();
-
-  useEffect(() => {
-    fetch();
-  }, []);
+  const { /* arcTypes, */ arcs, loading } = useArcs();
 
   if (loading) {
     return (
@@ -45,18 +21,58 @@ const ArcsPage: FC = () => {
 
   return (
     <ArcsLayout>
-      <div className="grid grid-cols-[repeat(auto-fit,--spacing(47))] gap-4 justify-center md:gap-6">
-        {data.map(item => (
-          <Card key={item.id} size="sm">
+      {/* <Table containerClassName="text-card-foreground bg-card shadow-sm ring-1 ring-foreground/5">
+        <TableHeader>
+          <TableRow>
+            <TableHead className="text-center">Дуга</TableHead>
+            <TableHead className="text-center">Тип</TableHead>
+            <TableHead className="text-center">Доп. атрибут (макс.)</TableHead>
+            <TableHead className="text-center">Эффект</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {arcs.map((arc) => {
+            const arcType = arcTypes.find(arcType => arcType.id === arc.typeId)!;
+
+            return (
+              <TableRow className="relative z-0 pointer-events-none has-[a:focus-visible]:bg-muted/50" key={arc.id}>
+                <TableHead className="p-3 space-y-1 text-center">
+                  <ArcImage alt={arc.name} className="mx-auto size-15" src={arc.image} />
+                  <Link
+                    children={arc.name}
+                    className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
+                    to={PATHS.Arc(arc.id)}
+                  />
+                </TableHead>
+                <TableCell className="space-y-1 text-center">
+                  <ArcTypeImage alt={arcType.name} className="mx-auto size-7.5" src={arcType.image} />
+                  <span children={arcType.name} />
+                </TableCell>
+                <TableCell children={`${arc.substat} +${arc.substat80}`} className="space-y-1 text-center" />
+                <TableCell />
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table> */}
+      <div className="grid grid-cols-[repeat(auto-fit,--spacing(42))] gap-4 justify-center md:gap-6">
+        {arcs.map(arc => (
+          <Card
+            className="relative z-0 transition-colors duration-100 pointer-events-none has-[a:focus-visible]:ring-[3px] has-[a:focus-visible]:ring-ring/50 has-[a:hover]:bg-card/50"
+            key={arc.id}
+            size="sm"
+          >
             <CardContent>
-              <img
-                alt={item.name}
-                className="aspect-square size-37"
-                src={item.image ?? "images/currently-unavailable.png"}
-              />
+              <ArcImage alt={arc.name} className="mx-auto size-32" src={arc.image} />
             </CardContent>
             <CardHeader>
-              <CardTitle className="text-base text-center whitespace-normal">{item.name}</CardTitle>
+              <CardTitle className="text-sm text-center whitespace-normal">
+                <Link
+                  children={arc.name}
+                  className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
+                  to={PATHS.Arc(arc.id)}
+                />
+              </CardTitle>
             </CardHeader>
           </Card>
         ))}

@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
 
-export type TableProps = ComponentProps<"table">;
+export type TableProps = ComponentProps<"table"> & { containerClassName?: string };
 export type TableBodyProps = ComponentProps<"tbody">;
 export type TableCaptionProps = ComponentProps<"caption">;
 export type TableCellProps = ComponentProps<"td">;
