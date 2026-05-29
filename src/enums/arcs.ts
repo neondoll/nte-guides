@@ -1,10 +1,10 @@
 export const ArcIds = {
   ATimeWillCome: "a-time-will-come", // Время придет
   BeHappy: "be-happy",
-  BlowUpTheCrowd: "blow-up-the-crowd",
-  CallOfTheTwistedCity: "call-of-the-twisted-city",
+  BlowUpTheCrowd: "blow-up-the-crowd", // Взорвать толпу
+  CallOfTheTwistedCity: "call-of-the-twisted-city", // Зов искаженного города
   CamelliaSociety: "camellia-society", // Сообщество Камелии
-  ClearSkies: "clear-skies",
+  ClearSkies: "clear-skies", // Чистое небо
   ContemplativeCat: "contemplative-cat", // Созерцательная кошка
   CosmosDazeWildReverie: "cosmos-daze-wild-reverie",
   DangerousGame: "dangerous-game",
@@ -13,34 +13,34 @@ export const ArcIds = {
   EternalWaltz: "eternal-waltz", // Вечный вальс
   FailingYouHeavyInMyHeart: "failing-you-heavy-in-my-heart",
   FirstStepToSuccess: "first-step-to-success",
-  FluffOfFearlessness: "fluff-of-fearlessness",
-  FluffOfFerocity: "fluff-of-ferocity",
-  FluffOfFinesse: "fluff-of-finesse",
-  FluffOfFleetness: "fluff-of-fleetness",
+  FluffOfFearlessness: "fluff-of-fearlessness", // Пух бесстрашия
+  FluffOfFerocity: "fluff-of-ferocity", // Пух ярости
+  FluffOfFinesse: "fluff-of-finesse", // Пух изящества
+  FluffOfFleetness: "fluff-of-fleetness", // Пух проворности
   FluffOfFortitude: "fluff-of-fortitude", // Пух стойкости
   GoodBoysGrandAdventure: "good-boys-grand-adventure", // Большой квест хорошего мальчика
-  HethereausKeeper: "hethereaus-keeper", // Хранитель хэтеро
-  MarchingBeyondTime: "marching-beyond-time",
-  MindRoyale: "mind-royale",
+  HethereausKeeper: "hethereaus-keeper", // Хранитель Этеро
+  MarchingBeyondTime: "marching-beyond-time", // За пределы времени
+  MindRoyale: "mind-royale", // Королевский разум
   Oraora: "oraora", // Ора-ора!
   RagingFlames: "raging-flames", // Бушующее пламя
   ReadyReady: "ready-ready", // Полная готовность
   RealMusic: "real-music",
-  RealityRefuge: "reality-refuge",
+  RealityRefuge: "reality-refuge", // Убежище реальности
   ShinyDays: "shiny-days",
   SongOfTheWhale: "song-of-the-whale", // Песня кита
-  StellarVeil: "stellar-veil",
-  TearsBeneathTheMask: "tears-beneath-the-mask",
+  StellarVeil: "stellar-veil", // Звёздная вуаль
+  TearsBeneathTheMask: "tears-beneath-the-mask", // Слезы за маской
   TheFoolsSpring: "the-fools-spring", // Ложная весна
-  TheForgotten: "the-forgotten",
+  TheForgotten: "the-forgotten", // Забытое
   TheGoodTheBadTheBitter: "the-good-the-bad-the-bitter",
   TheGreatThief: "the-great-thief",
-  TheLastRose: "the-last-rose",
-  TheRainThatShookTheWorld: "the-rain-that-shook-the-world",
+  TheLastRose: "the-last-rose", // Последняя роза
+  TheRainThatShookTheWorld: "the-rain-that-shook-the-world", // Дождь, сотрясший мир
   TimeBandit: "time-bandit",
   Umbrella: "umbrella", // Зонтик
   Us: "us",
   WatchYourHeads: "watch-your-heads", // Берегите головы!
-  YourHappinessIsPriceless: "your-happiness-is-priceless",
-  YouthfulFantasy: "youthful-fantasy",
+  YourHappinessIsPriceless: "your-happiness-is-priceless", // Твое счастье бесценно
+  YouthfulFantasy: "youthful-fantasy", // Ребяческая фантазия
 } as const;

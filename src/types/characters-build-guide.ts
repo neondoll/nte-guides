@@ -11,7 +11,7 @@ export type CharacterBuildGuide = {
   cartridgeBestMainStat: Array<Stat>;
   bestSubStats: Array<{ value: Stat; priority: number }>;
   recommendedAwakeningSkills: Record<CharacterAwakeningSkillKey, CharacterBuildGuideRecommendedSkill | undefined>;
-  recommendedSkills: Record<CharacterSkillKey, CharacterBuildGuideRecommendedSkill | undefined>;
+  recommendedSkills?: Record<CharacterSkillKey, CharacterBuildGuideRecommendedSkill | undefined>;
   bestTeams: Array<{ title: string } & Record<"slot1" | "slot2" | "slot3" | "slot4", Array<Character["id"]>>>;
   videoSourceIds: Array<VideoSource["id"]>;
 };

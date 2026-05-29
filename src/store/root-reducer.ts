@@ -2,6 +2,7 @@ import { combineReducers } from "@reduxjs/toolkit";
 
 import { arcTypesReducer } from "./arc-types";
 import { arcsReducer } from "./arcs";
+import { arcsGuideReducer } from "./arcs-guide";
 import { cartridgesReducer } from "./cartridges";
 import { characterRolesReducer } from "./character-roles";
 import { charactersReducer } from "./characters";
@@ -14,6 +15,7 @@ import { videoSourcesReducer } from "./video-sources";
 const rootReducer = combineReducers({
   arcTypes: arcTypesReducer,
   arcs: arcsReducer,
+  arcsGuide: arcsGuideReducer,
   cartridges: cartridgesReducer,
   characterRoles: characterRolesReducer,
   characters: charactersReducer,

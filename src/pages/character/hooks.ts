@@ -72,7 +72,6 @@ export const useCharacterBuildGuide = (id: Character["id"]) => {
   useEffect(() => {
     dispatch(fetchCharacterBuildGuideList());
   }, [dispatch]);
-
   useEffect(() => {
     if (charactersBuildGuideList.findIndex(item => item.id === id) !== -1) {
       dispatch(fetchCharacterBuildGuide(id));

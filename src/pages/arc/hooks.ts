@@ -3,7 +3,10 @@ import { useEffect, useMemo } from "react";
 import { useAppDispatch, useAppSelector } from "@/store";
 import { fetchArcType } from "@/store/arc-types";
 import { fetchArc } from "@/store/arcs";
+import { fetchArcGuide, fetchArcGuideList } from "@/store/arcs-guide";
+import { fetchCharacterList } from "@/store/characters";
 import { fetchRank } from "@/store/ranks";
+import { fetchVideoSourceList } from "@/store/video-sources";
 import type { Arc } from "@/types/arcs";
 
 export const useArc = (id: Arc["id"]) => {
@@ -35,4 +38,30 @@ export const useArc = (id: Arc["id"]) => {
   }, [arc, dispatch]);
 
   return { arc, loading, rank, type };
+};
+export const useArcGuide = (id: Arc["id"]) => {
+  const dispatch = useAppDispatch();
+
+  const arcsGuideDetails = useAppSelector(state => state.arcsGuide.details);
+  const arcsGuideDetailsLoading = useAppSelector(state => state.arcsGuide.detailsLoading);
+  const arcsGuideList = useAppSelector(state => state.arcsGuide.list);
+  const arcsGuideListLoading = useAppSelector(state => state.arcsGuide.listLoading);
+
+  const arcGuide = useMemo(() => arcsGuideDetails[id], [arcsGuideDetails, id]);
+  const loading = useMemo(() => {
+    return arcsGuideDetailsLoading || arcsGuideListLoading;
+  }, [arcsGuideDetailsLoading, arcsGuideListLoading]);
+
+  useEffect(() => {
+    dispatch(fetchArcGuideList());
+  }, [dispatch]);
+  useEffect(() => {
+    if (arcsGuideList.findIndex(item => item.id === id) !== -1) {
+      dispatch(fetchArcGuide(id));
+      dispatch(fetchCharacterList());
+      dispatch(fetchVideoSourceList());
+    }
+  }, [arcsGuideList, dispatch, id]);
+
+  return { arcGuide, loading };
 };

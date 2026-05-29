@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { useParams } from "react-router";
 
+import ArcGuide from "./guide";
 import { useArc } from "./hooks";
 import ArcLayout from "./layout";
 import { ArcImage, ArcTypeImage, RankImage } from "@/components/image";
@@ -70,6 +71,7 @@ const ArcPage: FC = () => {
           )}
         </TableBody>
       </Table>
+      <ArcGuide arc={arc} />
     </ArcLayout>
   );
 };
