@@ -2,7 +2,7 @@ import { ArcIds } from "@/enums/arcs";
 import type { ArcType } from "@/types/arc-types";
 import type { Rank } from "@/types/ranks";
 
-export interface Arc {
+export type Arc = {
   id: typeof ArcIds[keyof typeof ArcIds];
   name: string;
   rankId: Rank["id"];
@@ -12,6 +12,5 @@ export interface Arc {
   substat80: string | number;
   effect?: { title: string; text: string };
   image?: string;
-}
-
+};
 export type ArcListItem = Arc;

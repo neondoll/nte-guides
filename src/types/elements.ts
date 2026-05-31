@@ -1,9 +1,3 @@
 import { ElementIds } from "@/enums/elements";
 
-export interface Element {
-  id: typeof ElementIds[keyof typeof ElementIds];
-  name: string;
-  image: string;
-}
-
-export type ElementListItem = Element;
+export type Element = { id: typeof ElementIds[keyof typeof ElementIds]; name: string; image: string };

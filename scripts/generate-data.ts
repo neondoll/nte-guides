@@ -13,16 +13,16 @@ import elements from "./data/elements";
 import modules from "./data/modules";
 import ranks from "./data/ranks";
 import videoSources from "./data/video-sources";
-import type { ArcType, ArcTypeListItem } from "../src/types/arc-types";
+import type { ArcType } from "../src/types/arc-types";
 import type { Arc, ArcListItem } from "../src/types/arcs";
 import type { ArcGuide, ArcGuideListItem } from "../src/types/arcs-guide";
 import type { Cartridge, CartridgeListItem } from "../src/types/cartridges";
-import type { CharacterRole, CharacterRoleListItem } from "../src/types/character-roles";
+import type { CharacterRole } from "../src/types/character-roles";
 import type { Character, CharacterListItem } from "../src/types/characters";
 import type { CharacterBuildGuide, CharacterBuildGuideListItem } from "../src/types/characters-build-guide";
-import type { Element, ElementListItem } from "../src/types/elements";
+import type { Element } from "../src/types/elements";
 import type { Module } from "../src/types/modules";
-import type { Rank, RankListItem } from "../src/types/ranks";
+import type { Rank } from "../src/types/ranks";
 import type { VideoSource } from "../src/types/video-sources";
 
 type CategoryType = "arc-types" | "arcs" | "arcs-guide" | "cartridges" | "character-roles" | "characters"
@@ -41,16 +41,16 @@ type DataItem<T extends CategoryType>
                       : T extends "video-sources" ? VideoSource
                         : never;
 type DataListItem<T extends CategoryType>
-  = T extends "arc-types" ? ArcTypeListItem
+  = T extends "arc-types" ? ArcType
     : T extends "arcs" ? ArcListItem
       : T extends "arcs-guide" ? ArcGuideListItem
         : T extends "cartridges" ? CartridgeListItem
-          : T extends "character-roles" ? CharacterRoleListItem
+          : T extends "character-roles" ? CharacterRole
             : T extends "characters" ? CharacterListItem
               : T extends "characters-build-guide" ? CharacterBuildGuideListItem
-                : T extends "elements" ? ElementListItem
+                : T extends "elements" ? Element
                   : T extends "modules" ? Module
-                    : T extends "ranks" ? RankListItem
+                    : T extends "ranks" ? Rank
                       : T extends "video-sources" ? VideoSource
                         : never;
 
@@ -71,7 +71,7 @@ const CATEGORIES = {
   "cartridges": { data: cartridges, transformList: item => item },
   "character-roles": { data: characterRoles, transformList: item => item },
   "characters": { data: characters, transformList: item => item },
-  "characters-build-guide": { data: charactersBuildGuide, transformList: ({ id }) => ({ id }) },
+  "characters-build-guide": { data: Object.values(charactersBuildGuide), transformList: ({ id }) => ({ id }) },
   "elements": { data: elements, transformList: item => item },
   "modules": { data: modules, transformList: item => item },
   "ranks": { data: ranks, transformList: item => item },

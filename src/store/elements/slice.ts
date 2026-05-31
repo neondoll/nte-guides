@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import type { Element, ElementListItem } from "@/types/elements";
+import type { Element } from "@/types/elements";
 import { fetchJson } from "@/utils/api";
 
 export interface ElementsState {
   details: { [P in Element["id"]]?: Element };
   detailsLoading: boolean;
-  list: ElementListItem[];
+  list: Element[];
   listLoading: boolean;
 }
 
@@ -26,7 +26,7 @@ export const fetchElement = createAsyncThunk<Element, Element["id"]>("elements/f
 
   return await fetchJson<Element>(`${import.meta.env.BASE_URL}data/elements/details/${elementId}.json`);
 });
-export const fetchElementList = createAsyncThunk<ElementListItem[]>("elements/fetchList", async (_, { getState }) => {
+export const fetchElementList = createAsyncThunk<Element[]>("elements/fetchList", async (_, { getState }) => {
   const state = getState() as { elements: ElementsState };
   const stateList = state.elements.list;
 
@@ -38,7 +38,7 @@ export const fetchElementList = createAsyncThunk<ElementListItem[]>("elements/fe
 
   console.log("Загрузка списка элементов с сервера");
 
-  const list = await fetchJson<ElementListItem[]>(`${import.meta.env.BASE_URL}data/elements/index.json`);
+  const list = await fetchJson<Element[]>(`${import.meta.env.BASE_URL}data/elements/index.json`);
 
   return list.sort((a, b) => a.name.localeCompare(b.name));
 });

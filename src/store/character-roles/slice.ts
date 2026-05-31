@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import type { CharacterRole, CharacterRoleListItem } from "@/types/character-roles";
+import type { CharacterRole } from "@/types/character-roles";
 import { fetchJson } from "@/utils/api";
 
 export interface CharacterRolesState {
   details: { [P in CharacterRole["id"]]?: CharacterRole };
   detailsLoading: boolean;
-  list: CharacterRoleListItem[];
+  list: CharacterRole[];
   listLoading: boolean;
 }
 
@@ -26,7 +26,7 @@ export const fetchCharacterRole = createAsyncThunk<CharacterRole, CharacterRole[
 
   return await fetchJson<CharacterRole>(`${import.meta.env.BASE_URL}data/character-roles/details/${characterRoleId}.json`);
 });
-export const fetchCharacterRoleList = createAsyncThunk<CharacterRoleListItem[]>("characterRoles/fetchList", async (_, { getState }) => {
+export const fetchCharacterRoleList = createAsyncThunk<CharacterRole[]>("characterRoles/fetchList", async (_, { getState }) => {
   const state = getState() as { characterRoles: CharacterRolesState };
   const stateList = state.characterRoles.list;
 
@@ -38,7 +38,7 @@ export const fetchCharacterRoleList = createAsyncThunk<CharacterRoleListItem[]>(
 
   console.log("Загрузка списка ролей персонажей с сервера");
 
-  const list = await fetchJson<CharacterRoleListItem[]>(`${import.meta.env.BASE_URL}data/character-roles/index.json`);
+  const list = await fetchJson<CharacterRole[]>(`${import.meta.env.BASE_URL}data/character-roles/index.json`);
 
   return list.sort((a, b) => a.name.localeCompare(b.name));
 });

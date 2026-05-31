@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import type { Rank, RankListItem } from "@/types/ranks";
+import type { Rank } from "@/types/ranks";
 import { fetchJson } from "@/utils/api";
 
 export interface RanksState {
   details: { [P in Rank["id"]]?: Rank };
   detailsLoading: boolean;
-  list: RankListItem[];
+  list: Rank[];
   listLoading: boolean;
 }
 
@@ -26,7 +26,7 @@ export const fetchRank = createAsyncThunk<Rank, Rank["id"]>("ranks/fetch", async
 
   return await fetchJson<Rank>(`${import.meta.env.BASE_URL}data/ranks/details/${rankId}.json`);
 });
-export const fetchRankList = createAsyncThunk<RankListItem[]>("ranks/fetchList", async (_, { getState }) => {
+export const fetchRankList = createAsyncThunk<Rank[]>("ranks/fetchList", async (_, { getState }) => {
   const state = getState() as { ranks: RanksState };
   const stateList = state.ranks.list;
 
@@ -38,7 +38,7 @@ export const fetchRankList = createAsyncThunk<RankListItem[]>("ranks/fetchList",
 
   console.log("Загрузка списка рангов с сервера");
 
-  const list = await fetchJson<RankListItem[]>(`${import.meta.env.BASE_URL}data/ranks/index.json`);
+  const list = await fetchJson<Rank[]>(`${import.meta.env.BASE_URL}data/ranks/index.json`);
 
   return list.sort((a, b) => a.name.localeCompare(b.name));
 });

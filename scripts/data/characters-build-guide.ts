@@ -3,17 +3,18 @@ import { CartridgeIds } from "../../src/enums/cartridges";
 import { CharacterIds } from "../../src/enums/characters";
 import { Stats } from "../../src/enums/stats";
 import { VideoSourceIds } from "../../src/enums/video-sources";
+import type { Character } from "../../src/types/characters";
 import type { CharacterBuildGuide } from "../../src/types/characters-build-guide";
 
-export default [
-  {
+export default {
+  [CharacterIds.Adler]: {
     id: CharacterIds.Adler,
     recommendedArcs: [{ id: ArcIds.TheFoolsSpring }, { id: ArcIds.Umbrella }, { id: ArcIds.ATimeWillCome }],
     recommendedCartridges: [{ id: CartridgeIds.KingdomsGuard }],
-    cartridgeBestMainStat: [Stats.DEF_PERCENTAGE],
+    cartridgeBestMainStat: [Stats.DEF_BONUS],
     bestSubStats: [
-      { value: Stats.DEF_PERCENTAGE, priority: 1 },
-      { value: Stats.DMG, priority: 1 },
+      { value: Stats.DEF_BONUS, priority: 1 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 1 },
       { value: Stats.CYCLE_INTENSITY, priority: 2 },
       { value: Stats.CRIT_RATE, priority: 2 },
       { value: Stats.CRIT_DMG, priority: 3 },
@@ -57,7 +58,7 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Adler_v_1_0, VideoSourceIds.IceINFERN0_Umbrella_or_TheFoolsSpring_on_Adler],
   },
-  {
+  [CharacterIds.Baicang]: {
     id: CharacterIds.Baicang,
     recommendedArcs: [{ id: ArcIds.CamelliaSociety }, { id: ArcIds.FluffOfFerocity }, { id: ArcIds.ATimeWillCome }],
     recommendedCartridges: [{ id: CartridgeIds.CrimsonTwinButterflies }],
@@ -65,7 +66,7 @@ export default [
     bestSubStats: [
       { value: Stats.CRIT_DMG, priority: 1 },
       { value: Stats.CRIT_RATE, priority: 1 },
-      { value: Stats.DMG, priority: 2 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
       { value: Stats.ATK, priority: 2 },
       { value: Stats.CYCLE_INTENSITY, priority: 3 },
     ],
@@ -108,7 +109,7 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Baicang_v_1_0],
   },
-  {
+  [CharacterIds.Chiz]: {
     id: CharacterIds.Chiz,
     recommendedArcs: [{ id: ArcIds.ContemplativeCat }],
     recommendedCartridges: [{ id: CartridgeIds.LostRadiance }, { id: CartridgeIds.ShadowCreed }],
@@ -116,7 +117,7 @@ export default [
     bestSubStats: [
       { value: Stats.CRIT_DMG, priority: 1 },
       { value: Stats.CRIT_RATE, priority: 1 },
-      { value: Stats.DMG, priority: 2 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
       { value: Stats.ATK, priority: 2 },
       { value: Stats.CYCLE_INTENSITY, priority: 3 },
     ],
@@ -159,7 +160,7 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Chiz_v_1_0],
   },
-  {
+  [CharacterIds.Daffodill]: {
     id: CharacterIds.Daffodill,
     recommendedArcs: [{ id: ArcIds.YouthfulFantasy }],
     recommendedCartridges: [{ id: CartridgeIds.Diabolos }],
@@ -168,7 +169,7 @@ export default [
       { value: Stats.BREAK_INTENSITY, priority: 1 },
       { value: Stats.CRIT_RATE, priority: 1 },
       { value: Stats.CRIT_DMG, priority: 2 },
-      { value: Stats.DMG, priority: 2 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
       { value: Stats.CYCLE_INTENSITY, priority: 3 },
     ],
     recommendedAwakeningSkills: {
@@ -210,19 +211,19 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Daffodill_v_1_0],
   },
-  {
+  [CharacterIds.Edgar]: {
     id: CharacterIds.Edgar,
     recommendedArcs: [{ id: ArcIds.CallOfTheTwistedCity }, { id: ArcIds.MindRoyale }],
     recommendedCartridges: [{ id: CartridgeIds.TheasNightTavern }, { id: CartridgeIds.SpeedyHedgehog }],
-    cartridgeBestMainStat: [Stats.HEALING_BONUS, Stats.HP_PERCENTAGE, Stats.BREAK_INTENSITY],
+    cartridgeBestMainStat: [Stats.HEALING_BONUS, Stats.HP_BONUS, Stats.BREAK_INTENSITY],
     bestSubStats: [
-      { value: Stats.HP_PERCENTAGE, priority: 1 },
+      { value: Stats.HP_BONUS, priority: 1 },
       { value: Stats.HP, priority: 1 },
       { value: Stats.CYCLE_INTENSITY, priority: 2 },
       { value: Stats.BREAK_INTENSITY, priority: 2 },
-      { value: Stats.DEF_PERCENTAGE, priority: 3 },
+      { value: Stats.DEF_BONUS, priority: 3 },
       { value: Stats.DEF, priority: 3 },
-      { value: Stats.ATK_PERCENTAGE, priority: 3 },
+      { value: Stats.ATK_BONUS, priority: 3 },
       { value: Stats.ATK, priority: 3 },
     ],
     recommendedAwakeningSkills: {
@@ -264,7 +265,7 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Edgar_v_1_0],
   },
-  {
+  [CharacterIds.EsperZero]: {
     id: CharacterIds.EsperZero,
     recommendedArcs: [{ id: ArcIds.HethereausKeeper }, { id: ArcIds.DayOff }],
     recommendedCartridges: [{ id: CartridgeIds.LostRadiance }],
@@ -273,8 +274,8 @@ export default [
       { value: Stats.CRIT_DMG, priority: 1 },
       { value: Stats.CRIT_RATE, priority: 1 },
       { value: Stats.CYCLE_INTENSITY, priority: 2 },
-      { value: Stats.DMG, priority: 2 },
-      { value: Stats.ATK_PERCENTAGE, priority: 3 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
+      { value: Stats.ATK_BONUS, priority: 3 },
     ],
     recommendedAwakeningSkills: {
       2: { priority: 1 },
@@ -308,15 +309,15 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_EsperZero_v_1_0],
   },
-  {
+  [CharacterIds.Fadia]: {
     id: CharacterIds.Fadia,
     recommendedArcs: [{ id: ArcIds.EternalWaltz }, { id: ArcIds.Umbrella }],
     recommendedCartridges: [{ id: CartridgeIds.TinyBigAdventure }],
-    cartridgeBestMainStat: [Stats.HP_PERCENTAGE],
+    cartridgeBestMainStat: [Stats.HP_BONUS],
     bestSubStats: [
-      { value: Stats.HP_PERCENTAGE, priority: 1 },
+      { value: Stats.HP_BONUS, priority: 1 },
       { value: Stats.HP, priority: 2 },
-      { value: Stats.DMG, priority: 3 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 3 },
       { value: Stats.BREAK_INTENSITY, priority: 4 },
     ],
     recommendedAwakeningSkills: {
@@ -358,17 +359,17 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Fadia_v_1_0],
   },
-  {
+  [CharacterIds.Haniel]: {
     id: CharacterIds.Haniel,
     recommendedArcs: [{ id: ArcIds.BlowUpTheCrowd }, { id: ArcIds.HethereausKeeper }, { id: ArcIds.TheForgotten }],
     recommendedCartridges: [{ id: CartridgeIds.SpeedyHedgehog }, { id: CartridgeIds.DevilsBloodCurse }],
-    cartridgeBestMainStat: [Stats.ATK_PERCENTAGE, Stats.PSYCHE_DMG_BONUS, Stats.CRIT_DMG],
+    cartridgeBestMainStat: [Stats.ATK_BONUS, Stats.PSYCHE_DMG_BONUS, Stats.CRIT_DMG],
     bestSubStats: [
-      { value: Stats.ATK_PERCENTAGE, priority: 1 },
+      { value: Stats.ATK_BONUS, priority: 1 },
       { value: Stats.ATK, priority: 2 },
       { value: Stats.CRIT_RATE, priority: 3 },
       { value: Stats.CRIT_DMG, priority: 3 },
-      { value: Stats.DMG, priority: 4 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 4 },
     ],
     recommendedAwakeningSkills: {
       2: { priority: 1 },
@@ -416,15 +417,15 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Haniel_v_1_0],
   },
-  {
+  [CharacterIds.Hathor]: {
     id: CharacterIds.Hathor,
     recommendedArcs: [{ id: ArcIds.RagingFlames }, { id: ArcIds.FluffOfFortitude }, { id: ArcIds.SongOfTheWhale }, { id: ArcIds.DrawnBlade }],
     recommendedCartridges: [{ id: CartridgeIds.StreetBoxer }],
-    cartridgeBestMainStat: [Stats.ATK_PERCENTAGE, Stats.CRIT_RATE, Stats.CRIT_DMG, Stats.LAKSHANA_DMG_BONUS],
+    cartridgeBestMainStat: [Stats.ATK_BONUS, Stats.CRIT_RATE, Stats.CRIT_DMG, Stats.LAKSHANA_DMG_BONUS],
     bestSubStats: [
       { value: Stats.CRIT_RATE, priority: 1 },
       { value: Stats.CRIT_DMG, priority: 2 },
-      { value: Stats.ATK_PERCENTAGE, priority: 3 },
+      { value: Stats.ATK_BONUS, priority: 3 },
       { value: Stats.ATK, priority: 4 },
     ],
     recommendedAwakeningSkills: {
@@ -465,17 +466,61 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Hathor_v_1_0],
   },
-  {
+  [CharacterIds.Hotori]: {
+    id: CharacterIds.Hotori,
+    recommendedArcs: [{ id: ArcIds.MarchingBeyondTime }, { id: ArcIds.TheRainThatShookTheWorld }, { id: ArcIds.FluffOfFearlessness }, { id: ArcIds.TheForgotten }],
+    recommendedCartridges: [{ id: CartridgeIds.LostRadiance }],
+    cartridgeBestMainStat: [Stats.COSMOS_DMG_BONUS, Stats.CRIT_RATE, Stats.CRIT_DMG],
+    bestSubStats: [
+      { value: Stats.CRIT_RATE, priority: 1 },
+      { value: Stats.CRIT_DMG, priority: 1 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
+      { value: Stats.ATK_BONUS, priority: 2 },
+      { value: Stats.CYCLE_INTENSITY, priority: 3 },
+    ],
+    recommendedAwakeningSkills: {
+      1: { priority: 1 },
+      6: { priority: 2 },
+      5: { priority: 3 },
+      2: { priority: 4 },
+      4: { priority: 5 },
+      3: { priority: 6 },
+    },
+    recommendedSkills: {
+      Ultimate: { priority: 1 },
+      Skill: { priority: 1 },
+      BasicAttack: { priority: 3 },
+      SupportSkill: { priority: 3 },
+    },
+    bestTeams: [
+      {
+        title: "Hotori Blossom Team",
+        slot1: [CharacterIds.Hotori],
+        slot2: [CharacterIds.EsperZero],
+        slot3: [CharacterIds.Nanally, CharacterIds.Mint],
+        slot4: [CharacterIds.Jiuyuan, CharacterIds.Sakiri],
+      },
+      {
+        title: "Hotori Discord Team",
+        slot1: [CharacterIds.Hotori],
+        slot2: [CharacterIds.Daffodill],
+        slot3: [CharacterIds.Aurelia],
+        slot4: [CharacterIds.Sakiri],
+      },
+    ],
+    videoSourceIds: [],
+  },
+  [CharacterIds.Jiuyuan]: {
     id: CharacterIds.Jiuyuan,
     recommendedArcs: [{ id: ArcIds.RealityRefuge }, { id: ArcIds.FluffOfFearlessness }, { id: ArcIds.HethereausKeeper }, { id: ArcIds.DayOff }, { id: ArcIds.TheForgotten }],
     recommendedCartridges: [{ id: CartridgeIds.FirefliesAndTheForest }, { id: CartridgeIds.ShadowCreed }],
-    cartridgeBestMainStat: [Stats.ANIMA_DMG_BONUS, Stats.CRIT_RATE, Stats.CRIT_DMG, Stats.ATK_PERCENTAGE],
+    cartridgeBestMainStat: [Stats.ANIMA_DMG_BONUS, Stats.CRIT_RATE, Stats.CRIT_DMG, Stats.ATK_BONUS],
     bestSubStats: [
       { value: Stats.ANIMA_DMG_BONUS, priority: 1 },
       { value: Stats.CRIT_RATE, priority: 1 },
       { value: Stats.CRIT_DMG, priority: 1 },
-      { value: Stats.DMG, priority: 2 },
-      { value: Stats.ATK_PERCENTAGE, priority: 2 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
+      { value: Stats.ATK_BONUS, priority: 2 },
       { value: Stats.ATK, priority: 3 },
     ],
     recommendedAwakeningSkills: {
@@ -510,7 +555,7 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.Gamestalt_guide_Jiuyuan_v_1_0],
   },
-  {
+  [CharacterIds.Mint]: {
     id: CharacterIds.Mint,
     recommendedArcs: [{ id: ArcIds.FluffOfFleetness }, { id: ArcIds.ClearSkies }, { id: ArcIds.MindRoyale }],
     recommendedCartridges: [{ id: CartridgeIds.FirefliesAndTheForest }, { id: CartridgeIds.ShadowCreed }],
@@ -518,8 +563,8 @@ export default [
     bestSubStats: [
       { value: Stats.CRIT_DMG, priority: 1 },
       { value: Stats.CRIT_RATE, priority: 1 },
-      { value: Stats.DMG, priority: 2 },
-      { value: Stats.ATK_PERCENTAGE, priority: 2 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
+      { value: Stats.ATK_BONUS, priority: 2 },
       { value: Stats.CYCLE_INTENSITY, priority: 3 },
     ],
     recommendedAwakeningSkills: {
@@ -554,7 +599,7 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Mint_v_1_0],
   },
-  {
+  [CharacterIds.Nanally]: {
     id: CharacterIds.Nanally,
     recommendedArcs: [{ id: ArcIds.ReadyReady }, { id: ArcIds.FluffOfFortitude }, { id: ArcIds.SongOfTheWhale }, { id: ArcIds.Oraora }],
     recommendedCartridges: [{ id: CartridgeIds.FirefliesAndTheForest }],
@@ -562,7 +607,7 @@ export default [
     bestSubStats: [
       { value: Stats.CRIT_DMG, priority: 1 },
       { value: Stats.CRIT_RATE, priority: 1 },
-      { value: Stats.DMG, priority: 2 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
       { value: Stats.ATK, priority: 2 },
       { value: Stats.CYCLE_INTENSITY, priority: 3 },
     ],
@@ -585,7 +630,7 @@ export default [
     }],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Nanally_v_1_0],
   },
-  {
+  [CharacterIds.Sakiri]: {
     id: CharacterIds.Sakiri,
     recommendedArcs: [{ id: ArcIds.GoodBoysGrandAdventure }, { id: ArcIds.WatchYourHeads }],
     recommendedCartridges: [{ id: CartridgeIds.SpeedyHedgehog }, { id: CartridgeIds.ShadowCreed }, { id: CartridgeIds.CrimsonTwinButterflies }],
@@ -593,8 +638,8 @@ export default [
     bestSubStats: [
       { value: Stats.CYCLE_INTENSITY, priority: 1 },
       { value: Stats.BREAK_INTENSITY, priority: 2 },
-      { value: Stats.DMG, priority: 2 },
-      { value: Stats.ATK_PERCENTAGE, priority: 2 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
+      { value: Stats.ATK_BONUS, priority: 2 },
       { value: Stats.ATK, priority: 3 },
     ],
     recommendedAwakeningSkills: {
@@ -612,7 +657,7 @@ export default [
     }],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Sakiri_v_1_0],
   },
-  {
+  [CharacterIds.Skia]: {
     id: CharacterIds.Skia,
     recommendedArcs: [{ id: ArcIds.GoodBoysGrandAdventure }, { id: ArcIds.WatchYourHeads }],
     recommendedCartridges: [{ id: CartridgeIds.StreetBoxer }],
@@ -620,8 +665,8 @@ export default [
     bestSubStats: [
       { value: Stats.CRIT_DMG, priority: 1 },
       { value: Stats.CRIT_RATE, priority: 1 },
-      { value: Stats.DMG, priority: 2 },
-      { value: Stats.ATK_PERCENTAGE, priority: 2 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
+      { value: Stats.ATK_BONUS, priority: 2 },
       { value: Stats.CYCLE_INTENSITY, priority: 3 },
     ],
     recommendedAwakeningSkills: {
@@ -651,4 +696,4 @@ export default [
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Skia_v_1_0],
   },
-] as Array<CharacterBuildGuide>;
+} as Record<Character["id"], CharacterBuildGuide>;

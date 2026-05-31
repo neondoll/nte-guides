@@ -1,14 +1,14 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import type { ArcType, ArcTypeListItem } from "@/types/arc-types";
+import type { ArcType } from "@/types/arc-types";
 import { fetchJson } from "@/utils/api";
 
-export interface ArcTypesState {
+export type ArcTypesState = {
   details: { [P in ArcType["id"]]?: ArcType };
   detailsLoading: boolean;
-  list: ArcTypeListItem[];
+  list: ArcType[];
   listLoading: boolean;
-}
+};
 
 const initialState: ArcTypesState = { details: {}, detailsLoading: false, list: [], listLoading: false };
 
@@ -26,7 +26,7 @@ export const fetchArcType = createAsyncThunk<ArcType, ArcType["id"]>("arcTypes/f
 
   return await fetchJson<ArcType>(`${import.meta.env.BASE_URL}data/arc-types/details/${arcTypeId}.json`);
 });
-export const fetchArcTypeList = createAsyncThunk<ArcTypeListItem[]>("arcTypes/fetchList", async (_, { getState }) => {
+export const fetchArcTypeList = createAsyncThunk<ArcType[]>("arcTypes/fetchList", async (_, { getState }) => {
   const state = getState() as { arcTypes: ArcTypesState };
   const stateList = state.arcTypes.list;
 
@@ -38,7 +38,7 @@ export const fetchArcTypeList = createAsyncThunk<ArcTypeListItem[]>("arcTypes/fe
 
   console.log("Загрузка списка типов дуг с сервера");
 
-  const list = await fetchJson<ArcTypeListItem[]>(`${import.meta.env.BASE_URL}data/arc-types/index.json`);
+  const list = await fetchJson<ArcType[]>(`${import.meta.env.BASE_URL}data/arc-types/index.json`);
 
   return list.sort((a, b) => a.name.localeCompare(b.name));
 });
