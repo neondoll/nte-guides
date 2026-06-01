@@ -1,8 +1,14 @@
 export const ElementIds = {
-  Anima: "anima", // Анима
-  Chaos: "chaos", // Хаос
-  Cosmos: "cosmos", // Космос
-  Incantation: "incantation", // Чары
-  Lakshana: "lakshana", // Лакшана
-  Psyche: "psyche", // Психика
+  /** Анима (Anima) */
+  Anima: "anima",
+  /** Хаос (Chaos) */
+  Chaos: "chaos",
+  /** Космос (Cosmos) */
+  Cosmos: "cosmos",
+  /** Чары (Incantation) */
+  Incantation: "incantation",
+  /** Лакшана (Lakshana) */
+  Lakshana: "lakshana",
+  /** Психика (Psyche) */
+  Psyche: "psyche",
 } as const;

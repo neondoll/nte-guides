@@ -1,22 +1,38 @@
 export const CharacterIds = {
-  Adler: "adler", // Адлер
-  Aurelia: "aurelia", // Аурелия
-  Baicang: "baicang", // Байканг
+  /** Адлер (Adler) */
+  Adler: "adler",
+  /** Аурелия (Aurelia) */
+  Aurelia: "aurelia",
+  /** Байканг (Baicang) */
+  Baicang: "baicang",
   Chaos: "chaos",
-  Chiz: "chiz", // Чиз
-  Daffodill: "daffodill", // Даффодил
-  Edgar: "edgar", // Эдгар
-  EsperZero: "esper-zero", // Нулевой эспер
-  Fadia: "fadia", // Фадия
-  Haniel: "haniel", // Ханиэль
-  Hathor: "hathor", // Хатор
-  Hotori: "hotori", // Хотори
-  Jiuyuan: "jiuyuan", // Цзююань
+  /** Чиз (Chiz) */
+  Chiz: "chiz",
+  /** Даффодил (Daffodill) */
+  Daffodill: "daffodill",
+  /** Эдгар (Edgar) */
+  Edgar: "edgar",
+  /** Нулевой эспер (Esper Zero) */
+  EsperZero: "esper-zero",
+  /** Фадия (Fadia) */
+  Fadia: "fadia",
+  /** Ханиэль (Haniel) */
+  Haniel: "haniel",
+  /** Хатор (Hathor) */
+  Hathor: "hathor",
+  /** Хотори (Hotori) */
+  Hotori: "hotori",
+  /** Цзююань (Jiuyuan) */
+  Jiuyuan: "jiuyuan",
   Lacrimosa: "lacrimosa",
-  Mint: "mint", // Минт
-  Nanally: "nanally", // Наналли
-  Sakiri: "sakiri", // Сакири
-  Skia: "skia", // Ския
+  /** Минт (Mint) */
+  Mint: "mint",
+  /** Наналли (Nanally) */
+  Nanally: "nanally",
+  /** Сакири (Sakiri) */
+  Sakiri: "sakiri",
+  /** Ския (Skia) */
+  Skia: "skia",
 } as const;
 export const CharacterSkillKeys = {
   BasicAttack: "Базовая атака",

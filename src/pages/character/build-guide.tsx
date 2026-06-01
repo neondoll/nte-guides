@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { VideoSourcesTable } from "@/components/video-sources";
 import { CharacterSkillKeys } from "@/enums/characters";
+import { cn } from "@/lib/utils";
 import Paths from "@/paths";
 import { useAppSelector } from "@/store";
 import type { Character, CharacterAwakeningSkillKey, CharacterSkillKey } from "@/types/characters";
@@ -42,19 +43,26 @@ const CharacterBuildGuide: FC<{ character: Character }> = ({ character }) => {
           <AccordionItem value="recommended-arcs">
             <AccordionTrigger disabled={arcsLoading}>Рекомендуемые дуги</AccordionTrigger>
             <AccordionContent>
-              <CharacterBuildGuideRecommendedArcs buildGuide={characterBuildGuide} />
+              <CharacterBuildGuideRecommendedArcs recommendedArcs={characterBuildGuide.recommendedArcs} />
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="recommended-cartridges-and-best-stats">
             <AccordionTrigger disabled={cartridgesLoading}>Рекомендуемые картриджи и лучшие атрибуты</AccordionTrigger>
             <AccordionContent>
-              <CharacterBuildGuideRecommendedCartridgesAndBestStats buildGuide={characterBuildGuide} />
+              <CharacterBuildGuideRecommendedCartridgesAndBestStats
+                bestSubStats={characterBuildGuide.bestSubStats}
+                cartridgeBestMainStat={characterBuildGuide.cartridgeBestMainStat}
+                recommendedCartridges={characterBuildGuide.recommendedCartridges}
+              />
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="recommended-awakening-skills">
             <AccordionTrigger>Рекомендуемые навыки пробуждения</AccordionTrigger>
             <AccordionContent>
-              <CharacterBuildGuideRecommendedAwakeningSkills buildGuide={characterBuildGuide} character={character} />
+              <CharacterBuildGuideRecommendedAwakeningSkills
+                character={character}
+                recommendedAwakeningSkills={characterBuildGuide.recommendedAwakeningSkills}
+              />
             </AccordionContent>
           </AccordionItem>
           {characterBuildGuide.recommendedSkills && (
@@ -71,7 +79,7 @@ const CharacterBuildGuide: FC<{ character: Character }> = ({ character }) => {
           <AccordionItem value="best-teams">
             <AccordionTrigger disabled={charactersLoading}>Лучшие команды</AccordionTrigger>
             <AccordionContent>
-              <CharacterBuildGuideBestTeams buildGuide={characterBuildGuide} character={character} />
+              <CharacterBuildGuideBestTeams bestTeams={characterBuildGuide.bestTeams} character={character} />
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="video-sources">
@@ -86,15 +94,15 @@ const CharacterBuildGuide: FC<{ character: Character }> = ({ character }) => {
   );
 };
 const CharacterBuildGuideBestTeams: FC<{
-  buildGuide: BuildGuide;
+  bestTeams: BuildGuide["bestTeams"];
   character: Character;
-}> = ({ buildGuide, character: currentCharacter }) => {
+}> = ({ bestTeams, character: currentCharacter }) => {
   const characters = useAppSelector(state => state.characters.list);
 
   return (
     <Table>
       <TableBody>
-        {buildGuide.bestTeams.map(team => (
+        {bestTeams.map(team => (
           <TableRow key={team.title}>
             <TableHead children={team.title} className="text-center" />
             <TableCell className="text-center divide-y divide-dashed">
@@ -102,26 +110,11 @@ const CharacterBuildGuideBestTeams: FC<{
                 const character = characters.find(c => c.id == value)!;
 
                 return (
-                  <div
-                    className="relative z-0 p-2 space-y-1 transition-colors duration-100 pointer-events-none has-[a:focus-visible]:ring-[3px] has-[a:focus-visible]:ring-ring/50 has-[a:hover]:ring-[3px] has-[a:hover]:ring-ring/50"
+                  <TeamSlot
+                    character={character}
+                    isCurrentCharacter={character.id === currentCharacter.id}
                     key={value}
-                  >
-                    <CharacterImage
-                      alt={character.name}
-                      className="mx-auto size-12.5"
-                      src={character.imageWithElementAndRank ?? character.image}
-                    />
-                    {character.id === currentCharacter.id
-                      ? <span children={character.name} />
-                      : (
-                          <Link
-                            children={character.name}
-                            className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
-                            target="_blank"
-                            to={Paths.Character(character.id)}
-                          />
-                        )}
-                  </div>
+                  />
                 );
               })}
             </TableCell>
@@ -130,26 +123,11 @@ const CharacterBuildGuideBestTeams: FC<{
                 const character = characters.find(c => c.id == value)!;
 
                 return (
-                  <div
-                    className="relative z-0 p-2 space-y-1 transition-colors duration-100 pointer-events-none has-[a:focus-visible]:ring-[3px] has-[a:focus-visible]:ring-ring/50 has-[a:hover]:ring-[3px] has-[a:hover]:ring-ring/50"
+                  <TeamSlot
+                    character={character}
+                    isCurrentCharacter={character.id === currentCharacter.id}
                     key={value}
-                  >
-                    <CharacterImage
-                      alt={character.name}
-                      className="mx-auto size-12.5"
-                      src={character.imageWithElementAndRank ?? character.image}
-                    />
-                    {character.id === currentCharacter.id
-                      ? <span children={character.name} />
-                      : (
-                          <Link
-                            children={character.name}
-                            className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
-                            target="_blank"
-                            to={Paths.Character(character.id)}
-                          />
-                        )}
-                  </div>
+                  />
                 );
               })}
             </TableCell>
@@ -158,26 +136,11 @@ const CharacterBuildGuideBestTeams: FC<{
                 const character = characters.find(c => c.id == value)!;
 
                 return (
-                  <div
-                    className="relative z-0 p-2 space-y-1 transition-colors duration-100 pointer-events-none has-[a:focus-visible]:ring-[3px] has-[a:focus-visible]:ring-ring/50 has-[a:hover]:ring-[3px] has-[a:hover]:ring-ring/50"
+                  <TeamSlot
+                    character={character}
+                    isCurrentCharacter={character.id === currentCharacter.id}
                     key={value}
-                  >
-                    <CharacterImage
-                      alt={character.name}
-                      className="mx-auto size-12.5"
-                      src={character.imageWithElementAndRank ?? character.image}
-                    />
-                    {character.id === currentCharacter.id
-                      ? <span children={character.name} />
-                      : (
-                          <Link
-                            children={character.name}
-                            className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
-                            target="_blank"
-                            to={Paths.Character(character.id)}
-                          />
-                        )}
-                  </div>
+                  />
                 );
               })}
             </TableCell>
@@ -186,26 +149,11 @@ const CharacterBuildGuideBestTeams: FC<{
                 const character = characters.find(c => c.id == value)!;
 
                 return (
-                  <div
-                    className="relative z-0 p-2 space-y-1 transition-colors duration-100 pointer-events-none has-[a:focus-visible]:ring-[3px] has-[a:focus-visible]:ring-ring/50 has-[a:hover]:ring-[3px] has-[a:hover]:ring-ring/50"
+                  <TeamSlot
+                    character={character}
+                    isCurrentCharacter={character.id === currentCharacter.id}
                     key={value}
-                  >
-                    <CharacterImage
-                      alt={character.name}
-                      className="mx-auto size-12.5"
-                      src={character.imageWithElementAndRank ?? character.image}
-                    />
-                    {character.id === currentCharacter.id
-                      ? <span children={character.name} />
-                      : (
-                          <Link
-                            children={character.name}
-                            className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
-                            target="_blank"
-                            to={Paths.Character(character.id)}
-                          />
-                        )}
-                  </div>
+                  />
                 );
               })}
             </TableCell>
@@ -215,7 +163,9 @@ const CharacterBuildGuideBestTeams: FC<{
     </Table>
   );
 };
-const CharacterBuildGuideRecommendedArcs: FC<{ buildGuide: BuildGuide }> = ({ buildGuide }) => {
+const CharacterBuildGuideRecommendedArcs: FC<{
+  recommendedArcs: BuildGuide["recommendedArcs"];
+}> = ({ recommendedArcs }) => {
   const arcs = useAppSelector(state => state.arcs.list);
 
   return (
@@ -224,11 +174,12 @@ const CharacterBuildGuideRecommendedArcs: FC<{ buildGuide: BuildGuide }> = ({ bu
         <TableRow>
           <TableHead className="text-center">Приоритет</TableHead>
           <TableHead className="text-center">Дуга</TableHead>
+          <TableHead className="text-center">Доп. атрибут (макс.)</TableHead>
           <TableHead className="text-center">Эффект</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
-        {buildGuide.recommendedArcs.map((recommendedArc, index) => {
+        {recommendedArcs.map((recommendedArc, index) => {
           const arc = arcs.find(a => a.id === recommendedArc.id)!;
 
           return (
@@ -236,27 +187,26 @@ const CharacterBuildGuideRecommendedArcs: FC<{ buildGuide: BuildGuide }> = ({ bu
               className="relative z-0 pointer-events-none has-[a:focus-visible]:bg-muted/50"
               key={recommendedArc.id}
             >
-              <TableCell children={index + 1} className="text-center" />
-              <TableHead className="p-3 space-y-1 text-center">
-                <ArcImage alt={arc.name} className="mx-auto size-12.5" src={arc.image} />
-                <Link
-                  children={arc.name}
-                  className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
-                  target="_blank"
-                  to={Paths.Arc(arc.id)}
-                />
+              <TableCell children={recommendedArc.priority ?? index + 1} className="text-center" />
+              <TableHead className="p-3 text-center whitespace-normal">
+                <div className="space-y-1">
+                  <ArcImage alt={arc.name} className="mx-auto size-12.5" src={arc.image} />
+                  <Link
+                    children={arc.name}
+                    className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
+                    target="_blank"
+                    to={Paths.Arc(arc.id)}
+                  />
+                </div>
               </TableHead>
+              <TableCell children={`${arc.substat} +${arc.substat80}`} className="text-center whitespace-normal" />
               <TableCell className="whitespace-pre-line">
-                {arc.effect && (
-                  <>
-                    <span
-                      children={arc.effect.title}
-                      className="font-medium tracking-wider text-muted-foreground uppercase"
-                    />
-                    <br />
-                    {arc.effect.text}
-                  </>
-                )}
+                <span
+                  children={arc.effect.title}
+                  className="font-medium tracking-wider text-muted-foreground uppercase"
+                />
+                <br />
+                {arc.effect.text}
               </TableCell>
             </TableRow>
           );
@@ -265,12 +215,16 @@ const CharacterBuildGuideRecommendedArcs: FC<{ buildGuide: BuildGuide }> = ({ bu
     </Table>
   );
 };
-const CharacterBuildGuideRecommendedCartridgesAndBestStats: FC<{ buildGuide: BuildGuide }> = ({ buildGuide }) => {
+const CharacterBuildGuideRecommendedCartridgesAndBestStats: FC<{
+  bestSubStats: BuildGuide["bestSubStats"];
+  cartridgeBestMainStat: BuildGuide["cartridgeBestMainStat"];
+  recommendedCartridges: BuildGuide["recommendedCartridges"];
+}> = ({ bestSubStats, cartridgeBestMainStat, recommendedCartridges }) => {
   const cartridges = useAppSelector(state => state.cartridges.list);
 
   const maxSubStatsPriority = useMemo(() => {
-    return Math.max(...buildGuide.bestSubStats.map(stat => stat.priority));
-  }, [buildGuide.bestSubStats]);
+    return Math.max(...bestSubStats.map(stat => stat.priority));
+  }, [bestSubStats]);
 
   return (
     <Table>
@@ -282,7 +236,7 @@ const CharacterBuildGuideRecommendedCartridgesAndBestStats: FC<{ buildGuide: Bui
         </TableRow>
       </TableHeader>
       <TableBody>
-        {buildGuide.recommendedCartridges.map((recommendedCartridge, index) => {
+        {recommendedCartridges.map((recommendedCartridge, index) => {
           const cartridge = cartridges.find(c => c.id === recommendedCartridge.id)!;
 
           return (
@@ -291,24 +245,23 @@ const CharacterBuildGuideRecommendedCartridgesAndBestStats: FC<{ buildGuide: Bui
               key={recommendedCartridge.id}
             >
               <TableCell children={index + 1} className="text-center" />
-              <TableHead className="p-3 space-y-1 text-center">
-                <CartridgeImage alt={cartridge.name} className="mx-auto size-12.5" src={cartridge.image} />
-                <Link
-                  children={cartridge.name}
-                  className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
-                  target="_blank"
-                  to={Paths.Cartridge(cartridge.id)}
-                />
+              <TableHead className="p-3 text-center whitespace-normal">
+                <div className="space-y-1">
+                  <CartridgeImage alt={cartridge.name} className="mx-auto size-12.5" src={cartridge.image} />
+                  <Link
+                    children={cartridge.name}
+                    className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
+                    target="_blank"
+                    to={Paths.Cartridge(cartridge.id)}
+                  />
+                </div>
               </TableHead>
               <TableCell className="whitespace-pre-line">
-                <p>
-                  <span className="font-medium tracking-wider text-muted-foreground uppercase">Эпический (2):</span>
-                  {` ${cartridge.setEffects["2"]}`}
-                </p>
-                <p>
-                  <span className="font-medium tracking-wider text-muted-foreground uppercase">Легендарный (4):</span>
-                  {` ${cartridge.setEffects["4"]}`}
-                </p>
+                <span className="font-medium tracking-wider text-muted-foreground uppercase">Эпический (2):</span>
+                {` ${cartridge.setEffects["2"]}`}
+                <br />
+                <span className="font-medium tracking-wider text-muted-foreground uppercase">Легендарный (4):</span>
+                {` ${cartridge.setEffects["4"]}`}
               </TableCell>
             </TableRow>
           );
@@ -316,21 +269,20 @@ const CharacterBuildGuideRecommendedCartridgesAndBestStats: FC<{ buildGuide: Bui
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableHead className="text-center" colSpan={2}>Лучший главный атрибут картриджа</TableHead>
+          <TableHead className="text-center whitespace-normal" colSpan={2}>Лучший главный атрибут картриджа</TableHead>
           <TableCell>
             <ul className="pl-5 list-outside list-disc">
-              {buildGuide.cartridgeBestMainStat.map(stat => <li key={stat}>{stat}</li>)}
+              {cartridgeBestMainStat.map(stat => <li key={stat}>{stat}</li>)}
             </ul>
           </TableCell>
         </TableRow>
         <TableRow>
-          <TableHead className="text-center" colSpan={2}>Доп. атрибуты</TableHead>
+          <TableHead className="text-center whitespace-normal" colSpan={2}>Доп. атрибуты</TableHead>
           <TableCell>
             <ul className="pl-5 list-outside list-disc">
-              {buildGuide.bestSubStats.map(stat => (
+              {bestSubStats.map(stat => (
                 <li key={stat.value}>
-                  {stat.value}
-                  {" "}
+                  {`${stat.value} `}
                   {Array.from({ length: maxSubStatsPriority - stat.priority + 1 }).map(() => "★").join("")}
                 </li>
               ))}
@@ -342,16 +294,16 @@ const CharacterBuildGuideRecommendedCartridgesAndBestStats: FC<{ buildGuide: Bui
   );
 };
 const CharacterBuildGuideRecommendedAwakeningSkills: FC<{
-  buildGuide: BuildGuide;
   character: Character;
-}> = ({ buildGuide, character }) => {
+  recommendedAwakeningSkills: BuildGuide["recommendedAwakeningSkills"];
+}> = ({ character, recommendedAwakeningSkills }) => {
   const maxPriority = useMemo(() => {
     return Math.max(
-      ...Object.values(buildGuide.recommendedAwakeningSkills)
+      ...Object.values(recommendedAwakeningSkills)
         .filter(recommendation => !!recommendation)
         .map(recommendation => recommendation.priority),
     );
-  }, [buildGuide.recommendedAwakeningSkills]);
+  }, [recommendedAwakeningSkills]);
 
   return (
     <Table>
@@ -362,7 +314,7 @@ const CharacterBuildGuideRecommendedAwakeningSkills: FC<{
         </TableRow>
       </TableHeader>
       <TableBody>
-        {(Object.entries(buildGuide.recommendedAwakeningSkills) as [CharacterAwakeningSkillKey, RecommendedSkill][])
+        {(Object.entries(recommendedAwakeningSkills) as [CharacterAwakeningSkillKey, RecommendedSkill][])
           .sort((a, b) => a[1].priority - b[1].priority)
           .map(([skillKey, recommendation]) => (
             <TableRow key={skillKey}>
@@ -417,6 +369,36 @@ const CharacterBuildGuideRecommendedSkills: FC<{
           ))}
       </TableBody>
     </Table>
+  );
+};
+const TeamSlot: FC<{
+  character: Character;
+  isCurrentCharacter?: boolean;
+}> = ({ character, isCurrentCharacter = false }) => {
+  return (
+    <div
+      className={cn([
+        "relative z-0 p-2 space-y-1 transition-colors duration-100 pointer-events-none",
+        "has-[a:focus-visible]:ring-[3px] has-[a:focus-visible]:ring-ring/50 has-[a:hover]:ring-[3px]",
+        "has-[a:hover]:ring-ring/50",
+      ])}
+    >
+      <CharacterImage
+        alt={character.name}
+        className="mx-auto size-12.5"
+        src={character.imageWithElementAndRank ?? character.image}
+      />
+      {isCurrentCharacter
+        ? <span children={character.name} />
+        : (
+            <Link
+              children={character.name}
+              className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
+              target="_blank"
+              to={Paths.Character(character.id)}
+            />
+          )}
+    </div>
   );
 };
 

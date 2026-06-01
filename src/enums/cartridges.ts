@@ -1,14 +1,26 @@
 export const CartridgeIds = {
-  CrimsonTwinButterflies: "crimson-twin-butterflies", // Багрянец: Две бабочки
-  DevilsBloodCurse: "devils-blood-curse", // Кровь демона: Проклятие
-  Diabolos: "diabolos", // Диабло
-  FirefliesAndTheForest: "fireflies-and-the-forest", // Светлячки и лес
-  KingdomsGuard: "kingdoms-guard", // Королевский страж
-  LostRadiance: "lost-radiance", // Утраченное сияние
-  QuietManor: "quiet-manor", // Тихое поместье
-  ShadowCreed: "shadow-creed", // Кредо теней
-  SpeedyHedgehog: "speedy-hedgehog", // Скоростной ёж
-  StreetBoxer: "street-boxer", // Уличный боец
-  TheasNightTavern: "theas-night-tavern", // Ночная таверна Теи
-  TinyBigAdventure: "tiny-big-adventure", // Мини-мега приключение
+  /** Багрянец: Две бабочки (Crimson: Twin Butterflies) */
+  CrimsonTwinButterflies: "crimson-twin-butterflies",
+  /** Кровь демона: Проклятие (Devil's Blood: Curse) */
+  DevilsBloodCurse: "devils-blood-curse",
+  /** Диабло (Diabolos) */
+  Diabolos: "diabolos",
+  /** Светлячки и лес (Fireflies and the Forest) */
+  FirefliesAndTheForest: "fireflies-and-the-forest",
+  /** Королевский страж (Kingdom's Guard) */
+  KingdomsGuard: "kingdoms-guard",
+  /** Утраченное сияние (Lost Radiance) */
+  LostRadiance: "lost-radiance",
+  /** Тихое поместье (Quiet Manor) */
+  QuietManor: "quiet-manor",
+  /** Кредо теней (Shadow Creed) */
+  ShadowCreed: "shadow-creed",
+  /** Скоростной ёж (Speedy Hedgehog) */
+  SpeedyHedgehog: "speedy-hedgehog",
+  /** Уличный боец (Street Boxer) */
+  StreetBoxer: "street-boxer",
+  /** Ночная таверна Теи (Thea's Night Tavern) */
+  TheasNightTavern: "theas-night-tavern",
+  /** Мини-мега приключение (Tiny Big Adventure) */
+  TinyBigAdventure: "tiny-big-adventure",
 } as const;

@@ -1,8 +1,11 @@
 export const VideoSourceIds = {
+  Gamestalt_game_guide_Hotori_v_1_0: "Gamestalt_game_guide_Hotori_v_1.0",
   Gamestalt_guide_DayOff_v_1_0: "Gamestalt_guide_DayOff_v_1.0",
+  Gamestalt_guide_Hotori_v_1_0: "Gamestalt_guide_Hotori_v_1.0",
   Gamestalt_guide_Jiuyuan_v_1_0: "Gamestalt_guide_Jiuyuan_v_1.0",
   Gamestalt_guide_S_rank_arcs_v_1_0: "Gamestalt_guide_S_rank_arcs_v_1.0",
   IceINFERN0_guide_Adler_v_1_0: "IceINFERN0_guide_Adler_v_1.0",
+  IceINFERN0_guide_Aurelia_v_1_0: "IceINFERN0_guide_Aurelia_v_1.0",
   IceINFERN0_guide_Baicang_v_1_0: "IceINFERN0_guide_Baicang_v_1.0",
   IceINFERN0_guide_Chiz_v_1_0: "IceINFERN0_guide_Chiz_v_1.0",
   IceINFERN0_guide_Daffodill_v_1_0: "IceINFERN0_guide_Daffodill_v_1.0",

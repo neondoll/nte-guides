@@ -1,124 +1,145 @@
 import { VideoSourceIds } from "../../src/enums/video-sources";
 import type { VideoSource } from "../../src/types/video-sources";
 
-export default [
-  {
+export default {
+  [VideoSourceIds.Gamestalt_game_guide_Hotori_v_1_0]: {
+    id: VideoSourceIds.Gamestalt_game_guide_Hotori_v_1_0,
+    author: "Gamestalt",
+    title: "NTE: Neverness to Everness — Как правильно останавливать время за Хотори  | Гайд | Обзор |",
+    date: "2026-05-23",
+    url: "https://youtu.be/1oOgP13ezr4",
+  },
+  [VideoSourceIds.Gamestalt_guide_DayOff_v_1_0]: {
     id: VideoSourceIds.Gamestalt_guide_DayOff_v_1_0,
     author: "Gamestalt",
     title: "NTE: Neverness to Everness — Самая ЛУЧШАЯ и БЕСПЛАТНАЯ дуга S-ранга для Зеро | Гайд | Обзор |",
     date: "2026-05-10",
     url: "https://youtu.be/BF-102aAE5I",
   },
-  {
+  [VideoSourceIds.Gamestalt_guide_Hotori_v_1_0]: {
+    id: VideoSourceIds.Gamestalt_guide_Hotori_v_1_0,
+    author: "Gamestalt",
+    title: "NTE: Neverness to Everness — Всё о Хотори: навыки, оружие, модули  | Гайд | Обзор |",
+    date: "2026-05-20",
+    url: "https://youtu.be/vw8HFs8xlAk",
+  },
+  [VideoSourceIds.Gamestalt_guide_Jiuyuan_v_1_0]: {
     id: VideoSourceIds.Gamestalt_guide_Jiuyuan_v_1_0,
     author: "Gamestalt",
     title: "NTE: Neverness to Everness — Полный разбор механик Цзююань | Гайд | Обзор |",
     date: "2026-05-13",
     url: "https://youtu.be/COzannI2gzY",
   },
-  {
+  [VideoSourceIds.Gamestalt_guide_S_rank_arcs_v_1_0]: {
     id: VideoSourceIds.Gamestalt_guide_S_rank_arcs_v_1_0,
     author: "Gamestalt",
     title: "NTE: Neverness to Everness — Какие S-ранговые дуги подходят персонажам | Гайд | Обзор |",
     date: "2026-05-08",
     url: "https://youtu.be/rHy7hWfPh7g",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Adler_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Adler_v_1_0,
     author: "IceINFERN0",
     title: "АДЛЕР — Лучший бесплатный саппорт? Полный разбор персонажа NTE",
     date: "2026-05-11",
     url: "https://youtu.be/tofNCsgRbc4",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Aurelia_v_1_0]: {
+    id: VideoSourceIds.IceINFERN0_guide_Aurelia_v_1_0,
+    author: "IceINFERN0",
+    title: "НЕ КАЧАЙ АУРЕЛИЮ В Neverness to Everness ПОКА НЕ ПОСМОТРИШЬ ЭТО! ❌ ВСЯ ПРАВДА О БЕСПЛАТНОЙ МЕДУЗЕ",
+    date: "2026-05-30",
+    url: "https://youtu.be/g2xB0wrQXRo",
+  },
+  [VideoSourceIds.IceINFERN0_guide_Baicang_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Baicang_v_1_0,
     author: "IceINFERN0",
     title: "САМЫЙ СЛОЖНЫЙ DPS в NTE?! 🔥 Полный Гайд на Байканга",
     date: "2026-05-12",
     url: "https://youtu.be/LxthhG0mX8E",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Chiz_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Chiz_v_1_0,
     author: "IceINFERN0",
     title: "ТЫ ИГРАЕШЬ НЕПРАВИЛЬНО! ❌ ПОЛНЫЙ ГАЙД НА ЧИЗ В NTE",
     date: "2026-05-14",
     url: "https://youtu.be/WtLH2j-NqrQ",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Daffodill_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Daffodill_v_1_0,
     author: "IceINFERN0",
     title: "ОНА ОШИБКА РАЗРАБОТЧИКОВ?! 😱 ДАФФОДИЛ ПОЛНЫЙ ГАЙД | Neverness to Everness",
     date: "2026-05-16",
     url: "https://youtu.be/vmG78nlSjZE",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Edgar_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Edgar_v_1_0,
     author: "IceINFERN0",
     title: "ЭДГАР — ИМБА ИЛИ БЕСПОЛЕЗНЫЙ ХЛАМ?! 🤯 Полный Гайд на лучшего медика в Neverness to Everness!",
     date: "2026-05-24",
     url: "https://youtu.be/MzXFrZLu35o",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_EsperZero_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_EsperZero_v_1_0,
     author: "IceINFERN0",
     title: "Как играть за Эспера (Zero)? Гайд на главного героя NTE",
     date: "2026-05-08",
     url: "https://youtu.be/leq82z3_niA",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Fadia_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Fadia_v_1_0,
     author: "IceINFERN0",
     title: "ЗАБЕРИ ЕЁ БЕСПЛАТНО И ЗАБУДЬ ПРО УКЛОНЕНИЯ! 🔥 Полный разбор Фадии в Neverness to Everness",
     date: "2026-05-26",
     url: "https://youtu.be/EmAlLmuWk2g",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Haniel_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Haniel_v_1_0,
     author: "IceINFERN0",
     title: "ИМБА ИЗ КАРМАНА! 🦉 ХАНИЭЛЬ — ЛУЧШИЙ САППОРТ ДЛЯ НОВИЧКОВ И СТАРИЧКОВ | Neverness to Everness Гайд",
     date: "2026-05-22",
     url: "https://youtu.be/4cYhkEojXQE",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Hathor_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Hathor_v_1_0,
     author: "IceINFERN0",
     title: "ХАТОР NTE — СЕКРЕТ КРАШ-ТЕСТА БОССОВ! 🔥 Почему твоя Хатор НЕ ДАМАЖИТ? (Билд, Ротации, Модули)",
     date: "2026-05-28",
     url: "https://youtu.be/Ps3VEa0CeBg",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Mint_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Mint_v_1_0,
     author: "IceINFERN0",
     title: "МИНТ: Качать или совершить ошибку всей жизни?",
     date: "2026-05-18",
     url: "https://youtu.be/VuYzg5MvQ6E",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Nanally_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Nanally_v_1_0,
     author: "IceINFERN0",
     title: "НАНАЛЛИ — ЛУЧШИЙ DPS НА СТАРТЕ?! Полный ГАЙД ⚡ Билд, Дуга, Пробуждения | NTE Neverness to Everness",
     date: "2026-05-08",
     url: "https://youtu.be/EKt61Cas3HU",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Sakiri_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Sakiri_v_1_0,
     author: "IceINFERN0",
     title: "САКИРИ — ПОЛНЫЙ ГАЙД! Лучший билд, оружие, отряды и как играть | NTE Neverness to Everness",
     date: "2026-05-10",
     url: "https://youtu.be/crfb52YrcA8",
   },
-  {
+  [VideoSourceIds.IceINFERN0_guide_Skia_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Skia_v_1_0,
     author: "IceINFERN0",
     title: "ВСЕ СЛУЧАЙНО ПРОПУСТИЛИ ГЛАВНУЮ ИМБУ? Ския — Скрытый Гений Начала Игры!🔥",
     date: "2026-05-20",
     url: "https://youtu.be/JB9TKLQDjIw",
   },
-  {
+  [VideoSourceIds.IceINFERN0_Umbrella_or_TheFoolsSpring_on_Adler]: {
     id: VideoSourceIds.IceINFERN0_Umbrella_or_TheFoolsSpring_on_Adler,
     author: "IceINFERN0",
     title: "ВЫ ВСЁ ДЕЛАЕТЕ НЕ ТАК! Зонтик или Весна на Адлера?",
     date: "2026-05-13",
     url: "https://youtu.be/6edb14ctwDc",
   },
-] as Array<VideoSource>;
+} as Record<VideoSource["id"], VideoSource>;

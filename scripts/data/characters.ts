@@ -5,8 +5,10 @@ import { ElementIds } from "../../src/enums/elements";
 import { RankIds } from "../../src/enums/ranks";
 import type { Character } from "../../src/types/characters";
 
-export default [
-  {
+const image = (value: string) => `images/characters/${value}`;
+
+export default {
+  [CharacterIds.Adler]: {
     id: CharacterIds.Adler,
     name: "Адлер",
     rankId: RankIds.A,
@@ -14,8 +16,8 @@ export default [
     arcTypeId: ArcTypeIds.Synthesis,
     roleId: CharacterRoleIds.Survival,
     version: "1.0",
-    image: "images/characters/adler.png",
-    imageWithElementAndRank: "images/characters/adler-with-element-and-rank.png",
+    image: image("adler.png"),
+    imageWithElementAndRank: image("adler-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Форма",
       2: "Чувство",
@@ -31,7 +33,7 @@ export default [
       SupportSkill: "Идеальное отражение",
     },
   },
-  {
+  [CharacterIds.Aurelia]: {
     id: CharacterIds.Aurelia,
     name: "Аурелия",
     rankId: RankIds.A,
@@ -39,8 +41,8 @@ export default [
     arcTypeId: ArcTypeIds.Plasma,
     roleId: CharacterRoleIds.Damage,
     version: "1.0",
-    image: "images/characters/aurelia.png",
-    imageWithElementAndRank: "images/characters/aurelia-with-element-and-rank.png",
+    image: image("aurelia.png"),
+    imageWithElementAndRank: image("aurelia-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Футуристическая прелюдия",
       2: "Уникальная мелодия",
@@ -56,7 +58,7 @@ export default [
       SupportSkill: "Диссонанс",
     },
   },
-  {
+  [CharacterIds.Baicang]: {
     id: CharacterIds.Baicang,
     name: "Байканг",
     rankId: RankIds.S,
@@ -64,8 +66,8 @@ export default [
     arcTypeId: ArcTypeIds.Synthesis,
     roleId: CharacterRoleIds.Damage,
     version: "1.0",
-    image: "images/characters/baicang.png",
-    imageWithElementAndRank: "images/characters/baicang-with-element-and-rank.png",
+    image: image("baicang.png"),
+    imageWithElementAndRank: image("baicang-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Эй, капитан!",
       2: "Зов души",
@@ -81,15 +83,15 @@ export default [
       SupportSkill: "Перерыв окончен",
     },
   },
-  {
+  [CharacterIds.Chaos]: {
     id: CharacterIds.Chaos,
     name: "Chaos",
     rankId: RankIds.S,
     elementId: ElementIds.Lakshana,
     version: "1.1",
-    image: "images/characters/chaos.png",
+    image: image("chaos.png"),
   },
-  {
+  [CharacterIds.Chiz]: {
     id: CharacterIds.Chiz,
     name: "Чиз",
     rankId: RankIds.S,
@@ -97,8 +99,8 @@ export default [
     arcTypeId: ArcTypeIds.Gas,
     roleId: CharacterRoleIds.Damage,
     version: "1.0",
-    image: "images/characters/chiz.png",
-    imageWithElementAndRank: "images/characters/chiz-with-element-and-rank.png",
+    image: image("chiz.png"),
+    imageWithElementAndRank: image("chiz-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Солнце, солнце, к тебе взываю!",
       2: "Фейерверки в тишине",
@@ -109,7 +111,7 @@ export default [
     },
     skills: { BasicAttack: "Меч изгнанника", Skill: "Навык", Ultimate: "Сверхспособность", SupportSkill: "QTE" },
   },
-  {
+  [CharacterIds.Daffodill]: {
     id: CharacterIds.Daffodill,
     name: "Даффодил",
     rankId: RankIds.S,
@@ -117,8 +119,8 @@ export default [
     arcTypeId: ArcTypeIds.Liquid,
     roleId: CharacterRoleIds.Damage,
     version: "1.0",
-    image: "images/characters/daffodill.png",
-    imageWithElementAndRank: "images/characters/daffodill-with-element-and-rank.png",
+    image: image("daffodill.png"),
+    imageWithElementAndRank: image("daffodill-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Глаз",
       2: "Механический марш",
@@ -129,7 +131,7 @@ export default [
     },
     skills: { BasicAttack: "Спокойные воды", Skill: "Резонанс", Ultimate: "Финал", SupportSkill: "Скрещенные клинки" },
   },
-  {
+  [CharacterIds.Edgar]: {
     id: CharacterIds.Edgar,
     name: "Эдгар",
     rankId: RankIds.A,
@@ -137,8 +139,8 @@ export default [
     arcTypeId: ArcTypeIds.Liquid,
     roleId: CharacterRoleIds.Survival,
     version: "1.0",
-    image: "images/characters/edgar.png",
-    imageWithElementAndRank: "images/characters/edgar-with-element-and-rank.png",
+    image: image("edgar.png"),
+    imageWithElementAndRank: image("edgar-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Любящий аномалии наблюдатель",
       2: "Стажер-охотник за аномалиями",
@@ -154,7 +156,7 @@ export default [
       SupportSkill: "Вес знаний",
     },
   },
-  {
+  [CharacterIds.EsperZero]: {
     id: CharacterIds.EsperZero,
     name: "Нулевой эспер",
     rankId: RankIds.S,
@@ -162,8 +164,8 @@ export default [
     arcTypeId: ArcTypeIds.Solid,
     roleId: CharacterRoleIds.Damage,
     version: "1.0",
-    image: "images/characters/esper-zero.png",
-    imageWithElementAndRank: "images/characters/esper-zero-with-element-and-rank.png",
+    image: image("esper-zero.png"),
+    imageWithElementAndRank: image("esper-zero-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Цветущий взгляд",
       2: "В поисках признания",
@@ -179,7 +181,7 @@ export default [
       SupportSkill: "Цветение разлома",
     },
   },
-  {
+  [CharacterIds.Fadia]: {
     id: CharacterIds.Fadia,
     name: "Фадия",
     rankId: RankIds.S,
@@ -187,8 +189,8 @@ export default [
     arcTypeId: ArcTypeIds.Synthesis,
     roleId: CharacterRoleIds.Survival,
     version: "1.0",
-    image: "images/characters/fadia.png",
-    imageWithElementAndRank: "images/characters/fadia-with-element-and-rank.png",
+    image: image("fadia.png"),
+    imageWithElementAndRank: image("fadia-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Отступник",
       2: "Инстинкт",
@@ -204,7 +206,7 @@ export default [
       SupportSkill: "Чужак",
     },
   },
-  {
+  [CharacterIds.Haniel]: {
     id: CharacterIds.Haniel,
     name: "Ханиэль",
     rankId: RankIds.A,
@@ -212,8 +214,8 @@ export default [
     arcTypeId: ArcTypeIds.Solid,
     roleId: CharacterRoleIds.Buff,
     version: "1.0",
-    image: "images/characters/haniel.png",
-    imageWithElementAndRank: "images/characters/haniel-with-element-and-rank.png",
+    image: image("haniel.png"),
+    imageWithElementAndRank: image("haniel-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Я тут новенькая! Встречайте отличницу по обмену!",
       2: "Все, как в аниме! Задняя парта у окошка!",
@@ -229,7 +231,7 @@ export default [
       SupportSkill: "Пасхалки",
     },
   },
-  {
+  [CharacterIds.Hathor]: {
     id: CharacterIds.Hathor,
     name: "Хатор",
     rankId: RankIds.S,
@@ -237,8 +239,8 @@ export default [
     arcTypeId: ArcTypeIds.Plasma,
     roleId: CharacterRoleIds.Damage,
     version: "1.0",
-    image: "images/characters/hathor.png",
-    imageWithElementAndRank: "images/characters/hathor-with-element-and-rank.png",
+    image: image("hathor.png"),
+    imageWithElementAndRank: image("hathor-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Элитный курьер",
       2: "Царство шипов",
@@ -254,7 +256,7 @@ export default [
       SupportSkill: "Выбор точки воздействия",
     },
   },
-  {
+  [CharacterIds.Hotori]: {
     id: CharacterIds.Hotori,
     name: "Хотори",
     rankId: RankIds.S,
@@ -262,8 +264,8 @@ export default [
     arcTypeId: ArcTypeIds.Solid,
     roleId: CharacterRoleIds.Buff,
     version: "1.0",
-    image: "images/characters/hotori.png",
-    imageWithElementAndRank: "images/characters/hotori-with-element-and-rank.png",
+    image: image("hotori.png"),
+    imageWithElementAndRank: image("hotori-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Красочный финт",
       2: "Далекие воспоминания",
@@ -279,7 +281,7 @@ export default [
       SupportSkill: "Авторитет лавочника",
     },
   },
-  {
+  [CharacterIds.Jiuyuan]: {
     id: CharacterIds.Jiuyuan,
     name: "Цзююань",
     rankId: RankIds.S,
@@ -287,8 +289,8 @@ export default [
     arcTypeId: ArcTypeIds.Solid,
     roleId: CharacterRoleIds.Damage,
     version: "1.0",
-    image: "images/characters/jiuyuan.png",
-    imageWithElementAndRank: "images/characters/jiuyuan-with-element-and-rank.png",
+    image: image("jiuyuan.png"),
+    imageWithElementAndRank: image("jiuyuan-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Знание есть равновесие",
       2: "Разведданные превращаются в клинки",
@@ -304,7 +306,7 @@ export default [
       SupportSkill: "Сбор разведданных",
     },
   },
-  {
+  [CharacterIds.Lacrimosa]: {
     id: CharacterIds.Lacrimosa,
     name: "Lacrimosa",
     rankId: RankIds.S,
@@ -312,9 +314,9 @@ export default [
     arcTypeId: ArcTypeIds.Liquid,
     roleId: CharacterRoleIds.Damage,
     version: "1.1",
-    image: "images/characters/lacrimosa.png",
+    image: image("lacrimosa.png"),
   },
-  {
+  [CharacterIds.Mint]: {
     id: CharacterIds.Mint,
     name: "Минт",
     rankId: RankIds.A,
@@ -322,8 +324,8 @@ export default [
     arcTypeId: ArcTypeIds.Liquid,
     roleId: CharacterRoleIds.Damage,
     version: "1.0",
-    image: "images/characters/mint.png",
-    imageWithElementAndRank: "images/characters/mint-with-element-and-rank.png",
+    image: image("mint.png"),
+    imageWithElementAndRank: image("mint-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Операция целевой группы",
       2: "Повторный осмотр",
@@ -339,7 +341,7 @@ export default [
       SupportSkill: "Сверхспособность: Могучий торнадо",
     },
   },
-  {
+  [CharacterIds.Nanally]: {
     id: CharacterIds.Nanally,
     name: "Наналли",
     rankId: RankIds.S,
@@ -347,8 +349,8 @@ export default [
     arcTypeId: ArcTypeIds.Plasma,
     roleId: CharacterRoleIds.Damage,
     version: "1.0",
-    image: "images/characters/nanally.png",
-    imageWithElementAndRank: "images/characters/nanally-with-element-and-rank.png",
+    image: image("nanally.png"),
+    imageWithElementAndRank: image("nanally-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Сбор банды",
       2: "Второй член",
@@ -364,7 +366,7 @@ export default [
       SupportSkill: "Правосудие свыше",
     },
   },
-  {
+  [CharacterIds.Sakiri]: {
     id: CharacterIds.Sakiri,
     name: "Сакири",
     rankId: RankIds.S,
@@ -372,8 +374,8 @@ export default [
     arcTypeId: ArcTypeIds.Gas,
     roleId: CharacterRoleIds.Buff,
     version: "1.0",
-    image: "images/characters/sakiri.png",
-    imageWithElementAndRank: "images/characters/sakiri-with-element-and-rank.png",
+    image: image("sakiri.png"),
+    imageWithElementAndRank: image("sakiri-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Рассеянная дымка",
       2: "Ловкое разделение",
@@ -389,7 +391,7 @@ export default [
       SupportSkill: "Давилка!",
     },
   },
-  {
+  [CharacterIds.Skia]: {
     id: CharacterIds.Skia,
     name: "Ския",
     rankId: RankIds.A,
@@ -397,8 +399,8 @@ export default [
     arcTypeId: ArcTypeIds.Gas,
     roleId: CharacterRoleIds.Damage,
     version: "1.0",
-    image: "images/characters/skia.png",
-    imageWithElementAndRank: "images/characters/skia-with-element-and-rank.png",
+    image: image("skia.png"),
+    imageWithElementAndRank: image("skia-with-element-and-rank.png"),
     awakeningSkills: {
       1: "Процесс устранения",
       2: "Закон и порядок",
@@ -414,4 +416,4 @@ export default [
       SupportSkill: "Ордер на арест",
     },
   },
-] as Array<Character>;
+} as Record<Character["id"], Character>;

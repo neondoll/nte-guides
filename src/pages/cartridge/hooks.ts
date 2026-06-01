@@ -3,9 +3,9 @@ import { useEffect, useMemo } from "react";
 import { useAppDispatch, useAppSelector } from "@/store";
 import { fetchCartridge } from "@/store/cartridges";
 import { fetchModuleList } from "@/store/modules";
-import type { Cartridge } from "@/types/cartridges";
+import type { CartridgeId } from "@/types/cartridges";
 
-export const useCartridge = (id: Cartridge["id"]) => {
+export const useCartridge = (id: CartridgeId) => {
   const dispatch = useAppDispatch();
 
   const cartridgeLoading = useAppSelector(state => state.cartridges.detailsLoading);

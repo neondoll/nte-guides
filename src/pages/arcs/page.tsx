@@ -36,23 +36,30 @@ const ArcsPage: FC = () => {
 
             return (
               <TableRow className="relative z-0 pointer-events-none has-[a:focus-visible]:bg-muted/50" key={arc.id}>
-                <TableHead className="p-3 space-y-1 text-center">
-                  <ArcImage alt={arc.name} className="mx-auto size-15" src={arc.image} />
-                  <Link
-                    children={arc.name}
-                    className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
-                    to={PATHS.Arc(arc.id)}
-                  />
+                <TableHead className="p-3 text-center whitespace-normal">
+                  <div className="space-y-1">
+                    <ArcImage alt={arc.name} className="mx-auto size-15" src={arc.image} />
+                    <Link
+                      children={arc.name}
+                      className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
+                      to={PATHS.Arc(arc.id)}
+                    />
+                  </div>
                 </TableHead>
-                <TableCell className="space-y-1 text-center">
-                  <ArcTypeImage alt={arcType.name} className="mx-auto size-7.5" src={arcType.image} />
-                  <span children={arcType.name} />
+                <TableCell className="text-center">
+                  <div className="space-y-1">
+                    <ArcTypeImage alt={arcType.name} className="mx-auto size-7.5" src={arcType.image} />
+                    <span children={arcType.name} />
+                  </div>
                 </TableCell>
-                <TableCell children={`${arc.substat} +${arc.substat80}`} className="space-y-1 text-center" />
+                <TableCell children={`${arc.substat} +${arc.substat80}`} className="text-center whitespace-normal" />
                 <TableCell className="whitespace-pre-line">
                   {arc.effect && (
                     <>
-                      <span className="font-medium tracking-wider text-muted-foreground uppercase">{arc.effect.title}</span>
+                      <span
+                        children={arc.effect.title}
+                        className="font-medium tracking-wider text-muted-foreground uppercase"
+                      />
                       <br />
                       {arc.effect.text}
                     </>

@@ -6,10 +6,10 @@ import { useCharacter } from "./hooks";
 import CharacterLayout from "./layout";
 import { ArcTypeImage, CharacterImage, CharacterRoleImage, ElementImage, RankImage } from "@/components/image";
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@/components/ui/table";
-import type { Character } from "@/types/characters";
+import type { CharacterId } from "@/types/characters";
 
 const CharacterPage: FC = () => {
-  const params = useParams<{ characterId: Character["id"] }>();
+  const params = useParams<{ characterId: CharacterId }>();
   const { arcType, character, characterRole, element, loading, rank } = useCharacter(params.characterId!);
 
   if (loading || !character || !element || !rank) {

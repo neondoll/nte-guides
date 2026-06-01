@@ -65,17 +65,17 @@ interface CategoryConfig<T extends CategoryType> {
 const OUTPUT_DIR = path.resolve("public/data");
 
 const CATEGORIES = {
-  "arc-types": { data: arcTypes, transformList: item => item },
-  "arcs": { data: arcs, transformList: item => item },
-  "arcs-guide": { data: arcsGuide, transformList: ({ id }) => ({ id }) },
-  "cartridges": { data: cartridges, transformList: item => item },
-  "character-roles": { data: characterRoles, transformList: item => item },
-  "characters": { data: characters, transformList: item => item },
+  "arc-types": { data: Object.values(arcTypes), transformList: item => item },
+  "arcs": { data: Object.values(arcs), transformList: item => item },
+  "arcs-guide": { data: Object.values(arcsGuide), transformList: ({ id }) => ({ id }) },
+  "cartridges": { data: Object.values(cartridges), transformList: item => item },
+  "character-roles": { data: Object.values(characterRoles), transformList: item => item },
+  "characters": { data: Object.values(characters), transformList: item => item },
   "characters-build-guide": { data: Object.values(charactersBuildGuide), transformList: ({ id }) => ({ id }) },
-  "elements": { data: elements, transformList: item => item },
-  "modules": { data: modules, transformList: item => item },
-  "ranks": { data: ranks, transformList: item => item },
-  "video-sources": { data: videoSources, transformList: item => item },
+  "elements": { data: Object.values(elements), transformList: item => item },
+  "modules": { data: Object.values(modules), transformList: item => item },
+  "ranks": { data: Object.values(ranks), transformList: item => item },
+  "video-sources": { data: Object.values(videoSources), transformList: item => item },
 } satisfies {
   "arc-types": CategoryConfig<"arc-types">;
   "arcs": CategoryConfig<"arcs">;

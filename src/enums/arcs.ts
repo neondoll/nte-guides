@@ -1,46 +1,90 @@
 export const ArcIds = {
-  ATimeWillCome: "a-time-will-come", // Время придет
-  BeHappy: "be-happy", // Будь счастлив
-  BlowUpTheCrowd: "blow-up-the-crowd", // Взорвать толпу
-  CallOfTheTwistedCity: "call-of-the-twisted-city", // Зов искаженного города
-  CamelliaSociety: "camellia-society", // Сообщество Камелии
-  ClearSkies: "clear-skies", // Чистое небо
-  ContemplativeCat: "contemplative-cat", // Созерцательная кошка
-  CosmosDazeWildReverie: "cosmos-daze-wild-reverie", // Космический восторг, дикая греза
-  DangerousGame: "dangerous-game", // Опасная игра
-  DayOff: "day-off", // Выходной
-  DrawnBlade: "drawn-blade", // Обнаженный клинок
-  EternalWaltz: "eternal-waltz", // Вечный вальс
-  FailingYouHeavyInMyHeart: "failing-you-heavy-in-my-heart", // Я подвожу тебя с тяжестью в сердце
-  FirstStepToSuccess: "first-step-to-success", // Первый шаг к успеху
-  FluffOfFearlessness: "fluff-of-fearlessness", // Пух бесстрашия
-  FluffOfFerocity: "fluff-of-ferocity", // Пух ярости
-  FluffOfFinesse: "fluff-of-finesse", // Пух изящества
-  FluffOfFleetness: "fluff-of-fleetness", // Пух проворности
-  FluffOfFortitude: "fluff-of-fortitude", // Пух стойкости
-  GoodBoysGrandAdventure: "good-boys-grand-adventure", // Большой квест хорошего мальчика
-  HethereausKeeper: "hethereaus-keeper", // Хранитель Этеро
-  MarchingBeyondTime: "marching-beyond-time", // За пределы времени
-  MindRoyale: "mind-royale", // Королевский разум
-  Oraora: "oraora", // Ора-ора!
-  RagingFlames: "raging-flames", // Бушующее пламя
-  ReadyReady: "ready-ready", // Полная готовность
-  RealMusic: "real-music", // «Настоящая музыка»
-  RealityRefuge: "reality-refuge", // Убежище реальности
-  ShinyDays: "shiny-days", // Блестящие дни
-  SongOfTheWhale: "song-of-the-whale", // Песня кита
-  StellarVeil: "stellar-veil", // Звёздная вуаль
-  TearsBeneathTheMask: "tears-beneath-the-mask", // Слезы за маской
-  TheFoolsSpring: "the-fools-spring", // Ложная весна
-  TheForgotten: "the-forgotten", // Забытое
-  TheGoodTheBadTheBitter: "the-good-the-bad-the-bitter", // Хороший, плохой, горький
-  TheGreatThief: "the-great-thief", // Великий вор
-  TheLastRose: "the-last-rose", // Последняя роза
-  TheRainThatShookTheWorld: "the-rain-that-shook-the-world", // Дождь, сотрясший мир
-  TimeBandit: "time-bandit", // Бандит времени
-  Umbrella: "umbrella", // Зонтик
-  Us: "us", // Мы.
-  WatchYourHeads: "watch-your-heads", // Берегите головы!
-  YourHappinessIsPriceless: "your-happiness-is-priceless", // Твое счастье бесценно
-  YouthfulFantasy: "youthful-fantasy", // Ребяческая фантазия
+  /** Время придет (A Time Will Come) */
+  ATimeWillCome: "a-time-will-come",
+  /** Будь счастлив (Be Happy) */
+  BeHappy: "be-happy",
+  /** Взорвать толпу (Blow up the Crowd) */
+  BlowUpTheCrowd: "blow-up-the-crowd",
+  /** Зов искаженного города (Call of the Twisted City) */
+  CallOfTheTwistedCity: "call-of-the-twisted-city",
+  /** Сообщество Камелии (Camellia Society) */
+  CamelliaSociety: "camellia-society",
+  /** Чистое небо (Clear Skies) */
+  ClearSkies: "clear-skies",
+  /** Созерцательная кошка (Contemplative Cat) */
+  ContemplativeCat: "contemplative-cat",
+  /** Космический восторг, дикая греза (Cosmos Daze, Wild Reverie) */
+  CosmosDazeWildReverie: "cosmos-daze-wild-reverie",
+  /** Опасная игра (Dangerous Game) */
+  DangerousGame: "dangerous-game",
+  /** Выходной (Day Off) */
+  DayOff: "day-off",
+  /** Обнаженный клинок (Drawn Blade) */
+  DrawnBlade: "drawn-blade",
+  /** Вечный вальс (Eternal Waltz) */
+  EternalWaltz: "eternal-waltz",
+  /** Я подвожу тебя с тяжестью в сердце (Failing You, Heavy in My Heart) */
+  FailingYouHeavyInMyHeart: "failing-you-heavy-in-my-heart",
+  /** Первый шаг к успеху (First Step to Success) */
+  FirstStepToSuccess: "first-step-to-success",
+  /** Пух бесстрашия (Fluff of Fearlessness) */
+  FluffOfFearlessness: "fluff-of-fearlessness",
+  /** Пух ярости (Fluff of Ferocity) */
+  FluffOfFerocity: "fluff-of-ferocity",
+  /** Пух изящества (Fluff of Finesse) */
+  FluffOfFinesse: "fluff-of-finesse",
+  /** Пух проворности (Fluff of Fleetness) */
+  FluffOfFleetness: "fluff-of-fleetness",
+  /** Пух стойкости (Fluff of Fortitude) */
+  FluffOfFortitude: "fluff-of-fortitude",
+  /** Большой квест хорошего мальчика (Good Boy's Grand Adventure) */
+  GoodBoysGrandAdventure: "good-boys-grand-adventure",
+  /** Хранитель Этеро (Hethereau's Keeper) */
+  HethereausKeeper: "hethereaus-keeper",
+  /** За пределы времени (Marching Beyond Time) */
+  MarchingBeyondTime: "marching-beyond-time",
+  /** Королевский разум (Mind Royale) */
+  MindRoyale: "mind-royale",
+  /** Ора-ора! (Oraora!) */
+  Oraora: "oraora",
+  /** Бушующее пламя (Raging Flames) */
+  RagingFlames: "raging-flames",
+  /** Полная готовность (Ready-Ready) */
+  ReadyReady: "ready-ready",
+  /** «Настоящая музыка» ("Real Music") */
+  RealMusic: "real-music",
+  /** Убежище реальности (Reality Refuge) */
+  RealityRefuge: "reality-refuge",
+  /** Блестящие дни (Shiny Days) */
+  ShinyDays: "shiny-days",
+  /** Песня кита (Song of the Whale) */
+  SongOfTheWhale: "song-of-the-whale",
+  /** Звёздная вуаль (Stellar Veil) */
+  StellarVeil: "stellar-veil",
+  /** Слезы за маской (Tears Beneath the Mask) */
+  TearsBeneathTheMask: "tears-beneath-the-mask",
+  /** Ложная весна (The Fools' Spring) */
+  TheFoolsSpring: "the-fools-spring",
+  /** Забытое (The Forgotten) */
+  TheForgotten: "the-forgotten",
+  /** Хороший, плохой, горький (The Good, The Bad, The Bitter) */
+  TheGoodTheBadTheBitter: "the-good-the-bad-the-bitter",
+  /** Великий вор (The Great Thief) */
+  TheGreatThief: "the-great-thief",
+  /** Последняя роза (The Last Rose) */
+  TheLastRose: "the-last-rose",
+  /** Дождь, сотрясший мир (The Rain That Shook the World) */
+  TheRainThatShookTheWorld: "the-rain-that-shook-the-world",
+  /** Бандит времени (Time Bandit) */
+  TimeBandit: "time-bandit",
+  /** Зонтик (Umbrella) */
+  Umbrella: "umbrella",
+  /** Мы. (Us.) */
+  Us: "us",
+  /** Берегите головы! (Watch Your Heads!) */
+  WatchYourHeads: "watch-your-heads",
+  /** Твое счастье бесценно (Your Happiness is Priceless) */
+  YourHappinessIsPriceless: "your-happiness-is-priceless",
+  /** Ребяческая фантазия (Youthful Fantasy) */
+  YouthfulFantasy: "youthful-fantasy",
 } as const;

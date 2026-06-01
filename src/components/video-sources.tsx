@@ -4,9 +4,9 @@ import { Button } from "./ui/button";
 import { ExternalLinkIcon } from "./ui/icon";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
 import { useAppSelector } from "@/store";
-import type { VideoSource } from "@/types/video-sources";
+import type { VideoSourceId } from "@/types/video-sources";
 
-export const VideoSourcesTable: FC<{ videoSourceIds: VideoSource["id"] }> = ({ videoSourceIds }) => {
+export const VideoSourcesTable: FC<{ videoSourceIds: VideoSourceId[] }> = ({ videoSourceIds }) => {
   const videoSourceList = useAppSelector(state => state.videoSources.list);
 
   const videoSources = useMemo(() => {

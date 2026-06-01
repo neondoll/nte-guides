@@ -1,3 +1,4 @@
 import { CharacterRoleIds } from "@/enums/character-roles";
 
-export type CharacterRole = { id: typeof CharacterRoleIds[keyof typeof CharacterRoleIds]; name: string; image: string };
+export type CharacterRole = { id: CharacterRoleId; name: string; image: string };
+export type CharacterRoleId = typeof CharacterRoleIds[keyof typeof CharacterRoleIds];

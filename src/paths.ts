@@ -1,13 +1,13 @@
-import type { Arc } from "@/types/arcs";
-import type { Cartridge } from "@/types/cartridges";
-import type { Character } from "@/types/characters";
+import type { ArcId } from "@/types/arcs";
+import type { CartridgeId } from "@/types/cartridges";
+import type { CharacterId } from "@/types/characters";
 
 const PATHS = {
-  Arc: (arcId: Arc["id"] | string) => `/arcs/${arcId}`,
+  Arc: (arcId: ArcId | string) => `/arcs/${arcId}`,
   Arcs: "/arcs",
-  Cartridge: (cartridgeId: Cartridge["id"] | string) => `/cartridges/${cartridgeId}`,
+  Cartridge: (cartridgeId: CartridgeId | string) => `/cartridges/${cartridgeId}`,
   Cartridges: "/cartridges",
-  Character: (characterId: Character["id"] | string) => `/characters/${characterId}`,
+  Character: (characterId: CharacterId | string) => `/characters/${characterId}`,
   Characters: "/characters",
   Home: "/",
 };

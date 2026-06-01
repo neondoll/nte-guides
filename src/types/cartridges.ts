@@ -1,11 +1,12 @@
 import { CartridgeIds } from "@/enums/cartridges";
-import type { Module } from "@/types/modules";
+import type { ModuleId } from "@/types/modules";
 
 export type Cartridge = {
-  id: typeof CartridgeIds[keyof typeof CartridgeIds];
+  id: CartridgeId;
   name: string;
-  requiredModuleIds: Module["id"][];
+  requiredModuleIds: ModuleId[];
   setEffects: Record<2 | 4, string>;
   image: string;
 };
+export type CartridgeId = typeof CartridgeIds[keyof typeof CartridgeIds];
 export type CartridgeListItem = Cartridge;

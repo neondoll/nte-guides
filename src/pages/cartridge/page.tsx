@@ -5,10 +5,10 @@ import { useCartridge } from "./hooks";
 import CartridgeLayout from "./layout";
 import { CartridgeImage, ModuleImage } from "@/components/image";
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@/components/ui/table";
-import type { Cartridge } from "@/types/cartridges";
+import type { CartridgeId } from "@/types/cartridges";
 
 const CartridgePage: FC = () => {
-  const params = useParams<{ cartridgeId: Cartridge["id"] }>();
+  const params = useParams<{ cartridgeId: CartridgeId }>();
   const { cartridge, loading, requiredModules } = useCartridge(params.cartridgeId!);
 
   if (loading || !cartridge || !requiredModules) {

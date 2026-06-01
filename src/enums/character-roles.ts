@@ -1,5 +1,8 @@
 export const CharacterRoleIds = {
-  Buff: "buff", // Усиление
-  Damage: "damage", // Урон
-  Survival: "survival", // Выживание
+  /** Усиление (Buff) */
+  Buff: "buff",
+  /** Урон (Damage) */
+  Damage: "damage",
+  /** Выживание (Survival) */
+  Survival: "survival",
 } as const;

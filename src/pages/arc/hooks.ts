@@ -7,9 +7,9 @@ import { fetchArcGuide, fetchArcGuideList } from "@/store/arcs-guide";
 import { fetchCharacterList } from "@/store/characters";
 import { fetchRank } from "@/store/ranks";
 import { fetchVideoSourceList } from "@/store/video-sources";
-import type { Arc } from "@/types/arcs";
+import type { ArcId } from "@/types/arcs";
 
-export const useArc = (id: Arc["id"]) => {
+export const useArc = (id: ArcId) => {
   const dispatch = useAppDispatch();
 
   const arcLoading = useAppSelector(state => state.arcs.detailsLoading);
@@ -39,7 +39,7 @@ export const useArc = (id: Arc["id"]) => {
 
   return { arc, loading, rank, type };
 };
-export const useArcGuide = (id: Arc["id"]) => {
+export const useArcGuide = (id: ArcId) => {
   const dispatch = useAppDispatch();
 
   const arcsGuideDetails = useAppSelector(state => state.arcsGuide.details);

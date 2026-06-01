@@ -9,7 +9,12 @@ import type { CharacterBuildGuide } from "../../src/types/characters-build-guide
 export default {
   [CharacterIds.Adler]: {
     id: CharacterIds.Adler,
-    recommendedArcs: [{ id: ArcIds.TheFoolsSpring }, { id: ArcIds.Umbrella }, { id: ArcIds.ATimeWillCome }],
+    recommendedArcs: [
+      { id: ArcIds.TheFoolsSpring, priority: 1 },
+      { id: ArcIds.Umbrella, priority: 1 },
+      { id: ArcIds.TheGoodTheBadTheBitter, priority: 2 },
+      { id: ArcIds.ATimeWillCome, priority: 3 },
+    ],
     recommendedCartridges: [{ id: CartridgeIds.KingdomsGuard }],
     cartridgeBestMainStat: [Stats.DEF_BONUS],
     bestSubStats: [
@@ -56,7 +61,59 @@ export default {
         slot4: [CharacterIds.Haniel],
       },
     ],
-    videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Adler_v_1_0, VideoSourceIds.IceINFERN0_Umbrella_or_TheFoolsSpring_on_Adler],
+    videoSourceIds: [
+      VideoSourceIds.IceINFERN0_guide_Adler_v_1_0,
+      VideoSourceIds.IceINFERN0_Umbrella_or_TheFoolsSpring_on_Adler,
+    ],
+  },
+  [CharacterIds.Aurelia]: {
+    id: CharacterIds.Aurelia,
+    recommendedArcs: [
+      { id: ArcIds.StellarVeil },
+      { id: ArcIds.ReadyReady },
+      { id: ArcIds.FluffOfFortitude },
+      { id: ArcIds.Oraora },
+    ],
+    recommendedCartridges: [{ id: CartridgeIds.DevilsBloodCurse }],
+    cartridgeBestMainStat: [Stats.ATK_BONUS, Stats.PSYCHE_DMG_BONUS, Stats.CRIT_RATE],
+    bestSubStats: [
+      { value: Stats.CRIT_RATE, priority: 1 },
+      { value: Stats.CRIT_DMG, priority: 1 },
+      { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
+      { value: Stats.ATK_BONUS, priority: 2 },
+      { value: Stats.CYCLE_INTENSITY, priority: 3 },
+    ],
+    recommendedAwakeningSkills: {
+      6: { priority: 1 },
+      2: { priority: 2 },
+      1: { priority: 3 },
+      3: { priority: 4 },
+      5: { priority: 5 },
+      4: { priority: 6 },
+    },
+    recommendedSkills: {
+      BasicAttack: { priority: 1 },
+      Ultimate: { priority: 2 },
+      SupportSkill: { priority: 3 },
+      Skill: { priority: 4 },
+    },
+    bestTeams: [
+      {
+        title: "Заряженная пачка",
+        slot1: [CharacterIds.Aurelia],
+        slot2: [CharacterIds.Hathor],
+        slot3: [CharacterIds.EsperZero],
+        slot4: [CharacterIds.Jiuyuan],
+      },
+      {
+        title: "Пачка через реакцию \"Нова\"",
+        slot1: [CharacterIds.Aurelia],
+        slot2: [CharacterIds.Daffodill],
+        slot3: [CharacterIds.Haniel],
+        slot4: [CharacterIds.Fadia],
+      },
+    ],
+    videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Aurelia_v_1_0],
   },
   [CharacterIds.Baicang]: {
     id: CharacterIds.Baicang,
@@ -419,7 +476,12 @@ export default {
   },
   [CharacterIds.Hathor]: {
     id: CharacterIds.Hathor,
-    recommendedArcs: [{ id: ArcIds.RagingFlames }, { id: ArcIds.FluffOfFortitude }, { id: ArcIds.SongOfTheWhale }, { id: ArcIds.DrawnBlade }],
+    recommendedArcs: [
+      { id: ArcIds.RagingFlames },
+      { id: ArcIds.FluffOfFortitude },
+      { id: ArcIds.SongOfTheWhale },
+      { id: ArcIds.DrawnBlade },
+    ],
     recommendedCartridges: [{ id: CartridgeIds.StreetBoxer }],
     cartridgeBestMainStat: [Stats.ATK_BONUS, Stats.CRIT_RATE, Stats.CRIT_DMG, Stats.LAKSHANA_DMG_BONUS],
     bestSubStats: [
@@ -468,14 +530,21 @@ export default {
   },
   [CharacterIds.Hotori]: {
     id: CharacterIds.Hotori,
-    recommendedArcs: [{ id: ArcIds.MarchingBeyondTime }, { id: ArcIds.TheRainThatShookTheWorld }, { id: ArcIds.FluffOfFearlessness }, { id: ArcIds.TheForgotten }],
+    recommendedArcs: [
+      { id: ArcIds.MarchingBeyondTime },
+      { id: ArcIds.TheRainThatShookTheWorld },
+      { id: ArcIds.FluffOfFearlessness },
+      { id: ArcIds.TheForgotten },
+    ],
     recommendedCartridges: [{ id: CartridgeIds.LostRadiance }],
-    cartridgeBestMainStat: [Stats.COSMOS_DMG_BONUS, Stats.CRIT_RATE, Stats.CRIT_DMG],
+    cartridgeBestMainStat: [Stats.COSMOS_DMG_BONUS, Stats.CRIT_RATE, Stats.CRIT_DMG, Stats.ATK_BONUS],
     bestSubStats: [
+      { value: Stats.COSMOS_DMG_BONUS, priority: 1 },
       { value: Stats.CRIT_RATE, priority: 1 },
       { value: Stats.CRIT_DMG, priority: 1 },
       { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
       { value: Stats.ATK_BONUS, priority: 2 },
+      { value: Stats.ATK, priority: 3 },
       { value: Stats.CYCLE_INTENSITY, priority: 3 },
     ],
     recommendedAwakeningSkills: {
@@ -508,11 +577,17 @@ export default {
         slot4: [CharacterIds.Sakiri],
       },
     ],
-    videoSourceIds: [],
+    videoSourceIds: [VideoSourceIds.Gamestalt_game_guide_Hotori_v_1_0, VideoSourceIds.Gamestalt_guide_Hotori_v_1_0],
   },
   [CharacterIds.Jiuyuan]: {
     id: CharacterIds.Jiuyuan,
-    recommendedArcs: [{ id: ArcIds.RealityRefuge }, { id: ArcIds.FluffOfFearlessness }, { id: ArcIds.HethereausKeeper }, { id: ArcIds.DayOff }, { id: ArcIds.TheForgotten }],
+    recommendedArcs: [
+      { id: ArcIds.RealityRefuge },
+      { id: ArcIds.FluffOfFearlessness },
+      { id: ArcIds.HethereausKeeper },
+      { id: ArcIds.DayOff },
+      { id: ArcIds.TheForgotten },
+    ],
     recommendedCartridges: [{ id: CartridgeIds.FirefliesAndTheForest }, { id: CartridgeIds.ShadowCreed }],
     cartridgeBestMainStat: [Stats.ANIMA_DMG_BONUS, Stats.CRIT_RATE, Stats.CRIT_DMG, Stats.ATK_BONUS],
     bestSubStats: [
@@ -601,7 +676,12 @@ export default {
   },
   [CharacterIds.Nanally]: {
     id: CharacterIds.Nanally,
-    recommendedArcs: [{ id: ArcIds.ReadyReady }, { id: ArcIds.FluffOfFortitude }, { id: ArcIds.SongOfTheWhale }, { id: ArcIds.Oraora }],
+    recommendedArcs: [
+      { id: ArcIds.ReadyReady },
+      { id: ArcIds.FluffOfFortitude },
+      { id: ArcIds.SongOfTheWhale },
+      { id: ArcIds.Oraora },
+    ],
     recommendedCartridges: [{ id: CartridgeIds.FirefliesAndTheForest }],
     cartridgeBestMainStat: [Stats.CRIT_DMG, Stats.ANIMA_DMG_BONUS],
     bestSubStats: [
@@ -633,7 +713,11 @@ export default {
   [CharacterIds.Sakiri]: {
     id: CharacterIds.Sakiri,
     recommendedArcs: [{ id: ArcIds.GoodBoysGrandAdventure }, { id: ArcIds.WatchYourHeads }],
-    recommendedCartridges: [{ id: CartridgeIds.SpeedyHedgehog }, { id: CartridgeIds.ShadowCreed }, { id: CartridgeIds.CrimsonTwinButterflies }],
+    recommendedCartridges: [
+      { id: CartridgeIds.SpeedyHedgehog },
+      { id: CartridgeIds.ShadowCreed },
+      { id: CartridgeIds.CrimsonTwinButterflies },
+    ],
     cartridgeBestMainStat: [Stats.CYCLE_INTENSITY, Stats.INCANTATION_DMG_BONUS],
     bestSubStats: [
       { value: Stats.CYCLE_INTENSITY, priority: 1 },

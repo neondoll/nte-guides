@@ -1,8 +1,10 @@
 import { CharacterRoleIds } from "../../src/enums/character-roles";
 import type { CharacterRole } from "../../src/types/character-roles";
 
-export default [
-  { id: CharacterRoleIds.Buff, name: "Усиление", image: "images/character-roles/buff.png" },
-  { id: CharacterRoleIds.Damage, name: "Урон", image: "images/character-roles/damage.png" },
-  { id: CharacterRoleIds.Survival, name: "Выживание", image: "images/character-roles/survival.png" },
-] as Array<CharacterRole>;
+const image = (value: string) => `images/character-roles/${value}`;
+
+export default {
+  [CharacterRoleIds.Buff]: { id: CharacterRoleIds.Buff, name: "Усиление", image: image("buff.png") },
+  [CharacterRoleIds.Damage]: { id: CharacterRoleIds.Damage, name: "Урон", image: image("damage.png") },
+  [CharacterRoleIds.Survival]: { id: CharacterRoleIds.Survival, name: "Выживание", image: image("survival.png") },
+} as Record<CharacterRole["id"], CharacterRole>;

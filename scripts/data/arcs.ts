@@ -4,8 +4,10 @@ import { RankIds } from "../../src/enums/ranks";
 import { Stats } from "../../src/enums/stats";
 import type { Arc } from "../../src/types/arcs";
 
-export default [
-  {
+const image = (value: string) => `images/arcs/${value}`;
+
+export default {
+  [ArcIds.ATimeWillCome]: {
     id: ArcIds.ATimeWillCome,
     name: "Время придет",
     rankId: RankIds.A,
@@ -18,9 +20,9 @@ export default [
       text: "Дает владельцу 10.00% к АТК, 10.00% к защита и 10.00% к ОЗ, когда в команде есть как минимум 3 разных "
         + "типа эспера.",
     },
-    image: "images/arcs/a-time-will-come.png",
+    image: image("a-time-will-come.png"),
   },
-  {
+  [ArcIds.BeHappy]: {
     id: ArcIds.BeHappy,
     name: "Будь счастлив",
     rankId: RankIds.B,
@@ -30,11 +32,11 @@ export default [
     substat80: "30.00%",
     effect: {
       title: "Лиана-обнимашка",
-      text: "при победе над врагом увеличивает ОЗ владельца на 12.00%. Срабатывает не чаще раза в 20 сек.",
+      text: "При победе над врагом увеличивает ОЗ владельца на 12.00%. Срабатывает не чаще раза в 20 сек.",
     },
-    image: "images/arcs/be-happy.png",
+    image: image("be-happy.png"),
   },
-  {
+  [ArcIds.BlowUpTheCrowd]: {
     id: ArcIds.BlowUpTheCrowd,
     name: "Взорвать толпу",
     rankId: RankIds.S,
@@ -51,9 +53,9 @@ export default [
         + "наносит Урон психики базовой атакой. Складывается до 10 раз и запускается не чаще одного раза в 0,3 сек. "
         + "Эффект сбрасывается при смене персонажа.",
     },
-    image: "images/arcs/blow-up-the-crowd.png",
+    image: image("blow-up-the-crowd.png"),
   },
-  {
+  [ArcIds.CallOfTheTwistedCity]: {
     id: ArcIds.CallOfTheTwistedCity,
     name: "Зов искаженного города",
     rankId: RankIds.A,
@@ -66,9 +68,9 @@ export default [
       text: "Увеличивает бонус к лечению на 12.00% на 10 сек., когда владелец применяет навык перенаправления. Эффект "
         + "не складывается.",
     },
-    image: "images/arcs/call-of-the-twisted-city.png",
+    image: image("call-of-the-twisted-city.png"),
   },
-  {
+  [ArcIds.CamelliaSociety]: {
     id: ArcIds.CamelliaSociety,
     name: "Сообщество Камелии",
     rankId: RankIds.S,
@@ -85,9 +87,9 @@ export default [
         + "Непрерывное нытьё: острые, колючие слова пронзают, как шипы, нанося 6 экземпляров урона от чар в размере "
         + "18.00% от атаки. Последний экземпляр наносит вдвое больше урона.",
     },
-    image: "images/arcs/camellia-society.png",
+    image: image("camellia-society.png"),
   },
-  {
+  [ArcIds.ClearSkies]: {
     id: ArcIds.ClearSkies,
     name: "Чистое небо",
     rankId: RankIds.A,
@@ -99,9 +101,9 @@ export default [
       title: "Бумажная эскадрилья",
       text: "Увеличивает урон анимы, наносимый навыком перенаправления и сверхспособность владельца на 20.00%",
     },
-    image: "images/arcs/clear-skies.png",
+    image: image("clear-skies.png"),
   },
-  {
+  [ArcIds.ContemplativeCat]: {
     id: ArcIds.ContemplativeCat,
     name: "Созерцательная кошка",
     rankId: RankIds.S,
@@ -113,9 +115,9 @@ export default [
       title: "Маммон",
       text: "Увеличивает урон космоса на 2.50% за каждые 100 000 фонсов у владельца. Складывается до 10 раз.",
     },
-    image: "images/arcs/contemplative-cat.png",
+    image: image("contemplative-cat.png"),
   },
-  {
+  [ArcIds.CosmosDazeWildReverie]: {
     id: ArcIds.CosmosDazeWildReverie,
     name: "Космический восторг, дикая греза",
     rankId: RankIds.A,
@@ -128,9 +130,9 @@ export default [
       text: "Повышает наносимый носителем урон на 18.00% на 10 сек. после использования навыка поддержки. Срабатывает "
         + "не чаще раза в 20 сек.",
     },
-    image: "images/arcs/cosmos-daze-wild-reverie.png",
+    image: image("cosmos-daze-wild-reverie.png"),
   },
-  {
+  [ArcIds.DangerousGame]: {
     id: ArcIds.DangerousGame,
     name: "Опасная игра",
     rankId: RankIds.B,
@@ -143,9 +145,9 @@ export default [
       text: "При снижении разрушения повышает интенсивность разрушения владельца на 60 на 10 сек. Запускается не чаще "
         + "одного раза в 20 сек.",
     },
-    image: "images/arcs/dangerous-game.png",
+    image: image("dangerous-game.png"),
   },
-  {
+  [ArcIds.DayOff]: {
     id: ArcIds.DayOff,
     name: "Выходной",
     rankId: RankIds.S,
@@ -159,9 +161,9 @@ export default [
         + "затмение на 40 сек. Каждый убитый во время затмения враг восстанавливает 6 ед. энергии сверхспособности, до "
         + "5 раз. (Перезарядка: 300 сек.)",
     },
-    image: "images/arcs/day-off.png",
+    image: image("day-off.png"),
   },
-  {
+  [ArcIds.DrawnBlade]: {
     id: ArcIds.DrawnBlade,
     name: "Обнаженный клинок",
     rankId: RankIds.A,
@@ -173,9 +175,9 @@ export default [
       title: "Алый Хексблейд",
       text: "Наносит дополнительный урон от чар в размере 200.00% от атаки, когда владелец запускает ответный удар.",
     },
-    image: "images/arcs/drawn-blade.png",
+    image: image("drawn-blade.png"),
   },
-  {
+  [ArcIds.EternalWaltz]: {
     id: ArcIds.EternalWaltz,
     name: "Вечный вальс",
     rankId: RankIds.S,
@@ -188,9 +190,9 @@ export default [
       text: "Увеличивает макс. ОЗ на 20.00%.\nУвеличивает наносимый ментальный урон на 10.00% на 10 сек. после того, "
         + "как владелец применяет сверхспособность.",
     },
-    image: "images/arcs/eternal-waltz.png",
+    image: image("eternal-waltz.png"),
   },
-  {
+  [ArcIds.FailingYouHeavyInMyHeart]: {
     id: ArcIds.FailingYouHeavyInMyHeart,
     name: "Я подвожу тебя с тяжестью в сердце",
     rankId: RankIds.A,
@@ -205,9 +207,9 @@ export default [
         + "команды на 1.00% на 10 сек. за каждый израсходованный уровень. Дополнительно увеличивает атаку ещё на "
         + "2.00%, когда израсходовано 8 уровней.",
     },
-    image: "images/arcs/failing-you-heavy-in-my-heart.png",
+    image: image("failing-you-heavy-in-my-heart.png"),
   },
-  {
+  [ArcIds.FirstStepToSuccess]: {
     id: ArcIds.FirstStepToSuccess,
     name: "Первый шаг к успеху",
     rankId: RankIds.B,
@@ -220,9 +222,9 @@ export default [
       text: "При применении навыка перенаправления увеличивает атаку владельца на 12.00% на 10 сек. Запускается не "
         + "чаще раза в 20 сек.",
     },
-    image: "images/arcs/first-step-to-success.png",
+    image: image("first-step-to-success.png"),
   },
-  {
+  [ArcIds.FluffOfFearlessness]: {
     id: ArcIds.FluffOfFearlessness,
     name: "Пух бесстрашия",
     rankId: RankIds.S,
@@ -234,9 +236,9 @@ export default [
       title: "Конфета-хлопушка",
       text: "Когда владелец применяет сверхспособность, увеличивает атаку на 25.00% на 10 сек. Эффект не складывается.",
     },
-    image: "images/arcs/fluff-of-fearlessness.png",
+    image: image("fluff-of-fearlessness.png"),
   },
-  {
+  [ArcIds.FluffOfFerocity]: {
     id: ArcIds.FluffOfFerocity,
     name: "Пух ярости",
     rankId: RankIds.S,
@@ -249,9 +251,9 @@ export default [
       text: "Увеличивает крит. урон владельца на 4.00% на 10 сек. после нанесения крит. удара. Складывается до 10 раз. "
         + "При повторном запуске длительность сбрасывается.",
     },
-    image: "images/arcs/fluff-of-ferocity.png",
+    image: image("fluff-of-ferocity.png"),
   },
-  {
+  [ArcIds.FluffOfFinesse]: {
     id: ArcIds.FluffOfFinesse,
     name: "Пух изящества",
     rankId: RankIds.S,
@@ -264,9 +266,9 @@ export default [
       text: "После выполнения критического уклонения увеличивает урон владельца на 8.00% на 10 сек. Складывается до 3 "
         + "раз. При повторном запуске длительность сбрасывается.",
     },
-    image: "images/arcs/fluff-of-finesse.png",
+    image: image("fluff-of-finesse.png"),
   },
-  {
+  [ArcIds.FluffOfFleetness]: {
     id: ArcIds.FluffOfFleetness,
     name: "Пух проворности",
     rankId: RankIds.S,
@@ -279,9 +281,9 @@ export default [
       text: "Увеличивает атаку на 5.00% за 1 сек., когда владелец является активным персонажем. Складывается до 5 раз. "
         + "Сбрасывается, когда владелец покидает поле боя.",
     },
-    image: "images/arcs/fluff-of-fleetness.png",
+    image: image("fluff-of-fleetness.png"),
   },
-  {
+  [ArcIds.FluffOfFortitude]: {
     id: ArcIds.FluffOfFortitude,
     name: "Пух стойкости",
     rankId: RankIds.S,
@@ -294,9 +296,9 @@ export default [
       text: "Увеличивает урон владельца на 22.00%. Эффект увеличивается до 28.00% против врагов, у которых меньше 50 % "
         + "ОЗ.",
     },
-    image: "images/arcs/fluff-of-fortitude.png",
+    image: image("fluff-of-fortitude.png"),
   },
-  {
+  [ArcIds.GoodBoysGrandAdventure]: {
     id: ArcIds.GoodBoysGrandAdventure,
     name: "Большой квест хорошего мальчика",
     rankId: RankIds.S,
@@ -310,9 +312,9 @@ export default [
         + "применяет сверхспособность. Увеличивает атаку команды ещё на 6.00%, если враги находятся под контролем "
         + "эффекта сверхспособности. Эффекты с одинаковым названием не складываются.",
     },
-    image: "images/arcs/good-boys-grand-adventure.png",
+    image: image("good-boys-grand-adventure.png"),
   },
-  {
+  [ArcIds.HethereausKeeper]: {
     id: ArcIds.HethereausKeeper,
     name: "Хранитель Этеро",
     rankId: RankIds.S,
@@ -327,9 +329,9 @@ export default [
         + "атакует врагов, нанося урон в размере 100.00% от АТК владельца каждым ударом.\nОстается на 30 сек. Время "
         + "восстановления: 60 сек.",
     },
-    image: "images/arcs/hethereaus-keeper.png",
+    image: image("hethereaus-keeper.png"),
   },
-  {
+  [ArcIds.MarchingBeyondTime]: {
     id: ArcIds.MarchingBeyondTime,
     name: "За пределы времени",
     rankId: RankIds.S,
@@ -346,9 +348,9 @@ export default [
         + "сверхспособности повышается на 24.00% + дополнительно 8.00% за каждый уровень. Расход 3 уровней за раз даёт "
         + "12.00% игнорирования защиты на 70 сек.",
     },
-    image: "images/arcs/marching-beyond-time.png",
+    image: image("marching-beyond-time.png"),
   },
-  {
+  [ArcIds.MindRoyale]: {
     id: ArcIds.MindRoyale,
     name: "Королевский разум",
     rankId: RankIds.A,
@@ -361,9 +363,9 @@ export default [
       text: "При применении навыка перенаправления дает владельцу 10 ед. энергии сверхспособности. Запускается не чаще "
         + "раза в 20 сек.",
     },
-    image: "images/arcs/mind-royale.png",
+    image: image("mind-royale.png"),
   },
-  {
+  [ArcIds.Oraora]: {
     id: ArcIds.Oraora,
     name: "Ора-ора!",
     rankId: RankIds.A,
@@ -376,9 +378,9 @@ export default [
       text: "За каждую проведенную базовую атаку увеличивает урон от базовых атак владельца на 2.00% на 10 сек., "
         + "складывается до 10 раз. У каждого уровня своя длительность.",
     },
-    image: "images/arcs/oraora.png",
+    image: image("oraora.png"),
   },
-  {
+  [ArcIds.RagingFlames]: {
     id: ArcIds.RagingFlames,
     name: "Бушующее пламя",
     rankId: RankIds.S,
@@ -392,9 +394,9 @@ export default [
         + "владельца на 10.00% на 10 сек. после применения сверхспособности. Пока эффект действует, увеличивает урон "
         + "от навыка перенаправления владельца на 5.00% за применение, складываясь до 2 раз.",
     },
-    image: "images/arcs/raging-flames.png",
+    image: image("raging-flames.png"),
   },
-  {
+  [ArcIds.ReadyReady]: {
     id: ArcIds.ReadyReady,
     name: "Полная готовность",
     rankId: RankIds.S,
@@ -411,9 +413,9 @@ export default [
         + "второго, открывается Талисман командира-тигра.\nДуга: Талисман командира-тигра - увеличивает урон владельца "
         + "против боссов на 10.00% на 10 сек.",
     },
-    image: "images/arcs/ready-ready.png",
+    image: image("ready-ready.png"),
   },
-  {
+  [ArcIds.RealMusic]: {
     id: ArcIds.RealMusic,
     name: "«Настоящая музыка»",
     rankId: RankIds.B,
@@ -422,9 +424,9 @@ export default [
     substat: Stats.ATK,
     substat80: "20.00%",
     effect: { title: "Запись с привидениями", text: "Дает владельцу бонус 12.00% к навыку перенаправления урона." },
-    image: "images/arcs/real-music.png",
+    image: image("real-music.png"),
   },
-  {
+  [ArcIds.RealityRefuge]: {
     id: ArcIds.RealityRefuge,
     name: "Убежище реальности",
     rankId: RankIds.S,
@@ -437,9 +439,9 @@ export default [
       text: "Увеличивает урон анимы на 15.00%.\nУвеличивает урон вложений владельца на 10.00%. Увеличивает бонус к "
         + "урону вложений до 20.00% на 6 сек., когда владелец применяет сверхспособность. Эффект не складывается.",
     },
-    image: "images/arcs/reality-refuge.png",
+    image: image("reality-refuge.png"),
   },
-  {
+  [ArcIds.ShinyDays]: {
     id: ArcIds.ShinyDays,
     name: "Блестящие дни",
     rankId: RankIds.A,
@@ -451,9 +453,9 @@ export default [
       title: "Плёнка - МАНИШ",
       text: "Повышает интенсивность разрушения на 48.\nУвеличивает урон на 10.00% против сломленных врагов.",
     },
-    image: "images/arcs/shiny-days.png",
+    image: image("shiny-days.png"),
   },
-  {
+  [ArcIds.SongOfTheWhale]: {
     id: ArcIds.SongOfTheWhale,
     name: "Песня кита",
     rankId: RankIds.S,
@@ -466,9 +468,9 @@ export default [
       text: "Увеличивает атаку на 12.00%.\nУвеличивает урон владельца по сломленным врагам на 12.00%.\nВосстанавливает "
         + "владельцу 30.00% ОЗ после победы над сломленным врагом. Запускается не чаще одного раза в 30 сек.",
     },
-    image: "images/arcs/song-of-the-whale.png",
+    image: image("song-of-the-whale.png"),
   },
-  {
+  [ArcIds.StellarVeil]: {
     id: ArcIds.StellarVeil,
     name: "Звёздная вуаль",
     rankId: RankIds.S,
@@ -481,9 +483,9 @@ export default [
       text: "Увеличивает Урон психики владельца на 12.00%. При нанесении урона психики увеличивает крит. урон на 2.00% "
         + "на 5 сек. Эффект складывается до 10 раз. Срабатывает не чаще одного раза в 0,1 сек.",
     },
-    image: "images/arcs/stellar-veil.png",
+    image: image("stellar-veil.png"),
   },
-  {
+  [ArcIds.TearsBeneathTheMask]: {
     id: ArcIds.TearsBeneathTheMask,
     name: "Слезы за маской",
     rankId: RankIds.S,
@@ -496,9 +498,9 @@ export default [
       text: "Накладывает Предупреждающий взгляд на врагов, поражённых сверхспособностью владельца.\nПомеченные враги "
         + "наносят на 18 % меньше урона в течение 20 сек.\nЭффект не складывается.",
     },
-    image: "images/arcs/tears-beneath-the-mask.png",
+    image: image("tears-beneath-the-mask.png"),
   },
-  {
+  [ArcIds.TheFoolsSpring]: {
     id: ArcIds.TheFoolsSpring,
     name: "Ложная весна",
     rankId: RankIds.A,
@@ -507,9 +509,9 @@ export default [
     substat: Stats.DEF,
     substat80: "52.50%",
     effect: { title: "Живая фаланга", text: "Увеличивает атаку на 18.00%, когда у владельца есть щит." },
-    image: "images/arcs/the-fools-spring.png",
+    image: image("the-fools-spring.png"),
   },
-  {
+  [ArcIds.TheForgotten]: {
     id: ArcIds.TheForgotten,
     name: "Забытое",
     rankId: RankIds.A,
@@ -522,9 +524,9 @@ export default [
       text: "Увеличивает атаку на 20.00%, когда у владельца больше 50 % ОЗ.\nУвеличивает защиту на 20.00%, когда у "
         + "владельца меньше 50 % ОЗ.",
     },
-    image: "images/arcs/the-forgotten.png",
+    image: image("the-forgotten.png"),
   },
-  {
+  [ArcIds.TheGoodTheBadTheBitter]: {
     id: ArcIds.TheGoodTheBadTheBitter,
     name: "Хороший, плохой, горький",
     rankId: RankIds.A,
@@ -536,9 +538,9 @@ export default [
       title: "Горький торт",
       text: "При получении урона увеличивает защита владельца на 26.00% на 10 сек. Срабатывает не чаще раза в 20 сек.",
     },
-    image: "images/arcs/the-good-the-bad-the-bitter.png",
+    image: image("the-good-the-bad-the-bitter.png"),
   },
-  {
+  [ArcIds.TheGreatThief]: {
     id: ArcIds.TheGreatThief,
     name: "Великий вор",
     rankId: RankIds.A,
@@ -551,9 +553,9 @@ export default [
       text: "Увеличивает интенсивность разрушения на 70 для всех персонажей с тем же типом эспера, что у владельца "
         + "(включая самого владельца), когда в команде 3 или больше таких персонажей. Этот эффект не складывается.",
     },
-    // image:  "images/arcs/",
+    // image: image(""),
   },
-  {
+  [ArcIds.TheLastRose]: {
     id: ArcIds.TheLastRose,
     name: "Последняя роза",
     rankId: RankIds.S,
@@ -569,9 +571,9 @@ export default [
         + "когда владелец применяет навык перенаправления.\nПродлевает состояние сломленного врага на 3 сек., когда "
         + "владелец наносит ему урон (срабатывает не чаще одного раза за эффект разрушения).",
     },
-    // image:  "images/arcs/",
+    // image: image(""),
   },
-  {
+  [ArcIds.TheRainThatShookTheWorld]: {
     id: ArcIds.TheRainThatShookTheWorld,
     name: "Дождь, сотрясший мир",
     rankId: RankIds.S,
@@ -585,9 +587,9 @@ export default [
         + "Увеличивает эссентию носителя на 36 на 15 сек. после применения навыка перенаправления. При повторной "
         + "активации длительность сбрасывается.",
     },
-    image: "images/arcs/the-rain-that-shook-the-world.png",
+    image: image("the-rain-that-shook-the-world.png"),
   },
-  {
+  [ArcIds.TimeBandit]: {
     id: ArcIds.TimeBandit,
     name: "Бандит времени",
     rankId: RankIds.A,
@@ -601,9 +603,9 @@ export default [
         + "Эффект не складывается.\nОткрывает дугу: Отмычка.\nДуга: Отмычка - призывает Отмычку, открывающую все "
         + "запертые замки поблизости.",
     },
-    // image:  "images/arcs/",
+    // image: image(""),
   },
-  {
+  [ArcIds.Umbrella]: {
     id: ArcIds.Umbrella,
     name: "Зонтик",
     rankId: RankIds.A,
@@ -615,9 +617,9 @@ export default [
       title: "Человек дождя",
       text: "Увеличивает ОЗ на 10.00%.\nУсиливает щиты на 10.00%, когда ОЗ владельца выше 50 %.",
     },
-    image: "images/arcs/umbrella.png",
+    image: image("umbrella.png"),
   },
-  {
+  [ArcIds.Us]: {
     id: ArcIds.Us,
     name: "Мы.",
     rankId: RankIds.B,
@@ -626,9 +628,9 @@ export default [
     substat: Stats.ATK,
     substat80: "20.00%",
     effect: { title: "Протоядро", text: "Увеличивает урон базовых атак владельца на 12.00%." },
-    image: "images/arcs/us.png",
+    image: image("us.png"),
   },
-  {
+  [ArcIds.WatchYourHeads]: {
     id: ArcIds.WatchYourHeads,
     name: "Берегите головы!",
     rankId: RankIds.A,
@@ -641,9 +643,9 @@ export default [
       text: "Увеличивает атаку на 10.00% и урон лакшаны по целям, пораженным Реморой и Следом, на 10.00% на 15 сек., "
         + "когда владелец применяет навык перенаправления. Эффект не складывается.",
     },
-    image: "images/arcs/watch-your-heads.png",
+    image: image("watch-your-heads.png"),
   },
-  {
+  [ArcIds.YourHappinessIsPriceless]: {
     id: ArcIds.YourHappinessIsPriceless,
     name: "Твое счастье бесценно",
     rankId: RankIds.S,
@@ -658,9 +660,9 @@ export default [
         + "Дает щит в размере 20.00% от макс. ОЗ владельца на 15 сек.\n3. Все члены команды восстанавливают 10.00% "
         + "ОЗ.\nСрабатывает не чаще одного раза в 30 сек.",
     },
-    image: "images/arcs/your-happiness-is-priceless.png",
+    image: image("your-happiness-is-priceless.png"),
   },
-  {
+  [ArcIds.YouthfulFantasy]: {
     id: ArcIds.YouthfulFantasy,
     name: "Ребяческая фантазия",
     rankId: RankIds.S,
@@ -676,6 +678,6 @@ export default [
         + "сек. отмечает одного врага. Увеличивает наносимый отмеченным врагам урон хаоса на 20.00%. Когда отмеченные "
         + "враги получают урон от разрушения, наносит им урон хаоса в размере 200.00% от атаки владельца.",
     },
-    image: "images/arcs/youthful-fantasy.png",
+    image: image("youthful-fantasy.png"),
   },
-] as Array<Arc>;
+} as Record<Arc["id"], Arc>;

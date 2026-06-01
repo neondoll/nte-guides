@@ -1,16 +1,18 @@
 import { ArcIds } from "@/enums/arcs";
-import type { ArcType } from "@/types/arc-types";
-import type { Rank } from "@/types/ranks";
+import type { ArcTypeId } from "@/types/arc-types";
+import type { RankId } from "@/types/ranks";
+import type { Stat } from "@/types/stats";
 
 export type Arc = {
-  id: typeof ArcIds[keyof typeof ArcIds];
+  id: ArcId;
   name: string;
-  rankId: Rank["id"];
-  typeId: ArcType["id"];
+  rankId: RankId;
+  typeId: ArcTypeId;
   baseATK80: number;
-  substat: string;
+  substat: Stat;
   substat80: string | number;
-  effect?: { title: string; text: string };
+  effect: { title: string; text: string };
   image?: string;
 };
+export type ArcId = typeof ArcIds[keyof typeof ArcIds];
 export type ArcListItem = Arc;

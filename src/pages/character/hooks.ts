@@ -10,9 +10,9 @@ import { fetchCharacterBuildGuide, fetchCharacterBuildGuideList } from "@/store/
 import { fetchElement } from "@/store/elements";
 import { fetchRank } from "@/store/ranks";
 import { fetchVideoSourceList } from "@/store/video-sources";
-import type { Character } from "@/types/characters";
+import type { CharacterId } from "@/types/characters";
 
-export const useCharacter = (id: Character["id"]) => {
+export const useCharacter = (id: CharacterId) => {
   const dispatch = useAppDispatch();
 
   const arcTypeLoading = useAppSelector(state => state.arcTypes.detailsLoading);
@@ -56,7 +56,7 @@ export const useCharacter = (id: Character["id"]) => {
 
   return { arcType, character, characterRole, element, loading, rank };
 };
-export const useCharacterBuildGuide = (id: Character["id"]) => {
+export const useCharacterBuildGuide = (id: CharacterId) => {
   const dispatch = useAppDispatch();
 
   const charactersBuildGuideDetails = useAppSelector(state => state.charactersBuildGuide.details);

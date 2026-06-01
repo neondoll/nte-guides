@@ -1,19 +1,19 @@
-import type { Arc } from "@/types/arcs";
-import type { Cartridge } from "@/types/cartridges";
-import type { Character, CharacterAwakeningSkillKey, CharacterSkillKey } from "@/types/characters";
+import type { ArcId } from "@/types/arcs";
+import type { CartridgeId } from "@/types/cartridges";
+import type { CharacterAwakeningSkillKey, CharacterId, CharacterSkillKey } from "@/types/characters";
 import type { Stat } from "@/types/stats";
-import type { VideoSource } from "@/types/video-sources";
+import type { VideoSourceId } from "@/types/video-sources";
 
 export type CharacterBuildGuide = {
-  id: Character["id"];
-  recommendedArcs: Array<{ id: Arc["id"] }>;
-  recommendedCartridges: Array<{ id: Cartridge["id"] }>;
-  cartridgeBestMainStat: Array<Stat>;
+  id: CharacterId;
+  recommendedArcs: Array<{ id: ArcId; priority?: number; explanation?: string }>;
+  recommendedCartridges: Array<{ id: CartridgeId }>;
+  cartridgeBestMainStat: Stat[];
   bestSubStats: Array<{ value: Stat; priority: number }>;
   recommendedAwakeningSkills: Record<CharacterAwakeningSkillKey, CharacterBuildGuideRecommendedSkill | undefined>;
   recommendedSkills?: Record<CharacterSkillKey, CharacterBuildGuideRecommendedSkill | undefined>;
-  bestTeams: Array<{ title: string } & Record<"slot1" | "slot2" | "slot3" | "slot4", Array<Character["id"]>>>;
-  videoSourceIds: Array<VideoSource["id"]>;
+  bestTeams: Array<{ title: string } & Record<"slot1" | "slot2" | "slot3" | "slot4", CharacterId[]>>;
+  videoSourceIds: VideoSourceId[];
 };
 export type CharacterBuildGuideListItem = Pick<CharacterBuildGuide, "id">;
 export type CharacterBuildGuideRecommendedSkill = { priority: number };
