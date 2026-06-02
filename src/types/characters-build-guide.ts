@@ -10,9 +10,9 @@ export type CharacterBuildGuide = {
   recommendedCartridges: Array<{ id: CartridgeId }>;
   cartridgeBestMainStat: Stat[];
   bestSubStats: Array<{ value: Stat; priority: number }>;
-  recommendedAwakeningSkills: Record<CharacterAwakeningSkillKey, CharacterBuildGuideRecommendedSkill | undefined>;
+  recommendedAwakeningSkills?: Record<CharacterAwakeningSkillKey, CharacterBuildGuideRecommendedSkill | undefined>;
   recommendedSkills?: Record<CharacterSkillKey, CharacterBuildGuideRecommendedSkill | undefined>;
-  bestTeams: Array<{ title: string } & Record<"slot1" | "slot2" | "slot3" | "slot4", CharacterId[]>>;
+  bestTeams: Array<{ title: string; explanation?: string } & Record<"slot1" | "slot2" | "slot3" | "slot4", CharacterId[]>>;
   videoSourceIds: VideoSourceId[];
 };
 export type CharacterBuildGuideListItem = Pick<CharacterBuildGuide, "id">;

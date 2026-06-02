@@ -56,15 +56,17 @@ const CharacterBuildGuide: FC<{ character: Character }> = ({ character }) => {
               />
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="recommended-awakening-skills">
-            <AccordionTrigger>Рекомендуемые навыки пробуждения</AccordionTrigger>
-            <AccordionContent>
-              <CharacterBuildGuideRecommendedAwakeningSkills
-                character={character}
-                recommendedAwakeningSkills={characterBuildGuide.recommendedAwakeningSkills}
-              />
-            </AccordionContent>
-          </AccordionItem>
+          {characterBuildGuide.recommendedAwakeningSkills && (
+            <AccordionItem value="recommended-awakening-skills">
+              <AccordionTrigger>Рекомендуемые навыки пробуждения</AccordionTrigger>
+              <AccordionContent>
+                <CharacterBuildGuideRecommendedAwakeningSkills
+                  character={character}
+                  recommendedAwakeningSkills={characterBuildGuide.recommendedAwakeningSkills}
+                />
+              </AccordionContent>
+            </AccordionItem>
+          )}
           {characterBuildGuide.recommendedSkills && (
             <AccordionItem value="recommended-skills">
               <AccordionTrigger>Рекомендуемые навыки</AccordionTrigger>
@@ -98,6 +100,10 @@ const CharacterBuildGuideBestTeams: FC<{
   character: Character;
 }> = ({ bestTeams, character: currentCharacter }) => {
   const characters = useAppSelector(state => state.characters.list);
+
+  const hasExplanation = useMemo(() => {
+    return bestTeams.some(recommendation => Boolean(recommendation.explanation));
+  }, [bestTeams]);
 
   return (
     <Table>
@@ -157,6 +163,9 @@ const CharacterBuildGuideBestTeams: FC<{
                 );
               })}
             </TableCell>
+            {hasExplanation && (
+              <TableCell children={team.explanation} className="text-center whitespace-normal" />
+            )}
           </TableRow>
         ))}
       </TableBody>
@@ -295,7 +304,7 @@ const CharacterBuildGuideRecommendedCartridgesAndBestStats: FC<{
 };
 const CharacterBuildGuideRecommendedAwakeningSkills: FC<{
   character: Character;
-  recommendedAwakeningSkills: BuildGuide["recommendedAwakeningSkills"];
+  recommendedAwakeningSkills: NonNullable<BuildGuide["recommendedAwakeningSkills"]>;
 }> = ({ character, recommendedAwakeningSkills }) => {
   const maxPriority = useMemo(() => {
     return Math.max(
@@ -357,10 +366,10 @@ const CharacterBuildGuideRecommendedSkills: FC<{
           .sort((a, b) => a[1].priority - b[1].priority)
           .map(([skillKey, recommendation]) => (
             <TableRow key={skillKey}>
-              <TableCell
-                children={character.skills ? `${character.skills[skillKey]} (${CharacterSkillKeys[skillKey]})` : CharacterSkillKeys[skillKey]}
-                className="text-center"
-              />
+              <TableCell className="text-center">
+                {CharacterSkillKeys[skillKey]}
+                {character.skills && ` «${character.skills[skillKey]}»`}
+              </TableCell>
               <TableCell
                 children={Array.from({ length: maxPriority - recommendation.priority + 1 }).map(() => "★").join("")}
                 className="text-center"

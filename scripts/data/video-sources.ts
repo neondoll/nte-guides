@@ -2,12 +2,26 @@ import { VideoSourceIds } from "../../src/enums/video-sources";
 import type { VideoSource } from "../../src/types/video-sources";
 
 export default {
+  [VideoSourceIds.Director_guide_Lacrimosa_v_1_0]: {
+    id: VideoSourceIds.Director_guide_Lacrimosa_v_1_0,
+    author: "Director",
+    title: "Лакримоза в NTE - ПОЛНЫЙ ГАЙД",
+    date: "2026-06-01",
+    url: "https://youtu.be/yDlzMf73Xfs",
+  },
   [VideoSourceIds.Gamestalt_game_guide_Hotori_v_1_0]: {
     id: VideoSourceIds.Gamestalt_game_guide_Hotori_v_1_0,
     author: "Gamestalt",
     title: "NTE: Neverness to Everness — Как правильно останавливать время за Хотори  | Гайд | Обзор |",
     date: "2026-05-23",
     url: "https://youtu.be/1oOgP13ezr4",
+  },
+  [VideoSourceIds.Gamestalt_guide_Chiz_v_1_0]: {
+    id: VideoSourceIds.Gamestalt_guide_Chiz_v_1_0,
+    author: "Gamestalt",
+    title: "NTE: Neverness to Everness — Ты играешь за неё не правильно, полный разбор Чиз | Гайд | Обзор |",
+    date: "2026-06-01",
+    url: "https://youtu.be/wVaXJvFkZpk",
   },
   [VideoSourceIds.Gamestalt_guide_DayOff_v_1_0]: {
     id: VideoSourceIds.Gamestalt_guide_DayOff_v_1_0,
@@ -107,6 +121,13 @@ export default {
     date: "2026-05-28",
     url: "https://youtu.be/Ps3VEa0CeBg",
   },
+  [VideoSourceIds.IceINFERN0_guide_Jiuyuan_v_1_0]: {
+    id: VideoSourceIds.IceINFERN0_guide_Jiuyuan_v_1_0,
+    author: "IceINFERN0",
+    title: "ЗАБЕРИ ЕЁ БЕСПЛАТНО И УНИЧТОЖАЙ! 🌹 УЛЬТИМАТИВНЫЙ ГАЙД НА ЦЗЮЮАНЬ | Neverness to Everness",
+    date: "2026-06-01",
+    url: "https://youtu.be/S_j9JRge_3A",
+  },
   [VideoSourceIds.IceINFERN0_guide_Mint_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Mint_v_1_0,
     author: "IceINFERN0",
@@ -141,5 +162,33 @@ export default {
     title: "ВЫ ВСЁ ДЕЛАЕТЕ НЕ ТАК! Зонтик или Весна на Адлера?",
     date: "2026-05-13",
     url: "https://youtu.be/6edb14ctwDc",
+  },
+  [VideoSourceIds.Koshmar_Igrayet_guide_Baicang_v_1_0]: {
+    id: VideoSourceIds.Koshmar_Igrayet_guide_Baicang_v_1_0,
+    author: "Koshmar Играет",
+    title: "Гайд на байканга - как освоить имбу в NTE",
+    date: "2026-05-15",
+    url: "https://youtu.be/aBRHD6BOJd4",
+  },
+  [VideoSourceIds.Koshmar_Igrayet_guide_Hotori_v_1_0]: {
+    id: VideoSourceIds.Koshmar_Igrayet_guide_Hotori_v_1_0,
+    author: "Koshmar Играет",
+    title: "Подробный ГАЙД НА ХАТОРИ NTE",
+    date: "2026-05-13",
+    url: "https://youtu.be/dFYEpcaZrKk",
+  },
+  [VideoSourceIds.RAYDERIX_guide_Daffodill_v_1_0]: {
+    id: VideoSourceIds.RAYDERIX_guide_Daffodill_v_1_0,
+    author: "RAYDERIX",
+    title: "💢 NTE ДАФФОДИЛ ПОДРОБНЫЙ ГАЙД - КОМБО РОТАЦИИ ОТРЯДЫ💢 (2K60) Neverness to everness",
+    date: "2026-05-07",
+    url: "https://youtu.be/BF7M7ph92Uw",
+  },
+  [VideoSourceIds.RAYDERIX_guide_Hotori_v_1_0]: {
+    id: VideoSourceIds.RAYDERIX_guide_Hotori_v_1_0,
+    author: "RAYDERIX",
+    title: "💢 NTE ХОТОРИ СИЛЬНЕЙШИЙ БИЛД В ИГРЕ - ГАЙД КОМБО РОТАЦИИ ОТРЯДЫ💢 (2K60) Neverness to everness",
+    date: "2026-05-17",
+    url: "https://youtu.be/bPLWngZpab0",
   },
 } as Record<VideoSource["id"], VideoSource>;

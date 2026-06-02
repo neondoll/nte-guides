@@ -1,5 +1,7 @@
 export const VideoSourceIds = {
+  Director_guide_Lacrimosa_v_1_0: "Director_guide_Lacrimosa_v_1.0",
   Gamestalt_game_guide_Hotori_v_1_0: "Gamestalt_game_guide_Hotori_v_1.0",
+  Gamestalt_guide_Chiz_v_1_0: "Gamestalt_guide_Chiz_v_1.0",
   Gamestalt_guide_DayOff_v_1_0: "Gamestalt_guide_DayOff_v_1.0",
   Gamestalt_guide_Hotori_v_1_0: "Gamestalt_guide_Hotori_v_1.0",
   Gamestalt_guide_Jiuyuan_v_1_0: "Gamestalt_guide_Jiuyuan_v_1.0",
@@ -14,9 +16,14 @@ export const VideoSourceIds = {
   IceINFERN0_guide_Fadia_v_1_0: "IceINFERN0_guide_Fadia_v_1.0",
   IceINFERN0_guide_Haniel_v_1_0: "IceINFERN0_guide_Haniel_v_1.0",
   IceINFERN0_guide_Hathor_v_1_0: "IceINFERN0_guide_Hathor_v_1.0",
+  IceINFERN0_guide_Jiuyuan_v_1_0: "IceINFERN0_guide_Jiuyuan_v_1.0",
   IceINFERN0_guide_Mint_v_1_0: "IceINFERN0_guide_Mint_v_1.0",
   IceINFERN0_guide_Nanally_v_1_0: "IceINFERN0_guide_Nanally_v_1.0",
   IceINFERN0_guide_Sakiri_v_1_0: "IceINFERN0_guide_Sakiri_v_1.0",
   IceINFERN0_guide_Skia_v_1_0: "IceINFERN0_guide_Skia_v_1.0",
   IceINFERN0_Umbrella_or_TheFoolsSpring_on_Adler: "IceINFERN0_Umbrella_or_TheFoolsSpring_on_Adler",
+  Koshmar_Igrayet_guide_Baicang_v_1_0: "Koshmar_Igrayet_guide_Baicang_v_1.0",
+  Koshmar_Igrayet_guide_Hotori_v_1_0: "Koshmar_Igrayet_guide_Hotori_v_1.0",
+  RAYDERIX_guide_Daffodill_v_1_0: "RAYDERIX_guide_Daffodill_v_1.0",
+  RAYDERIX_guide_Hotori_v_1_0: "RAYDERIX_guide_Hotori_v_1.0",
 } as const;

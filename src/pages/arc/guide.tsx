@@ -36,7 +36,7 @@ const ArcGuide: FC<{ arc: Arc }> = ({ arc }) => {
           <AccordionItem value="best-characters">
             <AccordionTrigger disabled={charactersLoading}>Лучшие персонажи</AccordionTrigger>
             <AccordionContent>
-              <ArcGuideBestCharacters recommendations={arcGuide.bestCharacters} />
+              <ArcGuideBestCharacters bestCharacters={arcGuide.bestCharacters} />
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="video-sources">
@@ -50,12 +50,12 @@ const ArcGuide: FC<{ arc: Arc }> = ({ arc }) => {
     </Card>
   );
 };
-const ArcGuideBestCharacters: FC<{ recommendations: Guide["bestCharacters"] }> = ({ recommendations }) => {
+const ArcGuideBestCharacters: FC<{ bestCharacters: Guide["bestCharacters"] }> = ({ bestCharacters }) => {
   const characters = useAppSelector(state => state.characters.list);
 
   const hasExplanation = useMemo(() => {
-    return recommendations.some(recommendation => Boolean(recommendation.explanation));
-  }, [recommendations]);
+    return bestCharacters.some(recommendation => Boolean(recommendation.explanation));
+  }, [bestCharacters]);
 
   return (
     <Table>
@@ -66,7 +66,7 @@ const ArcGuideBestCharacters: FC<{ recommendations: Guide["bestCharacters"] }> =
         </TableRow>
       </TableHeader>
       <TableBody>
-        {recommendations.map((recommendation) => {
+        {bestCharacters.map((recommendation) => {
           const character = characters.find(value => value.id === recommendation.id)!;
 
           return (
