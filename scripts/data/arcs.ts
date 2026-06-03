@@ -13,8 +13,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Synthesis,
     baseATK80: 475,
-    substat: Stats.CRIT_RATE,
-    substat80: "20.00%",
+    subStat: Stats.CRIT_RATE,
+    subStat80: "20.00%",
     effect: {
       title: "Вознесение прилива",
       text: "Дает владельцу 10.00% к АТК, 10.00% к защита и 10.00% к ОЗ, когда в команде есть как минимум 3 разных "
@@ -28,8 +28,8 @@ export default {
     rankId: RankIds.B,
     typeId: ArcTypeIds.Gas,
     baseATK80: 316,
-    substat: Stats.HP,
-    substat80: "30.00%",
+    subStat: Stats.HP,
+    subStat80: "30.00%",
     effect: {
       title: "Лиана-обнимашка",
       text: "При победе над врагом увеличивает ОЗ владельца на 12.00%. Срабатывает не чаще раза в 20 сек.",
@@ -42,8 +42,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Solid,
     baseATK80: 512,
-    substat: Stats.ATK,
-    substat80: "27.50%",
+    subStat: Stats.ATK,
+    subStat80: "27.50%",
     effect: {
       title: "Король битов",
       text: "Увеличивает атаку активного персонажа на 10.00%, когда владелец не на поле боя, и увеличивает атаку "
@@ -61,8 +61,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Liquid,
     baseATK80: 395,
-    substat: Stats.HP,
-    substat80: "37.50%",
+    subStat: Stats.HP,
+    subStat80: "37.50%",
     effect: {
       title: "Картонный замок",
       text: "Увеличивает бонус к лечению на 12.00% на 10 сек., когда владелец применяет навык перенаправления. Эффект "
@@ -76,8 +76,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Synthesis,
     baseATK80: 666,
-    substat: Stats.CRIT_RATE,
-    substat80: "12.00%",
+    subStat: Stats.CRIT_RATE,
+    subStat80: "12.00%",
     effect: {
       title: "Тихий сад",
       text: "Увеличивает крит. урон на 12.00% на 5 сек., когда ОЗ владельца снижаются без получения урона. "
@@ -95,8 +95,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Liquid,
     baseATK80: 475,
-    substat: Stats.ATK,
-    substat80: "25.00%",
+    subStat: Stats.ATK,
+    subStat80: "25.00%",
     effect: {
       title: "Бумажная эскадрилья",
       text: "Увеличивает урон анимы, наносимый навыком перенаправления и сверхспособность владельца на 20.00%",
@@ -109,8 +109,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Gas,
     baseATK80: 512,
-    substat: Stats.CRIT_DMG,
-    substat80: "44.00%",
+    subStat: Stats.CRIT_DMG,
+    subStat80: "44.00%",
     effect: {
       title: "Маммон",
       text: "Увеличивает урон космоса на 2.50% за каждые 100 000 фонсов у владельца. Складывается до 10 раз.",
@@ -123,8 +123,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Gas,
     baseATK80: 475,
-    substat: Stats.ATK,
-    substat80: "25.00%",
+    subStat: Stats.ATK,
+    subStat80: "25.00%",
     effect: {
       title: "Бопп",
       text: "Повышает наносимый носителем урон на 18.00% на 10 сек. после использования навыка поддержки. Срабатывает "
@@ -138,8 +138,8 @@ export default {
     rankId: RankIds.B,
     typeId: ArcTypeIds.Synthesis,
     baseATK80: 380,
-    substat: Stats.BREAK_INTENSITY,
-    substat80: 96,
+    subStat: Stats.BREAK_INTENSITY,
+    subStat80: 96,
     effect: {
       title: "Деструктор",
       text: "При снижении разрушения повышает интенсивность разрушения владельца на 60 на 10 сек. Запускается не чаще "
@@ -153,8 +153,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Solid,
     baseATK80: 512,
-    substat: Stats.CHARGE_EFFICIENCY,
-    substat80: "33.00%",
+    subStat: Stats.CHARGE_EFFICIENCY,
+    subStat80: "33.00%",
     effect: {
       title: "Затмение",
       text: "Увеличивает атаку владельца на 30.00%. Открывает дугу: Затмение.\nДуга: Затмение - владелец создает "
@@ -169,8 +169,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Plasma,
     baseATK80: 395,
-    substat: Stats.ATK,
-    substat80: "37.50%",
+    subStat: Stats.ATK,
+    subStat80: "37.50%",
     effect: {
       title: "Алый Хексблейд",
       text: "Наносит дополнительный урон от чар в размере 200.00% от атаки, когда владелец запускает ответный удар.",
@@ -183,8 +183,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Synthesis,
     baseATK80: 424,
-    substat: Stats.HP,
-    substat80: "41.25%",
+    subStat: Stats.HP,
+    subStat80: "41.25%",
     effect: {
       title: "Арахна",
       text: "Увеличивает макс. ОЗ на 20.00%.\nУвеличивает наносимый ментальный урон на 10.00% на 10 сек. после того, "
@@ -198,8 +198,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Gas,
     baseATK80: 475,
-    substat: Stats.BREAK_INTENSITY,
-    substat80: 120,
+    subStat: Stats.BREAK_INTENSITY,
+    subStat80: 120,
     effect: {
       title: "Коллекционер знаний паука",
       text: "При нанесении урона базовыми атаками дает владельцу 1 уровень знания паука, вплоть до 8 уровней (макс. 1 "
@@ -215,8 +215,8 @@ export default {
     rankId: RankIds.B,
     typeId: ArcTypeIds.Solid,
     baseATK80: 380,
-    substat: Stats.ATK,
-    substat80: "20.00%",
+    subStat: Stats.ATK,
+    subStat80: "20.00%",
     effect: {
       title: "Норос",
       text: "При применении навыка перенаправления увеличивает атаку владельца на 12.00% на 10 сек. Запускается не "
@@ -230,8 +230,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Solid,
     baseATK80: 512,
-    substat: Stats.CRIT_RATE,
-    substat80: "22.00%",
+    subStat: Stats.CRIT_RATE,
+    subStat80: "22.00%",
     effect: {
       title: "Конфета-хлопушка",
       text: "Когда владелец применяет сверхспособность, увеличивает атаку на 25.00% на 10 сек. Эффект не складывается.",
@@ -244,8 +244,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Synthesis,
     baseATK80: 512,
-    substat: Stats.ATK,
-    substat80: "27.50%",
+    subStat: Stats.ATK,
+    subStat80: "27.50%",
     effect: {
       title: "Конфета рыцаря",
       text: "Увеличивает крит. урон владельца на 4.00% на 10 сек. после нанесения крит. удара. Складывается до 10 раз. "
@@ -259,8 +259,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Gas,
     baseATK80: 512,
-    substat: Stats.ATK,
-    substat80: "27.50%",
+    subStat: Stats.ATK,
+    subStat80: "27.50%",
     effect: {
       title: "Конфета вора",
       text: "После выполнения критического уклонения увеличивает урон владельца на 8.00% на 10 сек. Складывается до 3 "
@@ -274,8 +274,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Liquid,
     baseATK80: 512,
-    substat: Stats.CRIT_DMG,
-    substat80: "44.00%",
+    subStat: Stats.CRIT_DMG,
+    subStat80: "44.00%",
     effect: {
       title: "Моторная конфета",
       text: "Увеличивает атаку на 5.00% за 1 сек., когда владелец является активным персонажем. Складывается до 5 раз. "
@@ -289,8 +289,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Plasma,
     baseATK80: 512,
-    substat: Stats.ATK,
-    substat80: "27.50%",
+    subStat: Stats.ATK,
+    subStat80: "27.50%",
     effect: {
       title: "Конфета мордоворота",
       text: "Увеличивает урон владельца на 22.00%. Эффект увеличивается до 28.00% против врагов, у которых меньше 50 % "
@@ -304,8 +304,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Gas,
     baseATK80: 474,
-    substat: Stats.ATK,
-    substat80: "45.00%",
+    subStat: Stats.ATK,
+    subStat80: "45.00%",
     effect: {
       title: "Морфикс",
       text: "Увеличивает скорость зарядки на 18.00%.\nУвеличивает атаку команды на 10.00% на 20 сек., когда владелец "
@@ -320,8 +320,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Solid,
     baseATK80: 512,
-    substat: Stats.ATK,
-    substat80: "27.50%",
+    subStat: Stats.ATK,
+    subStat80: "27.50%",
     effect: {
       title: "Палач справедливости",
       text: "Увеличивает атаку на 15.00%.\nУвеличивает урон, наносимый боссам, на 15.00%.\nОткрывает дугу: Офицер "
@@ -337,8 +337,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Solid,
     baseATK80: 570,
-    substat: Stats.CRIT_RATE,
-    substat80: "24.00%",
+    subStat: Stats.CRIT_RATE,
+    subStat80: "24.00%",
     effect: {
       title: "Время за пределами времени",
       text: "Увеличивает АТК на 16.00%.\nПри активации навыка перенаправления носитель входит в Лабораторию пустоши и "
@@ -356,8 +356,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Liquid,
     baseATK80: 555,
-    substat: Stats.BREAK_INTENSITY,
-    substat80: 60,
+    subStat: Stats.BREAK_INTENSITY,
+    subStat80: 60,
     effect: {
       title: "Разрушитель вдохновения",
       text: "При применении навыка перенаправления дает владельцу 10 ед. энергии сверхспособности. Запускается не чаще "
@@ -371,8 +371,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Plasma,
     baseATK80: 395,
-    substat: Stats.ATK,
-    substat80: "37.50%",
+    subStat: Stats.ATK,
+    subStat80: "37.50%",
     effect: {
       title: "Панчер Ора",
       text: "За каждую проведенную базовую атаку увеличивает урон от базовых атак владельца на 2.00% на 10 сек., "
@@ -386,8 +386,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Plasma,
     baseATK80: 666,
-    substat: Stats.CRIT_DMG,
-    substat80: "24.00%",
+    subStat: Stats.CRIT_DMG,
+    subStat80: "24.00%",
     effect: {
       title: "Всадник без головы",
       text: "Увеличивает урон лакшаны на 15.00%.\nУвеличивает урон от навыка перенаправления и сверхспособности "
@@ -402,8 +402,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Plasma,
     baseATK80: 570,
-    substat: Stats.CRIT_RATE,
-    substat80: "24.00%",
+    subStat: Stats.CRIT_RATE,
+    subStat80: "24.00%",
     effect: {
       title: "Талисман командира-тигра",
       text: "Увеличивает атаку на 15.00%.\nКогда вы применяете навык перенаправления или сверхспособность, увеличивает "
@@ -421,8 +421,8 @@ export default {
     rankId: RankIds.B,
     typeId: ArcTypeIds.Liquid,
     baseATK80: 380,
-    substat: Stats.ATK,
-    substat80: "20.00%",
+    subStat: Stats.ATK,
+    subStat80: "20.00%",
     effect: { title: "Запись с привидениями", text: "Дает владельцу бонус 12.00% к навыку перенаправления урона." },
     image: image("real-music.png"),
   },
@@ -432,8 +432,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Solid,
     baseATK80: 570,
-    substat: Stats.ATK,
-    substat80: "30.00%",
+    subStat: Stats.ATK,
+    subStat80: "30.00%",
     effect: {
       title: "Парусник",
       text: "Увеличивает урон анимы на 15.00%.\nУвеличивает урон вложений владельца на 10.00%. Увеличивает бонус к "
@@ -447,8 +447,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Liquid,
     baseATK80: 475,
-    substat: Stats.ATK,
-    substat80: "25.00%",
+    subStat: Stats.ATK,
+    subStat80: "25.00%",
     effect: {
       title: "Плёнка - МАНИШ",
       text: "Повышает интенсивность разрушения на 48.\nУвеличивает урон на 10.00% против сломленных врагов.",
@@ -461,8 +461,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Plasma,
     baseATK80: 512,
-    substat: Stats.ATK,
-    substat80: "27.50%",
+    subStat: Stats.ATK,
+    subStat80: "27.50%",
     effect: {
       title: "Глубокая тоска",
       text: "Увеличивает атаку на 12.00%.\nУвеличивает урон владельца по сломленным врагам на 12.00%.\nВосстанавливает "
@@ -476,8 +476,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Plasma,
     baseATK80: 512,
-    substat: Stats.ATK,
-    substat80: "27.50%",
+    subStat: Stats.ATK,
+    subStat80: "27.50%",
     effect: {
       title: "Аква-астра",
       text: "Увеличивает Урон психики владельца на 12.00%. При нанесении урона психики увеличивает крит. урон на 2.00% "
@@ -491,8 +491,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Gas,
     baseATK80: 512,
-    substat: Stats.ATK,
-    substat80: "27.50%",
+    subStat: Stats.ATK,
+    subStat80: "27.50%",
     effect: {
       title: "Птица в гнезде",
       text: "Накладывает Предупреждающий взгляд на врагов, поражённых сверхспособностью владельца.\nПомеченные враги "
@@ -506,8 +506,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Synthesis,
     baseATK80: 395,
-    substat: Stats.DEF,
-    substat80: "52.50%",
+    subStat: Stats.DEF,
+    subStat80: "52.50%",
     effect: { title: "Живая фаланга", text: "Увеличивает атаку на 18.00%, когда у владельца есть щит." },
     image: image("the-fools-spring.png"),
   },
@@ -517,8 +517,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Solid,
     baseATK80: 475,
-    substat: Stats.HP,
-    substat80: "25.00%",
+    subStat: Stats.HP,
+    subStat80: "25.00%",
     effect: {
       title: "Рамка для картины",
       text: "Увеличивает атаку на 20.00%, когда у владельца больше 50 % ОЗ.\nУвеличивает защиту на 20.00%, когда у "
@@ -532,8 +532,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Synthesis,
     baseATK80: 475,
-    substat: Stats.HP,
-    substat80: "25.00%",
+    subStat: Stats.HP,
+    subStat80: "25.00%",
     effect: {
       title: "Горький торт",
       text: "При получении урона увеличивает защита владельца на 26.00% на 10 сек. Срабатывает не чаще раза в 20 сек.",
@@ -546,8 +546,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Synthesis,
     baseATK80: 475,
-    substat: Stats.BREAK_INTENSITY,
-    substat80: 120,
+    subStat: Stats.BREAK_INTENSITY,
+    subStat80: 120,
     effect: {
       title: "Данзабуру",
       text: "Увеличивает интенсивность разрушения на 70 для всех персонажей с тем же типом эспера, что у владельца "
@@ -561,8 +561,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Liquid,
     baseATK80: 570,
-    substat: Stats.CRIT_RATE,
-    substat80: "24.00%",
+    subStat: Stats.CRIT_RATE,
+    subStat80: "24.00%",
     effect: {
       title: "Богемная роза",
       text: "Увеличивает атаку на 14.00%.\nДаёт 1 уровень Шипа хаоса каждый раз, когда владелец наносит периодический "
@@ -579,8 +579,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Solid,
     baseATK80: 512,
-    substat: Stats.CRIT_RATE,
-    substat80: "22.00%",
+    subStat: Stats.CRIT_RATE,
+    subStat80: "22.00%",
     effect: {
       title: "Гипервортекс",
       text: "Наносит повышенный на 30.00% урон космоса от навыка перенаправления и сверхспособности носителя.\n"
@@ -595,8 +595,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Solid,
     baseATK80: 475,
-    substat: Stats.HP,
-    substat80: "25.00%",
+    subStat: Stats.HP,
+    subStat80: "25.00%",
     effect: {
       title: "Отмычка",
       text: "Увеличивает интенсивность разрушения на 90 на 10 сек., когда владелец применяет навык перенаправления. "
@@ -611,8 +611,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Synthesis,
     baseATK80: 395,
-    substat: Stats.DEF,
-    substat80: "52.50%",
+    subStat: Stats.DEF,
+    subStat80: "52.50%",
     effect: {
       title: "Человек дождя",
       text: "Увеличивает ОЗ на 10.00%.\nУсиливает щиты на 10.00%, когда ОЗ владельца выше 50 %.",
@@ -625,8 +625,8 @@ export default {
     rankId: RankIds.B,
     typeId: ArcTypeIds.Plasma,
     baseATK80: 380,
-    substat: Stats.ATK,
-    substat80: "20.00%",
+    subStat: Stats.ATK,
+    subStat80: "20.00%",
     effect: { title: "Протоядро", text: "Увеличивает урон базовых атак владельца на 12.00%." },
     image: image("us.png"),
   },
@@ -636,8 +636,8 @@ export default {
     rankId: RankIds.A,
     typeId: ArcTypeIds.Gas,
     baseATK80: 475,
-    substat: Stats.CRIT_DMG,
-    substat80: "40.00%",
+    subStat: Stats.CRIT_DMG,
+    subStat80: "40.00%",
     effect: {
       title: "Призрачный змей",
       text: "Увеличивает атаку на 10.00% и урон лакшаны по целям, пораженным Реморой и Следом, на 10.00% на 15 сек., "
@@ -651,8 +651,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Solid,
     baseATK80: 512,
-    substat: Stats.DEF,
-    substat80: "38.50%",
+    subStat: Stats.DEF,
+    subStat80: "38.50%",
     effect: {
       title: "Накупеда",
       text: "Увеличивает ОЗ на 24.00%.\nКогда владелец применяет сверхспособность, дает один из следующих эффектов "
@@ -668,8 +668,8 @@ export default {
     rankId: RankIds.S,
     typeId: ArcTypeIds.Liquid,
     baseATK80: 570,
-    substat: Stats.ATK,
-    substat80: "30.00%",
+    subStat: Stats.ATK,
+    subStat80: "30.00%",
     effect: {
       title: "Чёрный том",
       text: "Увеличивает интенсивность разрушения на 60.\nЗапирает дугу: Чёрный том по умолчанию на две цепи. Снимает "

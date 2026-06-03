@@ -40,7 +40,7 @@ export const fetchRankList = createAsyncThunk<Rank[]>("ranks/fetchList", async (
 
   const list = await fetchJson<Rank[]>(`${import.meta.env.BASE_URL}data/ranks/index.json`);
 
-  return list.sort((a, b) => a.name.localeCompare(b.name));
+  return list.sort((a, b) => a.order - b.order);
 });
 
 export const ranksSlice = createSlice({

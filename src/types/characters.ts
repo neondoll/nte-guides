@@ -11,7 +11,7 @@ export type Character = {
   elementId: ElementId;
   arcTypeId?: ArcTypeId;
   roleId?: CharacterRoleId;
-  version?: string;
+  version: string;
   image: string;
   imageWithElementAndRank?: string;
   awakeningSkills?: Record<CharacterAwakeningSkillKey, string>;

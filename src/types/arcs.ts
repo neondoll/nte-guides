@@ -9,8 +9,8 @@ export type Arc = {
   rankId: RankId;
   typeId: ArcTypeId;
   baseATK80: number;
-  substat: Stat;
-  substat80: string | number;
+  subStat: Stat;
+  subStat80: string | number;
   effect: { title: string; text: string };
   image?: string;
 };

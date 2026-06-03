@@ -208,7 +208,7 @@ const CharacterBuildGuideRecommendedArcs: FC<{
                   />
                 </div>
               </TableHead>
-              <TableCell children={`${arc.substat} +${arc.substat80}`} className="text-center whitespace-normal" />
+              <TableCell children={`${arc.subStat} +${arc.subStat80}`} className="text-center whitespace-normal" />
               <TableCell className="whitespace-pre-line">
                 <span
                   children={arc.effect.title}

@@ -49,7 +49,7 @@ const ArcPage: FC = () => {
           </TableRow>
           <TableRow>
             <TableHead className="text-center">Доп. атрибут (макс.)</TableHead>
-            <TableCell children={`${arc.substat} +${arc.substat80}`} className="text-center" />
+            <TableCell children={`${arc.subStat} +${arc.subStat80}`} className="text-center" />
           </TableRow>
           <TableRow>
             <TableHead className="text-center">Тип</TableHead>

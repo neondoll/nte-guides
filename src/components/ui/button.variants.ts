@@ -19,8 +19,8 @@ export const buttonVariants = cva(
           "aria-expanded:text-foreground dark:hover:bg-input/30",
         ],
         secondary: [
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary",
-          "aria-expanded:text-secondary-foreground",
+          "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)]",
+          "aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
         ],
         ghost: [
           "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground",
@@ -35,7 +35,10 @@ export const buttonVariants = cva(
       },
       size: {
         "default": "h-10 gap-1.5 px-6 has-data-[icon=inline-end]:pr-4 has-data-[icon=inline-start]:pl-4",
-        "xs": "h-7 gap-1 px-3 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 [&_svg:not([class*='size-'])]:size-3",
+        "xs": [
+          "h-7 gap-1 px-3 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
+          "[&_svg:not([class*='size-'])]:size-3",
+        ],
         "sm": "h-9 gap-1 px-4 has-data-[icon=inline-end]:pr-3 has-data-[icon=inline-start]:pl-3",
         "lg": "h-11 gap-1.5 px-8 has-data-[icon=inline-end]:pr-5 has-data-[icon=inline-start]:pl-5",
         "icon": "size-10",
