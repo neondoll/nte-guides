@@ -6,8 +6,7 @@ import { inputGroupAddonVariants, inputGroupButtonVariants } from "./input-group
 
 export type InputGroupProps = ComponentProps<"div">;
 export type InputGroupAddonProps = ComponentProps<"div"> & VariantProps<typeof inputGroupAddonVariants>;
-export type InputGroupButtonProps = Omit<ComponentProps<typeof Button>, "size">
-  & VariantProps<typeof inputGroupButtonVariants>;
+export type InputGroupButtonProps = Omit<ComponentProps<typeof Button>, "size"> & VariantProps<typeof inputGroupButtonVariants>;
 export type InputGroupInputProps = ComponentProps<"input">;
 export type InputGroupTextProps = ComponentProps<"span">;
 export type InputGroupTextareaProps = ComponentProps<"textarea">;

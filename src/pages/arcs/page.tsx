@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/combobox";
 import { useComboboxAnchor } from "@/components/ui/combobox.hooks";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
-// import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { cn } from "@/lib/utils";
 import PATHS from "@/paths";
@@ -122,51 +121,6 @@ const ArcsPage: FC = () => {
           </FieldGroup>
         </CardContent>
       </Card>
-      {/* <Table containerClassName="text-card-foreground bg-card shadow-sm ring-1 ring-foreground/5">
-        <TableHeader>
-          <TableRow>
-            <TableHead className="text-center">Дуга</TableHead>
-            <TableHead className="text-center">Тип</TableHead>
-            <TableHead className="text-center">Доп. атрибут (макс.)</TableHead>
-            <TableHead className="text-center">Эффект</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {filteredArcs.map((arc) => {
-            const arcType = arcTypes.find(arcType => arcType.id === arc.typeId)!;
-
-            return (
-              <TableRow className="relative z-0 pointer-events-none has-[a:focus-visible]:bg-muted/50" key={arc.id}>
-                <TableHead className="p-3 text-center whitespace-normal">
-                  <div className="space-y-1">
-                    <ArcImage alt={arc.name} className="mx-auto size-15" src={arc.image} />
-                    <Link
-                      children={arc.name}
-                      className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
-                      to={PATHS.Arc(arc.id)}
-                    />
-                  </div>
-                </TableHead>
-                <TableCell className="text-center">
-                  <div className="space-y-1">
-                    <ArcTypeImage alt={arcType.name} className="mx-auto size-7.5" src={arcType.image} />
-                    <span children={arcType.name} />
-                  </div>
-                </TableCell>
-                <TableCell children={`${arc.subStat} +${arc.subStat80}`} className="text-center whitespace-normal" />
-                <TableCell className="whitespace-pre-line">
-                  <span
-                    children={arc.effect.title}
-                    className="font-medium tracking-wider text-muted-foreground uppercase"
-                  />
-                  <br />
-                  {arc.effect.text}
-                </TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table> */}
       <div className="grid grid-cols-[repeat(auto-fit,--spacing(45.5))] gap-4 justify-center md:gap-6">
         {filteredArcs.map(arc => (
           <Card

@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router";
 
+import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import PATHS from "@/paths";
 
@@ -11,6 +12,9 @@ function App() {
         <div className="px-4 mx-auto container md:px-6">
           <div className="flex items-center h-14">
             <Button size="lg" variant="ghost">Neverness to Everness Guides</Button>
+            <div className="flex gap-2 items-center ml-auto md:flex-1 md:justify-end">
+              <ModeToggle />
+            </div>
           </div>
         </div>
       </header>

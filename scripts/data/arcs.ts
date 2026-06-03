@@ -553,7 +553,7 @@ export default {
       text: "Увеличивает интенсивность разрушения на 70 для всех персонажей с тем же типом эспера, что у владельца "
         + "(включая самого владельца), когда в команде 3 или больше таких персонажей. Этот эффект не складывается.",
     },
-    // image: image(""),
+    image: image("the-great-thief.png"),
   },
   [ArcIds.TheLastRose]: {
     id: ArcIds.TheLastRose,
@@ -571,7 +571,7 @@ export default {
         + "когда владелец применяет навык перенаправления.\nПродлевает состояние сломленного врага на 3 сек., когда "
         + "владелец наносит ему урон (срабатывает не чаще одного раза за эффект разрушения).",
     },
-    // image: image(""),
+    image: image("the-last-rose.png"),
   },
   [ArcIds.TheRainThatShookTheWorld]: {
     id: ArcIds.TheRainThatShookTheWorld,
@@ -603,7 +603,7 @@ export default {
         + "Эффект не складывается.\nОткрывает дугу: Отмычка.\nДуга: Отмычка - призывает Отмычку, открывающую все "
         + "запертые замки поблизости.",
     },
-    // image: image(""),
+    image: image("time-bandit.png"),
   },
   [ArcIds.Umbrella]: {
     id: ArcIds.Umbrella,

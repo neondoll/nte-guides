@@ -7,8 +7,7 @@ export type ComboboxChipsProps = ComponentPropsWithRef<typeof ComboboxPrimitive.
 export type ComboboxChipsInputProps = ComboboxPrimitive.Input.Props;
 export type ComboboxClearProps = ComboboxPrimitive.Clear.Props;
 export type ComboboxCollectionProps = ComboboxPrimitive.Collection.Props;
-export type ComboboxContentProps = ComboboxPrimitive.Popup.Props
-  & Pick<ComboboxPrimitive.Positioner.Props, "side" | "align" | "sideOffset" | "alignOffset" | "anchor">;
+export type ComboboxContentProps = ComboboxPrimitive.Popup.Props & Pick<ComboboxPrimitive.Positioner.Props, "align" | "alignOffset" | "anchor" | "side" | "sideOffset">;
 export type ComboboxEmptyProps = ComboboxPrimitive.Empty.Props;
 export type ComboboxGroupProps = ComboboxPrimitive.Group.Props;
 export type ComboboxInputProps = ComboboxPrimitive.Input.Props & { showClear?: boolean; showTrigger?: boolean };

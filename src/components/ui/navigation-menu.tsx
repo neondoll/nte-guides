@@ -1,0 +1,140 @@
+import { NavigationMenu as NavigationMenuPrimitive } from "radix-ui";
+
+import { ChevronDownIcon } from "./icon";
+import type {
+  NavigationMenuContentProps, NavigationMenuIndicatorProps, NavigationMenuItemProps, NavigationMenuLinkProps,
+  NavigationMenuListProps, NavigationMenuProps, NavigationMenuTriggerProps, NavigationMenuViewportProps,
+} from "./navigation-menu.types";
+import { navigationMenuTriggerStyle } from "./navigation-menu.variants";
+import { cn } from "@/lib/utils";
+
+export function NavigationMenu({ children, className, viewport = true, ...props }: NavigationMenuProps) {
+  return (
+    <NavigationMenuPrimitive.Root
+      className={cn(["group/navigation-menu relative flex max-w-max flex-1 items-center justify-center"], className)}
+      data-slot="navigation-menu"
+      data-viewport={viewport}
+      {...props}
+    >
+      {children}
+      {viewport && <NavigationMenuViewport />}
+    </NavigationMenuPrimitive.Root>
+  );
+}
+
+export function NavigationMenuContent({ className, ...props }: NavigationMenuContentProps) {
+  return (
+    <NavigationMenuPrimitive.Content
+      className={cn([
+        "top-0 left-0 w-full p-2.5 pr-3 ease-[cubic-bezier(0.22,1,0.36,1)]",
+        "group-data-[viewport=false]/navigation-menu:top-full group-data-[viewport=false]/navigation-menu:mt-1.5",
+        "group-data-[viewport=false]/navigation-menu:overflow-hidden",
+        "group-data-[viewport=false]/navigation-menu:rounded-none",
+        "group-data-[viewport=false]/navigation-menu:bg-popover",
+        "group-data-[viewport=false]/navigation-menu:text-popover-foreground",
+        "group-data-[viewport=false]/navigation-menu:shadow-md group-data-[viewport=false]/navigation-menu:ring-1",
+        "group-data-[viewport=false]/navigation-menu:ring-foreground/10",
+        "group-data-[viewport=false]/navigation-menu:duration-300 data-[motion=from-end]:slide-in-from-right-52",
+        "data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52",
+        "data-[motion=to-start]:slide-out-to-left-52 data-[motion^=from-]:animate-in data-[motion^=from-]:fade-in",
+        "data-[motion^=to-]:animate-out data-[motion^=to-]:fade-out **:data-[slot=navigation-menu-link]:focus:ring-0",
+        "**:data-[slot=navigation-menu-link]:focus:outline-none md:absolute md:w-auto",
+        "group-data-[viewport=false]/navigation-menu:data-open:animate-in",
+        "group-data-[viewport=false]/navigation-menu:data-open:fade-in-0",
+        "group-data-[viewport=false]/navigation-menu:data-open:zoom-in-95",
+        "group-data-[viewport=false]/navigation-menu:data-closed:animate-out",
+        "group-data-[viewport=false]/navigation-menu:data-closed:fade-out-0",
+        "group-data-[viewport=false]/navigation-menu:data-closed:zoom-out-95",
+      ], className)}
+      data-slot="navigation-menu-content"
+      {...props}
+    />
+  );
+}
+
+export function NavigationMenuIndicator({ className, ...props }: NavigationMenuIndicatorProps) {
+  return (
+    <NavigationMenuPrimitive.Indicator
+      className={cn([
+        "top-full z-1 flex h-1.5 items-end justify-center overflow-hidden data-[state=hidden]:animate-out",
+        "data-[state=hidden]:fade-out data-[state=visible]:animate-in data-[state=visible]:fade-in",
+      ], className)}
+      data-slot="navigation-menu-indicator"
+      {...props}
+    >
+      <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-none bg-border shadow-md" />
+    </NavigationMenuPrimitive.Indicator>
+  );
+}
+
+export function NavigationMenuItem({ className, ...props }: NavigationMenuItemProps) {
+  return (
+    <NavigationMenuPrimitive.Item
+      className={cn(["relative"], className)}
+      data-slot="navigation-menu-item"
+      {...props}
+    />
+  );
+}
+
+export function NavigationMenuLink({ className, ...props }: NavigationMenuLinkProps) {
+  return (
+    <NavigationMenuPrimitive.Link
+      className={cn([
+        "flex items-center gap-1.5 rounded-none p-3 text-sm transition-all outline-none hover:bg-muted focus:bg-muted",
+        "focus-visible:ring-2 focus-visible:ring-ring/30 focus-visible:outline-1",
+        "in-data-[slot=navigation-menu-content]:rounded-none data-[active=true]:bg-muted/50",
+        "data-[active=true]:hover:bg-muted data-[active=true]:focus:bg-muted [&_svg:not([class*='size-'])]:size-3.5",
+      ], className)}
+      data-slot="navigation-menu-link"
+      {...props}
+    />
+  );
+}
+
+export function NavigationMenuList({ className, ...props }: NavigationMenuListProps) {
+  return (
+    <NavigationMenuPrimitive.List
+      className={cn(["group flex flex-1 list-none items-center justify-center gap-0"], className)}
+      data-slot="navigation-menu-list"
+      {...props}
+    />
+  );
+}
+
+export function NavigationMenuTrigger({ children, className, ...props }: NavigationMenuTriggerProps) {
+  return (
+    <NavigationMenuPrimitive.Trigger
+      className={cn(navigationMenuTriggerStyle(), "group", className)}
+      data-slot="navigation-menu-trigger"
+      {...props}
+    >
+      {children}
+      {" "}
+      <ChevronDownIcon
+        aria-hidden="true"
+        className={cn([
+          "relative top-px ml-1 size-3 transition duration-300",
+          "group-data-popup-open/navigation-menu-trigger:rotate-180 group-data-open/navigation-menu-trigger:rotate-180",
+        ])}
+      />
+    </NavigationMenuPrimitive.Trigger>
+  );
+}
+
+export function NavigationMenuViewport({ className, ...props }: NavigationMenuViewportProps) {
+  return (
+    <div className="absolute top-full left-0 isolate z-50 flex justify-center">
+      <NavigationMenuPrimitive.Viewport
+        className={cn([
+          "origin-top-center relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden",
+          "rounded-none bg-popover text-popover-foreground shadow-md ring-1 ring-foreground/10 duration-100",
+          "md:w-(--radix-navigation-menu-viewport-width) data-open:animate-in data-open:zoom-in-90",
+          "data-closed:animate-out data-closed:zoom-out-90",
+        ], className)}
+        data-slot="navigation-menu-viewport"
+        {...props}
+      />
+    </div>
+  );
+}

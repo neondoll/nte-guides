@@ -1,18 +1,12 @@
 "use client";
 
 import { ToggleGroup as ToggleGroupPrimitive } from "radix-ui";
-import { createContext, type CSSProperties, useContext } from "react";
+import { type CSSProperties, useContext } from "react";
 
+import { ToggleGroupContext } from "./toggle-group.contexts";
 import { toggleVariants } from "./toggle.variants";
-import type { ToggleGroupContextProps, ToggleGroupItemProps, ToggleGroupProps } from "./toggle-group.types";
+import type { ToggleGroupItemProps, ToggleGroupProps } from "./toggle-group.types";
 import { cn } from "@/lib/utils";
-
-const ToggleGroupContext = createContext<ToggleGroupContextProps>({
-  orientation: "horizontal",
-  size: "default",
-  spacing: 2,
-  variant: "default",
-});
 
 export function ToggleGroup({
   children,
