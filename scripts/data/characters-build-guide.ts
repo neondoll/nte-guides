@@ -678,22 +678,22 @@ export default {
   },
   [CharacterIds.Lacrimosa]: {
     id: CharacterIds.Lacrimosa,
-    recommendedArcs: [{ id: ArcIds.TheLastRose }],
+    recommendedArcs: [{ id: ArcIds.TheLastRose }, { id: ArcIds.YouthfulFantasy }],
     recommendedCartridges: [{ id: CartridgeIds.Diabolos }],
-    cartridgeBestMainStat: [Stats.CHAOS_DMG_BONUS],
+    cartridgeBestMainStat: [
+      Stats.CHAOS_DMG_BONUS,
+      Stats.CRIT_RATE, // До момента пока без него не будет 70%+
+    ],
     bestSubStats: [
       { value: Stats.CHAOS_DMG_BONUS, priority: 1 },
       { value: Stats.CRIT_RATE, priority: 1 },
       { value: Stats.CRIT_DMG, priority: 1 },
     ],
-    /* recommendedAwakeningSkills: {
-      1: { priority: 1 },
-      2: { priority: 2 },
-      3: { priority: 3 },
-      4: { priority: 4 },
-      5: { priority: 5 },
-      6: { priority: 6 },
-    }, */
+    recommendedAwakeningSkills: {
+      1: { priority: 1 }, // Отсроченное Милосердие
+      2: { priority: 2 }, // Приговор Закаленного Стекла
+      3: { priority: 3 }, // Всемогущий Повелитель Томатов
+    },
     /* recommendedSkills: {
       BasicAttack: { priority: 0 },
       Skill: { priority: 0 },
@@ -704,12 +704,15 @@ export default {
       {
         title: "",
         slot1: [CharacterIds.Lacrimosa],
-        slot2: [CharacterIds.Sakiri],
-        slot3: [CharacterIds.Daffodill, CharacterIds.Baicang],
-        slot4: [CharacterIds.Haniel, CharacterIds.Fadia, CharacterIds.Adler, CharacterIds.Hotori],
+        slot2: [CharacterIds.Sakiri, CharacterIds.Haniel, CharacterIds.Baicang, CharacterIds.Hotori],
+        slot3: [CharacterIds.Daffodill],
+        slot4: [CharacterIds.Adler, CharacterIds.Fadia, CharacterIds.Jiuyuan],
       },
     ],
-    videoSourceIds: [VideoSourceIds.Director_guide_Lacrimosa_v_1_0],
+    videoSourceIds: [
+      VideoSourceIds.Director_guide_Lacrimosa_v_1_0,
+      VideoSourceIds.Tyulen_Arkadiy_ItAllCanWait_guide_Lacrimosa_v_1_1,
+    ],
   },
   [CharacterIds.Mint]: {
     id: CharacterIds.Mint,

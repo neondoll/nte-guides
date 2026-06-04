@@ -26,4 +26,5 @@ export const VideoSourceIds = {
   Koshmar_Igrayet_guide_Hotori_v_1_0: "Koshmar_Igrayet_guide_Hotori_v_1.0",
   RAYDERIX_guide_Daffodill_v_1_0: "RAYDERIX_guide_Daffodill_v_1.0",
   RAYDERIX_guide_Hotori_v_1_0: "RAYDERIX_guide_Hotori_v_1.0",
+  Tyulen_Arkadiy_ItAllCanWait_guide_Lacrimosa_v_1_1: "Tyulen_Arkadiy_ItAllCanWait_guide_Lacrimosa_v_1.1",
 } as const;

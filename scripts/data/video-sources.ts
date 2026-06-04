@@ -191,4 +191,11 @@ export default {
     date: "2026-05-17",
     url: "https://youtu.be/bPLWngZpab0",
   },
+  [VideoSourceIds.Tyulen_Arkadiy_ItAllCanWait_guide_Lacrimosa_v_1_1]: {
+    id: VideoSourceIds.Tyulen_Arkadiy_ItAllCanWait_guide_Lacrimosa_v_1_1,
+    author: "Тюлень Аркадий - ItAllCanWait",
+    title: "ПОЛНЫЙ ГАЙД НА ЛАКРИМОЗУ В NTE! ЛУЧШИЙ ДОТЕР ИГРЫ!",
+    date: "2026-06-03",
+    url: "https://youtu.be/NZs4-qJ3miQ",
+  },
 } as Record<VideoSource["id"], VideoSource>;

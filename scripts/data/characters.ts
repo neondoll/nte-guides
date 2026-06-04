@@ -315,6 +315,7 @@ export default {
     roleId: CharacterRoleIds.Damage,
     version: "1.1",
     image: image("lacrimosa.png"),
+    imageWithElementAndRank: image("lacrimosa-with-element-and-rank.png"),
   },
   [CharacterIds.Mint]: {
     id: CharacterIds.Mint,
