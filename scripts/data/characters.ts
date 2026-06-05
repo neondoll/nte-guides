@@ -308,7 +308,7 @@ export default {
   },
   [CharacterIds.Lacrimosa]: {
     id: CharacterIds.Lacrimosa,
-    name: "Lacrimosa",
+    name: "Лакримоза",
     rankId: RankIds.S,
     elementId: ElementIds.Chaos,
     arcTypeId: ArcTypeIds.Liquid,
@@ -316,6 +316,20 @@ export default {
     version: "1.1",
     image: image("lacrimosa.png"),
     imageWithElementAndRank: image("lacrimosa-with-element-and-rank.png"),
+    awakeningSkills: {
+      1: "Отсроченное милосердие",
+      2: "Проснись и пой",
+      3: "Расплавленное мороженное",
+      4: "Всемогущий повелитель томатов",
+      5: "Приговор закалённого стекла",
+      6: "Утреннее заклинание",
+    },
+    skills: {
+      BasicAttack: "Сладкое и кислое",
+      Skill: "Утренний томат",
+      Ultimate: "Приговор рабочего дня",
+      SupportSkill: "Микропробуждение",
+    },
   },
   [CharacterIds.Mint]: {
     id: CharacterIds.Mint,

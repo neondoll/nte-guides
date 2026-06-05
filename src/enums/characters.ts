@@ -24,6 +24,7 @@ export const CharacterIds = {
   Hotori: "hotori",
   /** Цзююань (Jiuyuan) */
   Jiuyuan: "jiuyuan",
+  /** Лакримоза (Lacrimosa) */
   Lacrimosa: "lacrimosa",
   /** Минт (Mint) */
   Mint: "mint",

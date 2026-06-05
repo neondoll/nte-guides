@@ -749,11 +749,7 @@ export default {
       { value: Stats.CRIT_RATE, priority: 1 },
       { value: Stats.CRIT_DMG, priority: 1 },
     ],
-    recommendedAwakeningSkills: {
-      1: { priority: 1 }, // Отсроченное Милосердие
-      2: { priority: 2 }, // Приговор Закаленного Стекла
-      3: { priority: 3 }, // Всемогущий Повелитель Томатов
-    },
+    recommendedAwakeningSkills: { 1: { priority: 1 }, 5: { priority: 2 }, 4: { priority: 3 } },
     /* recommendedSkills: {
       BasicAttack: { priority: 0 },
       Skill: { priority: 0 },
