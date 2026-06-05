@@ -536,12 +536,12 @@ export default {
       { id: ArcIds.MarchingBeyondTime },
       { id: ArcIds.TheRainThatShookTheWorld },
       { id: ArcIds.FluffOfFearlessness },
+      { id: ArcIds.HethereausKeeper },
       { id: ArcIds.TheForgotten },
     ],
     recommendedCartridges: [{ id: CartridgeIds.LostRadiance }],
-    cartridgeBestMainStat: [Stats.COSMOS_DMG_BONUS, Stats.CRIT_RATE, Stats.CRIT_DMG, Stats.ATK_BONUS],
+    cartridgeBestMainStat: [Stats.CRIT_RATE, Stats.CRIT_DMG, Stats.COSMOS_DMG_BONUS, Stats.ATK_BONUS],
     bestSubStats: [
-      { value: Stats.COSMOS_DMG_BONUS, priority: 1 },
       { value: Stats.CRIT_RATE, priority: 1 },
       { value: Stats.CRIT_DMG, priority: 1 },
       { value: Stats.UNIVERSAL_DMG_BONUS, priority: 2 },
@@ -550,39 +550,99 @@ export default {
       { value: Stats.CYCLE_INTENSITY, priority: 3 },
       { value: Stats.BREAK_INTENSITY, priority: 3 },
     ],
+    targetAttributes: [
+      "Здоровье от 20 000",
+      "Атака от 2200",
+      "Крит. шанс 70%",
+      "Крит. урон 90-110%",
+      "Бонус к урону от 10%",
+      "Урон космоса от 60%",
+    ],
     recommendedAwakeningSkills: {
       6: { priority: 1 },
-      2: { priority: 2 },
+      5: { priority: 2 },
       1: { priority: 3 },
-      4: { priority: 4 },
-      5: { priority: 5 },
-      3: { priority: 6 },
+      2: { priority: 4 },
+      3: { priority: 5 },
+      4: { priority: 6 },
     },
     recommendedSkills: {
       Ultimate: { priority: 1 },
-      Skill: { priority: 1 },
-      BasicAttack: { priority: 3 },
-      SupportSkill: { priority: 3 },
+      Skill: { priority: 2 },
+      SupportSkill: { priority: 2 },
     },
     bestTeams: [
       {
-        title: "Hotori Blossom Team",
+        title: "Классическое Цветение",
         slot1: [CharacterIds.Hotori],
-        slot2: [CharacterIds.EsperZero],
-        slot3: [CharacterIds.Nanally, CharacterIds.Mint],
-        slot4: [CharacterIds.Jiuyuan, CharacterIds.Sakiri],
+        slot2: [CharacterIds.Nanally],
+        slot3: [CharacterIds.Jiuyuan],
+        slot4: [CharacterIds.EsperZero, CharacterIds.Sakiri],
+        explanation: "Ротация:\n"
+          + "Шаг 1: Накапливаем циклы эспера за каждого героя.\n"
+          + "Шаг 2: Прожимаем Навык Хотори (E), чтобы запустить окно записи.\n"
+          + "Шаг 3: Переключаемся на Цзююань; Активируем её Навык (E); Сразу сдаем её Сверхспособность (Q).\n"
+          + "Шаг 4: Переключаемся на Зеро через «цикл»; Прожимаем строго её Сверхспособность (Q).\n"
+          + "Шаг 5: выводим Наналли; Активируем её умения; Непрерывно бьем базовыми атаками пока действует её ульта.\n"
+          + "Шаг 6: Снова переключаемся на Зеро и через её Навык докидываем пару бутонов вместе с любым анима-героем.\n"
+          + "Шаг 7: Возвращаемся на Хотори; Прожимаем Сверхспособность (Q) для повторения всех записанных кнопок в тайм-стопе.",
       },
       {
-        title: "Hotori Discord Team",
+        title: "Гиперкерри Чиз",
         slot1: [CharacterIds.Hotori],
-        slot2: [CharacterIds.Daffodill],
-        slot3: [CharacterIds.Aurelia],
-        slot4: [CharacterIds.Sakiri],
+        slot2: [CharacterIds.Chiz],
+        slot3: [CharacterIds.Hathor],
+        slot4: [CharacterIds.Skia],
+        explanation: "Ротация:\n"
+          + "Шаг 1: Активируем Навык Хотори (E).\n"
+          + "Шаг 2: Быстро прожимаем Навык Хатор (E) (используя исключительно короткое нажатие); Прожимаем Навык Скии (E) для наложения дебаффов.\n"
+          + "Шаг 3: Переключаемся на Чиз; Сдаем её Навык (E) (Хотори зафиксирует только один заряд из трёх).\n"
+          + "Шаг 4: Прожимаем Сверхспособность Хотори (Q); В тайм-стопе активно спамим атаками катаны до 10 уровней комбо.\n"
+          + "Шаг 5: После завершения тайм-стопа выводим Чиз; Активируем её Сверхспособность (Q); Спамим оставшимися зарядами Навыка (E) и базовыми ударами.",
+      },
+      {
+        title: "Гибридное Разрушение/Ожог",
+        slot1: [CharacterIds.Jiuyuan],
+        slot2: [CharacterIds.Hotori],
+        slot3: [CharacterIds.Daffodill],
+        slot4: [CharacterIds.Baicang, CharacterIds.Sakiri, CharacterIds.Adler],
+        explanation: "Ротация:\n"
+          + "Шаг 1: Выводим саппортов на поле; даем Навык Цзююань (E) для стяжки врагов; Прожимаем Навык Байканга (E) для наложения статуса горения.\n"
+          + "Шаг 2: Активируем Навык Хотори (E) для фиксации примененных скиллов.\n"
+          + "Шаг 3: Переключаемся на главного ДД Даффодил; Прожимаем её Навык (E); Реализуем комбо на разрушение стойки, пока по целям тикают дебаффы.\n"
+          + "Шаг 4: Возвращаемся на Хотори; Прожимаем Сверхспособность (Q) для нанесения бёрст-урона космосом по области.",
+      },
+      {
+        title: "Ожог-бёрст",
+        slot1: [CharacterIds.Hotori],
+        slot2: [CharacterIds.Baicang],
+        slot3: [CharacterIds.Sakiri],
+        slot4: [CharacterIds.Jiuyuan, CharacterIds.Mint],
+        explanation: "Ротация:\n"
+          + "Шаг 1: Активируем Навык Хотори (E).\n"
+          + "Шаг 2: Переключаемся на Сакири; Прожимаем её Навык (E) для стяжки и снижения показателей брони противников.\n"
+          + "Шаг 3: Переключаемся на Цзююань; Активируем её Навык (E).\n"
+          + "Шаг 4: Выводим на поле Байканга; Активируем его Навык (E) для взрыва статуса Ожога.\n"
+          + "Шаг 5: Быстро возвращаем Хотори; Прожимаем Сверхспособность (Q) (все контролирующие и поджигающие умения сработают повторно в тайм-стопе).\n"
+          + "Шаг 6: Поа кнопки Хотори находятся на перезарядке, оставляем Байканга на поле истощать врагов базовыми атаками.",
+      },
+      {
+        title: "Бюджетный F2P-вариант",
+        slot1: [CharacterIds.Hotori],
+        slot2: [CharacterIds.Aurelia],
+        slot3: [CharacterIds.Fadia],
+        slot4: [CharacterIds.Hathor, CharacterIds.Skia, CharacterIds.Haniel],
+        explanation: "Ротация:\n"
+          + "Шаг 1: Поочередно активируем Навык Фадии (E); Прожимаем навык Хатор (E).\n"
+          + "Шаг 2: Активируем Навык Хотори (E).\n"
+          + "Шаг 3: Переключаемся на Аурелию; Прожимаем её Навык (E); Наносим урон, пока активны карманные баффы поддержки.\n"
+          + "Шаг 4: Возвращаем Хотори; Прожимаем Сверхспособность (Q) для финального аккорда и полного дублирования урона.",
       },
     ],
     videoSourceIds: [
       VideoSourceIds.Gamestalt_game_guide_Hotori_v_1_0,
       VideoSourceIds.Gamestalt_guide_Hotori_v_1_0,
+      VideoSourceIds.IceINFERN0_guide_Hotori_v_1_1,
       VideoSourceIds.Koshmar_Igrayet_guide_Hotori_v_1_0,
       VideoSourceIds.RAYDERIX_guide_Hotori_v_1_0,
     ],

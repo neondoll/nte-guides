@@ -121,6 +121,13 @@ export default {
     date: "2026-05-28",
     url: "https://youtu.be/Ps3VEa0CeBg",
   },
+  [VideoSourceIds.IceINFERN0_guide_Hotori_v_1_1]: {
+    id: VideoSourceIds.IceINFERN0_guide_Hotori_v_1_1,
+    author: "IceINFERN0",
+    title: "НЕ КАЧАЙ ЕЙ БАЗУ! ❌ Секрет бесконечного урона Хотори [Ультимативный Гайд]",
+    date: "2026-06-04",
+    url: "https://youtu.be/5uJptGGOIzg",
+  },
   [VideoSourceIds.IceINFERN0_guide_Jiuyuan_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Jiuyuan_v_1_0,
     author: "IceINFERN0",

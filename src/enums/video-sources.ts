@@ -16,6 +16,7 @@ export const VideoSourceIds = {
   IceINFERN0_guide_Fadia_v_1_0: "IceINFERN0_guide_Fadia_v_1.0",
   IceINFERN0_guide_Haniel_v_1_0: "IceINFERN0_guide_Haniel_v_1.0",
   IceINFERN0_guide_Hathor_v_1_0: "IceINFERN0_guide_Hathor_v_1.0",
+  IceINFERN0_guide_Hotori_v_1_1: "IceINFERN0_guide_Hathor_v_1.1",
   IceINFERN0_guide_Jiuyuan_v_1_0: "IceINFERN0_guide_Jiuyuan_v_1.0",
   IceINFERN0_guide_Mint_v_1_0: "IceINFERN0_guide_Mint_v_1.0",
   IceINFERN0_guide_Nanally_v_1_0: "IceINFERN0_guide_Nanally_v_1.0",

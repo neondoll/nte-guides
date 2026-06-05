@@ -53,6 +53,7 @@ const CharacterBuildGuide: FC<{ character: Character }> = ({ character }) => {
                 bestSubStats={characterBuildGuide.bestSubStats}
                 cartridgeBestMainStat={characterBuildGuide.cartridgeBestMainStat}
                 recommendedCartridges={characterBuildGuide.recommendedCartridges}
+                targetAttributes={characterBuildGuide.targetAttributes}
               />
             </AccordionContent>
           </AccordionItem>
@@ -110,7 +111,7 @@ const CharacterBuildGuideBestTeams: FC<{
       <TableBody>
         {bestTeams.map(team => (
           <TableRow key={team.title}>
-            <TableHead children={team.title} className="text-center" />
+            <TableHead children={team.title} className="text-center whitespace-normal" />
             <TableCell className="text-center divide-y divide-dashed">
               {team.slot1.map((value) => {
                 const character = characters.find(c => c.id == value)!;
@@ -164,7 +165,11 @@ const CharacterBuildGuideBestTeams: FC<{
               })}
             </TableCell>
             {hasExplanation && (
-              <TableCell children={team.explanation} className="text-center whitespace-normal" />
+              <TableCell className="text-center text-balance whitespace-normal">
+                {team.explanation?.split("\n").map((text, index) => (
+                  <p children={text} key={index} />
+                ))}
+              </TableCell>
             )}
           </TableRow>
         ))}
@@ -228,7 +233,8 @@ const CharacterBuildGuideRecommendedCartridgesAndBestStats: FC<{
   bestSubStats: BuildGuide["bestSubStats"];
   cartridgeBestMainStat: BuildGuide["cartridgeBestMainStat"];
   recommendedCartridges: BuildGuide["recommendedCartridges"];
-}> = ({ bestSubStats, cartridgeBestMainStat, recommendedCartridges }) => {
+  targetAttributes: BuildGuide["targetAttributes"];
+}> = ({ bestSubStats, cartridgeBestMainStat, recommendedCartridges, targetAttributes }) => {
   const cartridges = useAppSelector(state => state.cartridges.list);
 
   const maxSubStatsPriority = useMemo(() => {
@@ -298,6 +304,16 @@ const CharacterBuildGuideRecommendedCartridgesAndBestStats: FC<{
             </ul>
           </TableCell>
         </TableRow>
+        {targetAttributes && (
+          <TableRow>
+            <TableHead className="text-center whitespace-normal" colSpan={2}>Целевые атрибуты</TableHead>
+            <TableCell>
+              <ul className="pl-5 list-outside list-disc">
+                {targetAttributes.map(targetAttribute => <li children={targetAttribute} key={targetAttribute} />)}
+              </ul>
+            </TableCell>
+          </TableRow>
+        )}
       </TableFooter>
     </Table>
   );
@@ -400,13 +416,13 @@ const TeamSlot: FC<{
       {isCurrentCharacter
         ? <span children={character.name} />
         : (
-            <Link
-              children={character.name}
-              className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
-              target="_blank"
-              to={Paths.Character(character.id)}
-            />
-          )}
+          <Link
+            children={character.name}
+            className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
+            target="_blank"
+            to={Paths.Character(character.id)}
+          />
+        )}
     </div>
   );
 };

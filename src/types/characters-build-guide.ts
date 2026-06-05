@@ -10,6 +10,7 @@ export type CharacterBuildGuide = {
   recommendedCartridges: Array<{ id: CartridgeId }>;
   cartridgeBestMainStat: Stat[];
   bestSubStats: Array<{ value: Stat; priority: number }>;
+  targetAttributes?: string[];
   recommendedAwakeningSkills?: Record<CharacterAwakeningSkillKey, CharacterBuildGuideRecommendedSkill | undefined>;
   recommendedSkills?: Record<CharacterSkillKey, CharacterBuildGuideRecommendedSkill | undefined>;
   bestTeams: Array<{ title: string; explanation?: string } & Record<"slot1" | "slot2" | "slot3" | "slot4", CharacterId[]>>;
