@@ -135,6 +135,13 @@ export default {
     date: "2026-06-01",
     url: "https://youtu.be/S_j9JRge_3A",
   },
+  [VideoSourceIds.IceINFERN0_guide_Lacrimosa_v_1_1]: {
+    id: VideoSourceIds.IceINFERN0_guide_Lacrimosa_v_1_1,
+    author: "IceINFERN0",
+    title: "ГОТИЧЕСКАЯ ИМБА! Полный разбор Лакримозы от А до Я | NTEГайд на Лакримозу",
+    date: "2026-06-06",
+    url: "https://youtu.be/3DLU8iJHH4c",
+  },
   [VideoSourceIds.IceINFERN0_guide_Mint_v_1_0]: {
     id: VideoSourceIds.IceINFERN0_guide_Mint_v_1_0,
     author: "IceINFERN0",
@@ -197,6 +204,13 @@ export default {
     title: "💢 NTE ХОТОРИ СИЛЬНЕЙШИЙ БИЛД В ИГРЕ - ГАЙД КОМБО РОТАЦИИ ОТРЯДЫ💢 (2K60) Neverness to everness",
     date: "2026-05-17",
     url: "https://youtu.be/bPLWngZpab0",
+  },
+  [VideoSourceIds.RAYDERIX_guide_Lacrimosa_v_1_1]: {
+    id: VideoSourceIds.RAYDERIX_guide_Lacrimosa_v_1_1,
+    author: "RAYDERIX",
+    title: "💢 NTE ЛАКРИМОЗА ТЫ НЕПРАВИЛЬНО ИГРАЕШЬ ! ГАЙД КОМБО РОТАЦИИ ОТРЯДЫ💢 (2K60) Neverness to everness",
+    date: "2026-06-07",
+    url: "https://youtu.be/jOrtwNZYFSc",
   },
   [VideoSourceIds.Tyulen_Arkadiy_ItAllCanWait_guide_Lacrimosa_v_1_1]: {
     id: VideoSourceIds.Tyulen_Arkadiy_ItAllCanWait_guide_Lacrimosa_v_1_1,

@@ -16,8 +16,9 @@ export const VideoSourceIds = {
   IceINFERN0_guide_Fadia_v_1_0: "IceINFERN0_guide_Fadia_v_1.0",
   IceINFERN0_guide_Haniel_v_1_0: "IceINFERN0_guide_Haniel_v_1.0",
   IceINFERN0_guide_Hathor_v_1_0: "IceINFERN0_guide_Hathor_v_1.0",
-  IceINFERN0_guide_Hotori_v_1_1: "IceINFERN0_guide_Hathor_v_1.1",
+  IceINFERN0_guide_Hotori_v_1_1: "IceINFERN0_guide_Hotori_v_1.1",
   IceINFERN0_guide_Jiuyuan_v_1_0: "IceINFERN0_guide_Jiuyuan_v_1.0",
+  IceINFERN0_guide_Lacrimosa_v_1_1: "IceINFERN0_guide_Lacrimosa_v_1.1",
   IceINFERN0_guide_Mint_v_1_0: "IceINFERN0_guide_Mint_v_1.0",
   IceINFERN0_guide_Nanally_v_1_0: "IceINFERN0_guide_Nanally_v_1.0",
   IceINFERN0_guide_Sakiri_v_1_0: "IceINFERN0_guide_Sakiri_v_1.0",
@@ -27,5 +28,6 @@ export const VideoSourceIds = {
   Koshmar_Igrayet_guide_Hotori_v_1_0: "Koshmar_Igrayet_guide_Hotori_v_1.0",
   RAYDERIX_guide_Daffodill_v_1_0: "RAYDERIX_guide_Daffodill_v_1.0",
   RAYDERIX_guide_Hotori_v_1_0: "RAYDERIX_guide_Hotori_v_1.0",
+  RAYDERIX_guide_Lacrimosa_v_1_1: "RAYDERIX_guide_Lacrimosa_v_1.1",
   Tyulen_Arkadiy_ItAllCanWait_guide_Lacrimosa_v_1_1: "Tyulen_Arkadiy_ItAllCanWait_guide_Lacrimosa_v_1.1",
 } as const;
