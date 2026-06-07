@@ -416,13 +416,13 @@ const TeamSlot: FC<{
       {isCurrentCharacter
         ? <span children={character.name} />
         : (
-          <Link
-            children={character.name}
-            className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
-            target="_blank"
-            to={Paths.Character(character.id)}
-          />
-        )}
+            <Link
+              children={character.name}
+              className="outline-none pointer-events-auto before:absolute before:inset-0 before:-z-1"
+              target="_blank"
+              to={Paths.Character(character.id)}
+            />
+          )}
     </div>
   );
 };
