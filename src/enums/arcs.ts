@@ -83,6 +83,8 @@ export const ArcIds = {
   Us: "us",
   /** Берегите головы! (Watch Your Heads!) */
   WatchYourHeads: "watch-your-heads",
+  /** Заветное желание (What's Desired) */
+  WhatsDesired: "whats-desired",
   /** Твое счастье бесценно (Your Happiness is Priceless) */
   YourHappinessIsPriceless: "your-happiness-is-priceless",
   /** Ребяческая фантазия (Youthful Fantasy) */

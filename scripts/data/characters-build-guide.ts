@@ -4,11 +4,10 @@ import { CartridgeIds } from "../../src/enums/cartridges";
 import { CharacterIds } from "../../src/enums/characters";
 import { Stats } from "../../src/enums/stats";
 import { VideoSourceIds } from "../../src/enums/video-sources";
-import type { Character } from "../../src/types/characters";
 import type { CharacterBuildGuide } from "../../src/types/characters-build-guide";
 
 export default {
-  [CharacterIds.Adler]: {
+  Adler: {
     id: CharacterIds.Adler,
     recommendedArcs: [
       { id: ArcIds.TheFoolsSpring, priority: 1 },
@@ -67,7 +66,7 @@ export default {
       VideoSourceIds.IceINFERN0_Umbrella_or_TheFoolsSpring_on_Adler,
     ],
   },
-  [CharacterIds.Aurelia]: {
+  Aurelia: {
     id: CharacterIds.Aurelia,
     recommendedArcs: [
       { id: ArcIds.StellarVeil },
@@ -116,7 +115,7 @@ export default {
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Aurelia_v_1_0],
   },
-  [CharacterIds.Baicang]: {
+  Baicang: {
     id: CharacterIds.Baicang,
     recommendedArcs: [{ id: ArcIds.CamelliaSociety }, { id: ArcIds.FluffOfFerocity }, { id: ArcIds.ATimeWillCome }],
     recommendedCartridges: [{ id: CartridgeIds.CrimsonTwinButterflies }],
@@ -167,7 +166,7 @@ export default {
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Baicang_v_1_0, VideoSourceIds.Koshmar_Igrayet_guide_Baicang_v_1_0],
   },
-  [CharacterIds.Chiz]: {
+  Chiz: {
     id: CharacterIds.Chiz,
     recommendedArcs: [{ id: ArcIds.ContemplativeCat }, { id: ArcIds.CosmosDazeWildReverie }],
     recommendedCartridges: [{ id: CartridgeIds.LostRadiance }, { id: CartridgeIds.ShadowCreed }],
@@ -219,7 +218,7 @@ export default {
     ],
     videoSourceIds: [VideoSourceIds.Gamestalt_guide_Chiz_v_1_0, VideoSourceIds.IceINFERN0_guide_Chiz_v_1_0],
   },
-  [CharacterIds.Daffodill]: {
+  Daffodill: {
     id: CharacterIds.Daffodill,
     recommendedArcs: [{ id: ArcIds.YouthfulFantasy }],
     recommendedCartridges: [{ id: CartridgeIds.Diabolos }],
@@ -270,7 +269,7 @@ export default {
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Daffodill_v_1_0, VideoSourceIds.RAYDERIX_guide_Daffodill_v_1_0],
   },
-  [CharacterIds.Edgar]: {
+  Edgar: {
     id: CharacterIds.Edgar,
     recommendedArcs: [{ id: ArcIds.CallOfTheTwistedCity }, { id: ArcIds.MindRoyale }],
     recommendedCartridges: [{ id: CartridgeIds.TheasNightTavern }, { id: CartridgeIds.SpeedyHedgehog }],
@@ -324,7 +323,7 @@ export default {
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Edgar_v_1_0],
   },
-  [CharacterIds.EsperZero]: {
+  EsperZero: {
     id: CharacterIds.EsperZero,
     recommendedArcs: [{ id: ArcIds.HethereausKeeper }, { id: ArcIds.DayOff }],
     recommendedCartridges: [{ id: CartridgeIds.LostRadiance }],
@@ -368,7 +367,7 @@ export default {
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_EsperZero_v_1_0],
   },
-  [CharacterIds.Fadia]: {
+  Fadia: {
     id: CharacterIds.Fadia,
     recommendedArcs: [{ id: ArcIds.EternalWaltz }, { id: ArcIds.Umbrella }],
     recommendedCartridges: [{ id: CartridgeIds.TinyBigAdventure }],
@@ -418,7 +417,7 @@ export default {
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Fadia_v_1_0],
   },
-  [CharacterIds.Haniel]: {
+  Haniel: {
     id: CharacterIds.Haniel,
     recommendedArcs: [{ id: ArcIds.BlowUpTheCrowd }, { id: ArcIds.HethereausKeeper }, { id: ArcIds.TheForgotten }],
     recommendedCartridges: [{ id: CartridgeIds.SpeedyHedgehog }, { id: CartridgeIds.DevilsBloodCurse }],
@@ -476,7 +475,7 @@ export default {
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Haniel_v_1_0],
   },
-  [CharacterIds.Hathor]: {
+  Hathor: {
     id: CharacterIds.Hathor,
     recommendedArcs: [
       { id: ArcIds.RagingFlames },
@@ -530,7 +529,7 @@ export default {
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Hathor_v_1_0],
   },
-  [CharacterIds.Hotori]: {
+  Hotori: {
     id: CharacterIds.Hotori,
     recommendedArcs: [
       { id: ArcIds.MarchingBeyondTime },
@@ -647,7 +646,7 @@ export default {
       VideoSourceIds.RAYDERIX_guide_Hotori_v_1_0,
     ],
   },
-  [CharacterIds.Jiuyuan]: {
+  Jiuyuan: {
     id: CharacterIds.Jiuyuan,
     recommendedArcs: [
       { id: ArcIds.RealityRefuge },
@@ -689,10 +688,10 @@ export default {
         slot3: [CharacterIds.Jiuyuan],
         slot4: [CharacterIds.EsperZero],
         explanation: [
-          `${characters[CharacterIds.EsperZero].name} (Навык)`.replaceAll(" ", "\u00A0"),
-          `${characters[CharacterIds.Hotori].name} (Копия)`.replaceAll(" ", "\u00A0"),
-          `${characters[CharacterIds.Nanally].name} (Мейн-ДД)`.replaceAll(" ", "\u00A0"),
-          `${characters[CharacterIds.Jiuyuan].name} (Сверхспособность «${characters[CharacterIds.Jiuyuan].skills!.Ultimate}»)`.replaceAll(" ", "\u00A0"),
+          `${characters.EsperZero.name} (Навык)`.replaceAll(" ", "\u00A0"),
+          `${characters.Hotori.name} (Копия)`.replaceAll(" ", "\u00A0"),
+          `${characters.Nanally.name} (Мейн-ДД)`.replaceAll(" ", "\u00A0"),
+          `${characters.Jiuyuan.name} (Сверхспособность «${characters.Jiuyuan.skills!.Ultimate}»)`.replaceAll(" ", "\u00A0"),
         ].join(" +\u00A0"),
       },
       {
@@ -702,10 +701,10 @@ export default {
         slot3: [CharacterIds.EsperZero],
         slot4: [CharacterIds.Sakiri],
         explanation: [
-          `${characters[CharacterIds.Sakiri].name} (Стяжка)`.replaceAll(" ", "\u00A0"),
-          `${characters[CharacterIds.EsperZero].name} (Космос)`.replaceAll(" ", "\u00A0"),
-          `${characters[CharacterIds.Nanally].name} (Блоссом)`.replaceAll(" ", "\u00A0"),
-          `${characters[CharacterIds.Jiuyuan].name} (Навык «${characters[CharacterIds.Jiuyuan].skills!.Skill}»; Контрудар «${characters[CharacterIds.Jiuyuan].skills!.Ultimate}»)`.replaceAll(" ", "\u00A0"),
+          `${characters.Sakiri.name} (Стяжка)`.replaceAll(" ", "\u00A0"),
+          `${characters.EsperZero.name} (Космос)`.replaceAll(" ", "\u00A0"),
+          `${characters.Nanally.name} (Блоссом)`.replaceAll(" ", "\u00A0"),
+          `${characters.Jiuyuan.name} (Навык «${characters.Jiuyuan.skills!.Skill}»; Контрудар «${characters.Jiuyuan.skills!.Ultimate}»)`.replaceAll(" ", "\u00A0"),
         ].join(" +\u00A0"),
       },
       {
@@ -715,10 +714,10 @@ export default {
         slot3: [CharacterIds.Hathor],
         slot4: [CharacterIds.Fadia],
         explanation: [
-          `${characters[CharacterIds.Hathor].name} (Ремора)`.replaceAll(" ", "\u00A0"),
-          `${characters[CharacterIds.Chiz].name} (Космос)`.replaceAll(" ", "\u00A0"),
-          `${characters[CharacterIds.Fadia].name} (Осквернение)`.replaceAll(" ", "\u00A0"),
-          `${characters[CharacterIds.Jiuyuan].name} (Взрыв заряда)`.replaceAll(" ", "\u00A0"),
+          `${characters.Hathor.name} (Ремора)`.replaceAll(" ", "\u00A0"),
+          `${characters.Chiz.name} (Космос)`.replaceAll(" ", "\u00A0"),
+          `${characters.Fadia.name} (Осквернение)`.replaceAll(" ", "\u00A0"),
+          `${characters.Jiuyuan.name} (Взрыв заряда)`.replaceAll(" ", "\u00A0"),
         ].join(" +\u00A0"),
       },
       {
@@ -728,15 +727,15 @@ export default {
         slot3: [CharacterIds.Jiuyuan],
         slot4: [CharacterIds.Fadia],
         explanation: [
-          `${characters[CharacterIds.Daffodill].name} + ${characters[CharacterIds.Baicang].name} (Ожог)`.replaceAll(" ", "\u00A0"),
-          `${characters[CharacterIds.Fadia].name} (Нова = Диссонанс)`.replaceAll(" ", "\u00A0"),
-          `${characters[CharacterIds.Jiuyuan].name} (Бурст)`.replaceAll(" ", "\u00A0"),
+          `${characters.Daffodill.name} + ${characters.Baicang.name} (Ожог)`.replaceAll(" ", "\u00A0"),
+          `${characters.Fadia.name} (Нова = Диссонанс)`.replaceAll(" ", "\u00A0"),
+          `${characters.Jiuyuan.name} (Бурст)`.replaceAll(" ", "\u00A0"),
         ].join(" +\u00A0"),
       },
     ],
     videoSourceIds: [VideoSourceIds.Gamestalt_guide_Jiuyuan_v_1_0, VideoSourceIds.IceINFERN0_guide_Jiuyuan_v_1_0],
   },
-  [CharacterIds.Lacrimosa]: {
+  Lacrimosa: {
     id: CharacterIds.Lacrimosa,
     recommendedArcs: [
       { id: ArcIds.TheLastRose },
@@ -846,7 +845,7 @@ export default {
       VideoSourceIds.Tyulen_Arkadiy_ItAllCanWait_guide_Lacrimosa_v_1_1,
     ],
   },
-  [CharacterIds.Mint]: {
+  Mint: {
     id: CharacterIds.Mint,
     recommendedArcs: [{ id: ArcIds.FluffOfFleetness }, { id: ArcIds.ClearSkies }, { id: ArcIds.MindRoyale }],
     recommendedCartridges: [{ id: CartridgeIds.FirefliesAndTheForest }, { id: CartridgeIds.ShadowCreed }],
@@ -890,7 +889,7 @@ export default {
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Mint_v_1_0],
   },
-  [CharacterIds.Nanally]: {
+  Nanally: {
     id: CharacterIds.Nanally,
     recommendedArcs: [
       { id: ArcIds.ReadyReady },
@@ -926,7 +925,7 @@ export default {
     }],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Nanally_v_1_0],
   },
-  [CharacterIds.Sakiri]: {
+  Sakiri: {
     id: CharacterIds.Sakiri,
     recommendedArcs: [{ id: ArcIds.GoodBoysGrandAdventure }, { id: ArcIds.WatchYourHeads }],
     recommendedCartridges: [
@@ -957,7 +956,7 @@ export default {
     }],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Sakiri_v_1_0],
   },
-  [CharacterIds.Skia]: {
+  Skia: {
     id: CharacterIds.Skia,
     recommendedArcs: [{ id: ArcIds.GoodBoysGrandAdventure }, { id: ArcIds.WatchYourHeads }],
     recommendedCartridges: [{ id: CartridgeIds.StreetBoxer }],
@@ -996,4 +995,4 @@ export default {
     ],
     videoSourceIds: [VideoSourceIds.IceINFERN0_guide_Skia_v_1_0],
   },
-} as Record<Character["id"], CharacterBuildGuide>;
+} as Record<keyof typeof CharacterIds, CharacterBuildGuide>;

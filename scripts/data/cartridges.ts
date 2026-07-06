@@ -5,7 +5,7 @@ import type { Cartridge } from "../../src/types/cartridges";
 const image = (value: string) => `images/cartridges/${value}`;
 
 export default {
-  [CartridgeIds.CrimsonTwinButterflies]: {
+  CrimsonTwinButterflies: {
     id: CartridgeIds.CrimsonTwinButterflies,
     name: "Багрянец: Две бабочки",
     requiredModuleIds: [ModuleIds.I2, ModuleIds.I3R, ModuleIds.J, ModuleIds.S],
@@ -15,7 +15,7 @@ export default {
     },
     image: image("crimson-twin-butterflies.png"),
   },
-  [CartridgeIds.DevilsBloodCurse]: {
+  DevilsBloodCurse: {
     id: CartridgeIds.DevilsBloodCurse,
     name: "Кровь демона: Проклятие",
     requiredModuleIds: [ModuleIds.I2, ModuleIds.I3, ModuleIds.JR, ModuleIds.SR],
@@ -25,7 +25,7 @@ export default {
     },
     image: image("devils-blood-curse.png"),
   },
-  [CartridgeIds.Diabolos]: {
+  Diabolos: {
     id: CartridgeIds.Diabolos,
     name: "Диабло",
     requiredModuleIds: [ModuleIds.I2, ModuleIds.JR, ModuleIds.J, ModuleIds.I4R],
@@ -35,7 +35,7 @@ export default {
     },
     image: image("diabolos.png"),
   },
-  [CartridgeIds.FirefliesAndTheForest]: {
+  FirefliesAndTheForest: {
     id: CartridgeIds.FirefliesAndTheForest,
     name: "Светлячки и лес",
     requiredModuleIds: [ModuleIds.I2R, ModuleIds.I3, ModuleIds.L, ModuleIds.SR],
@@ -45,14 +45,14 @@ export default {
     },
     image: image("fireflies-and-the-forest.png"),
   },
-  [CartridgeIds.KingdomsGuard]: {
+  KingdomsGuard: {
     id: CartridgeIds.KingdomsGuard,
     name: "Королевский страж",
     requiredModuleIds: [ModuleIds.I3R, ModuleIds.I3, ModuleIds.LR, ModuleIds.J],
     setEffects: { 2: "Защита +15 %.", 4: "Увеличивает прочность щитов владельца на 20 %." },
     image: image("kingdoms-guard.png"),
   },
-  [CartridgeIds.LostRadiance]: {
+  LostRadiance: {
     id: CartridgeIds.LostRadiance,
     name: "Утраченное сияние",
     requiredModuleIds: [ModuleIds.I2R, ModuleIds.L, ModuleIds.LR, ModuleIds.I4],
@@ -62,7 +62,7 @@ export default {
     },
     image: image("lost-radiance.png"),
   },
-  [CartridgeIds.QuietManor]: {
+  QuietManor: {
     id: CartridgeIds.QuietManor,
     name: "Тихое поместье",
     requiredModuleIds: [ModuleIds.I2R, ModuleIds.I2, ModuleIds.I4, ModuleIds.SR],
@@ -72,14 +72,14 @@ export default {
     },
     image: image("quiet-manor.png"),
   },
-  [CartridgeIds.ShadowCreed]: {
+  ShadowCreed: {
     id: CartridgeIds.ShadowCreed,
     name: "Кредо теней",
     requiredModuleIds: [ModuleIds.I2R, ModuleIds.I2, ModuleIds.I4R, ModuleIds.SR],
     setEffects: { 2: "Атака +10 %.", 4: "После применения навыка увеличивает атаку владельца на 25 % на 20 сек." },
     image: image("shadow-creed.png"),
   },
-  [CartridgeIds.SpeedyHedgehog]: {
+  SpeedyHedgehog: {
     id: CartridgeIds.SpeedyHedgehog,
     name: "Скоростной ёж",
     requiredModuleIds: [ModuleIds.L, ModuleIds.JR, ModuleIds.LR, ModuleIds.J],
@@ -89,7 +89,7 @@ export default {
     },
     image: image("speedy-hedgehog.png"),
   },
-  [CartridgeIds.StreetBoxer]: {
+  StreetBoxer: {
     id: CartridgeIds.StreetBoxer,
     name: "Уличный боец",
     requiredModuleIds: [ModuleIds.I2R, ModuleIds.I3R, ModuleIds.LR, ModuleIds.S],
@@ -99,14 +99,14 @@ export default {
     },
     image: image("street-boxer.png"),
   },
-  [CartridgeIds.TheasNightTavern]: {
+  TheasNightTavern: {
     id: CartridgeIds.TheasNightTavern,
     name: "Ночная таверна Теи",
     requiredModuleIds: [ModuleIds.I3R, ModuleIds.I3, ModuleIds.L, ModuleIds.JR],
     setEffects: { 2: "ОЗ +10 %.", 4: "Увеличивает бонус к лечению владельца на 20 %." },
     image: image("theas-night-tavern.png"),
   },
-  [CartridgeIds.TinyBigAdventure]: {
+  TinyBigAdventure: {
     id: CartridgeIds.TinyBigAdventure,
     name: "Мини-мега приключение",
     requiredModuleIds: [ModuleIds.I2R, ModuleIds.I2, ModuleIds.I4R, ModuleIds.S],

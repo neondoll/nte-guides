@@ -11,11 +11,11 @@ export type Character = {
   elementId: ElementId;
   arcTypeId?: ArcTypeId;
   roleId?: CharacterRoleId;
+  awakeningSkills?: Record<CharacterAwakeningSkillKey, string>;
+  skills?: Record<CharacterSkillKey, string>;
   version: string;
   image: string;
   imageWithElementAndRank?: string;
-  awakeningSkills?: Record<CharacterAwakeningSkillKey, string>;
-  skills?: Record<CharacterSkillKey, string>;
 };
 export type CharacterAwakeningSkillKey = "1" | "2" | "3" | "4" | "5" | "6";
 export type CharacterId = typeof CharacterIds[keyof typeof CharacterIds];

@@ -5,6 +5,7 @@ export const CharacterIds = {
   Aurelia: "aurelia",
   /** Байканг (Baicang) */
   Baicang: "baicang",
+  /** Хаос (Chaos) */
   Chaos: "chaos",
   /** Чиз (Chiz) */
   Chiz: "chiz",
@@ -22,6 +23,8 @@ export const CharacterIds = {
   Hathor: "hathor",
   /** Хотори (Hotori) */
   Hotori: "hotori",
+  /** (Iroi) */
+  Iroi: "iroi",
   /** Цзююань (Jiuyuan) */
   Jiuyuan: "jiuyuan",
   /** Лакримоза (Lacrimosa) */
@@ -32,6 +35,8 @@ export const CharacterIds = {
   Nanally: "nanally",
   /** Сакири (Sakiri) */
   Sakiri: "sakiri",
+  /** (Shinku) */
+  Shinku: "shinku",
   /** Ския (Skia) */
   Skia: "skia",
 } as const;

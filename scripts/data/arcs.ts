@@ -7,11 +7,11 @@ import type { Arc } from "../../src/types/arcs";
 const image = (value: string) => `images/arcs/${value}`;
 
 export default {
-  [ArcIds.ATimeWillCome]: {
+  ATimeWillCome: {
     id: ArcIds.ATimeWillCome,
     name: "Время придет",
     rankId: RankIds.A,
-    typeId: ArcTypeIds.Synthesis,
+    typeId: ArcTypeIds.Condensate,
     baseATK80: 475,
     subStat: Stats.CRIT_RATE,
     subStat80: "20.00%",
@@ -22,7 +22,7 @@ export default {
     },
     image: image("a-time-will-come.png"),
   },
-  [ArcIds.BeHappy]: {
+  BeHappy: {
     id: ArcIds.BeHappy,
     name: "Будь счастлив",
     rankId: RankIds.B,
@@ -36,7 +36,7 @@ export default {
     },
     image: image("be-happy.png"),
   },
-  [ArcIds.BlowUpTheCrowd]: {
+  BlowUpTheCrowd: {
     id: ArcIds.BlowUpTheCrowd,
     name: "Взорвать толпу",
     rankId: RankIds.S,
@@ -55,7 +55,7 @@ export default {
     },
     image: image("blow-up-the-crowd.png"),
   },
-  [ArcIds.CallOfTheTwistedCity]: {
+  CallOfTheTwistedCity: {
     id: ArcIds.CallOfTheTwistedCity,
     name: "Зов искаженного города",
     rankId: RankIds.A,
@@ -70,11 +70,11 @@ export default {
     },
     image: image("call-of-the-twisted-city.png"),
   },
-  [ArcIds.CamelliaSociety]: {
+  CamelliaSociety: {
     id: ArcIds.CamelliaSociety,
     name: "Сообщество Камелии",
     rankId: RankIds.S,
-    typeId: ArcTypeIds.Synthesis,
+    typeId: ArcTypeIds.Condensate,
     baseATK80: 666,
     subStat: Stats.CRIT_RATE,
     subStat80: "12.00%",
@@ -89,7 +89,7 @@ export default {
     },
     image: image("camellia-society.png"),
   },
-  [ArcIds.ClearSkies]: {
+  ClearSkies: {
     id: ArcIds.ClearSkies,
     name: "Чистое небо",
     rankId: RankIds.A,
@@ -103,7 +103,7 @@ export default {
     },
     image: image("clear-skies.png"),
   },
-  [ArcIds.ContemplativeCat]: {
+  ContemplativeCat: {
     id: ArcIds.ContemplativeCat,
     name: "Созерцательная кошка",
     rankId: RankIds.S,
@@ -117,7 +117,7 @@ export default {
     },
     image: image("contemplative-cat.png"),
   },
-  [ArcIds.CosmosDazeWildReverie]: {
+  CosmosDazeWildReverie: {
     id: ArcIds.CosmosDazeWildReverie,
     name: "Космический восторг, дикая греза",
     rankId: RankIds.A,
@@ -132,11 +132,11 @@ export default {
     },
     image: image("cosmos-daze-wild-reverie.png"),
   },
-  [ArcIds.DangerousGame]: {
+  DangerousGame: {
     id: ArcIds.DangerousGame,
     name: "Опасная игра",
     rankId: RankIds.B,
-    typeId: ArcTypeIds.Synthesis,
+    typeId: ArcTypeIds.Condensate,
     baseATK80: 380,
     subStat: Stats.BREAK_INTENSITY,
     subStat80: 96,
@@ -147,7 +147,7 @@ export default {
     },
     image: image("dangerous-game.png"),
   },
-  [ArcIds.DayOff]: {
+  DayOff: {
     id: ArcIds.DayOff,
     name: "Выходной",
     rankId: RankIds.S,
@@ -163,7 +163,7 @@ export default {
     },
     image: image("day-off.png"),
   },
-  [ArcIds.DrawnBlade]: {
+  DrawnBlade: {
     id: ArcIds.DrawnBlade,
     name: "Обнаженный клинок",
     rankId: RankIds.A,
@@ -177,11 +177,11 @@ export default {
     },
     image: image("drawn-blade.png"),
   },
-  [ArcIds.EternalWaltz]: {
+  EternalWaltz: {
     id: ArcIds.EternalWaltz,
     name: "Вечный вальс",
     rankId: RankIds.S,
-    typeId: ArcTypeIds.Synthesis,
+    typeId: ArcTypeIds.Condensate,
     baseATK80: 424,
     subStat: Stats.HP,
     subStat80: "41.25%",
@@ -192,7 +192,7 @@ export default {
     },
     image: image("eternal-waltz.png"),
   },
-  [ArcIds.FailingYouHeavyInMyHeart]: {
+  FailingYouHeavyInMyHeart: {
     id: ArcIds.FailingYouHeavyInMyHeart,
     name: "Я подвожу тебя с тяжестью в сердце",
     rankId: RankIds.A,
@@ -209,7 +209,7 @@ export default {
     },
     image: image("failing-you-heavy-in-my-heart.png"),
   },
-  [ArcIds.FirstStepToSuccess]: {
+  FirstStepToSuccess: {
     id: ArcIds.FirstStepToSuccess,
     name: "Первый шаг к успеху",
     rankId: RankIds.B,
@@ -224,7 +224,7 @@ export default {
     },
     image: image("first-step-to-success.png"),
   },
-  [ArcIds.FluffOfFearlessness]: {
+  FluffOfFearlessness: {
     id: ArcIds.FluffOfFearlessness,
     name: "Пух бесстрашия",
     rankId: RankIds.S,
@@ -238,11 +238,11 @@ export default {
     },
     image: image("fluff-of-fearlessness.png"),
   },
-  [ArcIds.FluffOfFerocity]: {
+  FluffOfFerocity: {
     id: ArcIds.FluffOfFerocity,
     name: "Пух ярости",
     rankId: RankIds.S,
-    typeId: ArcTypeIds.Synthesis,
+    typeId: ArcTypeIds.Condensate,
     baseATK80: 512,
     subStat: Stats.ATK,
     subStat80: "27.50%",
@@ -253,7 +253,7 @@ export default {
     },
     image: image("fluff-of-ferocity.png"),
   },
-  [ArcIds.FluffOfFinesse]: {
+  FluffOfFinesse: {
     id: ArcIds.FluffOfFinesse,
     name: "Пух изящества",
     rankId: RankIds.S,
@@ -268,7 +268,7 @@ export default {
     },
     image: image("fluff-of-finesse.png"),
   },
-  [ArcIds.FluffOfFleetness]: {
+  FluffOfFleetness: {
     id: ArcIds.FluffOfFleetness,
     name: "Пух проворности",
     rankId: RankIds.S,
@@ -283,7 +283,7 @@ export default {
     },
     image: image("fluff-of-fleetness.png"),
   },
-  [ArcIds.FluffOfFortitude]: {
+  FluffOfFortitude: {
     id: ArcIds.FluffOfFortitude,
     name: "Пух стойкости",
     rankId: RankIds.S,
@@ -298,7 +298,7 @@ export default {
     },
     image: image("fluff-of-fortitude.png"),
   },
-  [ArcIds.GoodBoysGrandAdventure]: {
+  GoodBoysGrandAdventure: {
     id: ArcIds.GoodBoysGrandAdventure,
     name: "Большой квест хорошего мальчика",
     rankId: RankIds.S,
@@ -314,7 +314,7 @@ export default {
     },
     image: image("good-boys-grand-adventure.png"),
   },
-  [ArcIds.HethereausKeeper]: {
+  HethereausKeeper: {
     id: ArcIds.HethereausKeeper,
     name: "Хранитель Этеро",
     rankId: RankIds.S,
@@ -331,7 +331,7 @@ export default {
     },
     image: image("hethereaus-keeper.png"),
   },
-  [ArcIds.MarchingBeyondTime]: {
+  MarchingBeyondTime: {
     id: ArcIds.MarchingBeyondTime,
     name: "За пределы времени",
     rankId: RankIds.S,
@@ -350,7 +350,7 @@ export default {
     },
     image: image("marching-beyond-time.png"),
   },
-  [ArcIds.MindRoyale]: {
+  MindRoyale: {
     id: ArcIds.MindRoyale,
     name: "Королевский разум",
     rankId: RankIds.A,
@@ -365,7 +365,7 @@ export default {
     },
     image: image("mind-royale.png"),
   },
-  [ArcIds.Oraora]: {
+  Oraora: {
     id: ArcIds.Oraora,
     name: "Ора-ора!",
     rankId: RankIds.A,
@@ -380,7 +380,7 @@ export default {
     },
     image: image("oraora.png"),
   },
-  [ArcIds.RagingFlames]: {
+  RagingFlames: {
     id: ArcIds.RagingFlames,
     name: "Бушующее пламя",
     rankId: RankIds.S,
@@ -396,7 +396,7 @@ export default {
     },
     image: image("raging-flames.png"),
   },
-  [ArcIds.ReadyReady]: {
+  ReadyReady: {
     id: ArcIds.ReadyReady,
     name: "Полная готовность",
     rankId: RankIds.S,
@@ -415,7 +415,7 @@ export default {
     },
     image: image("ready-ready.png"),
   },
-  [ArcIds.RealMusic]: {
+  RealMusic: {
     id: ArcIds.RealMusic,
     name: "«Настоящая музыка»",
     rankId: RankIds.B,
@@ -426,7 +426,7 @@ export default {
     effect: { title: "Запись с привидениями", text: "Дает владельцу бонус 12.00% к навыку перенаправления урона." },
     image: image("real-music.png"),
   },
-  [ArcIds.RealityRefuge]: {
+  RealityRefuge: {
     id: ArcIds.RealityRefuge,
     name: "Убежище реальности",
     rankId: RankIds.S,
@@ -441,7 +441,7 @@ export default {
     },
     image: image("reality-refuge.png"),
   },
-  [ArcIds.ShinyDays]: {
+  ShinyDays: {
     id: ArcIds.ShinyDays,
     name: "Блестящие дни",
     rankId: RankIds.A,
@@ -455,7 +455,7 @@ export default {
     },
     image: image("shiny-days.png"),
   },
-  [ArcIds.SongOfTheWhale]: {
+  SongOfTheWhale: {
     id: ArcIds.SongOfTheWhale,
     name: "Песня кита",
     rankId: RankIds.S,
@@ -470,7 +470,7 @@ export default {
     },
     image: image("song-of-the-whale.png"),
   },
-  [ArcIds.StellarVeil]: {
+  StellarVeil: {
     id: ArcIds.StellarVeil,
     name: "Звёздная вуаль",
     rankId: RankIds.S,
@@ -485,7 +485,7 @@ export default {
     },
     image: image("stellar-veil.png"),
   },
-  [ArcIds.TearsBeneathTheMask]: {
+  TearsBeneathTheMask: {
     id: ArcIds.TearsBeneathTheMask,
     name: "Слезы за маской",
     rankId: RankIds.S,
@@ -500,18 +500,18 @@ export default {
     },
     image: image("tears-beneath-the-mask.png"),
   },
-  [ArcIds.TheFoolsSpring]: {
+  TheFoolsSpring: {
     id: ArcIds.TheFoolsSpring,
     name: "Ложная весна",
     rankId: RankIds.A,
-    typeId: ArcTypeIds.Synthesis,
+    typeId: ArcTypeIds.Condensate,
     baseATK80: 395,
     subStat: Stats.DEF,
     subStat80: "52.50%",
     effect: { title: "Живая фаланга", text: "Увеличивает атаку на 18.00%, когда у владельца есть щит." },
     image: image("the-fools-spring.png"),
   },
-  [ArcIds.TheForgotten]: {
+  TheForgotten: {
     id: ArcIds.TheForgotten,
     name: "Забытое",
     rankId: RankIds.A,
@@ -526,11 +526,11 @@ export default {
     },
     image: image("the-forgotten.png"),
   },
-  [ArcIds.TheGoodTheBadTheBitter]: {
+  TheGoodTheBadTheBitter: {
     id: ArcIds.TheGoodTheBadTheBitter,
     name: "Хороший, плохой, горький",
     rankId: RankIds.A,
-    typeId: ArcTypeIds.Synthesis,
+    typeId: ArcTypeIds.Condensate,
     baseATK80: 475,
     subStat: Stats.HP,
     subStat80: "25.00%",
@@ -540,11 +540,11 @@ export default {
     },
     image: image("the-good-the-bad-the-bitter.png"),
   },
-  [ArcIds.TheGreatThief]: {
+  TheGreatThief: {
     id: ArcIds.TheGreatThief,
     name: "Великий вор",
     rankId: RankIds.A,
-    typeId: ArcTypeIds.Synthesis,
+    typeId: ArcTypeIds.Condensate,
     baseATK80: 475,
     subStat: Stats.BREAK_INTENSITY,
     subStat80: 120,
@@ -555,7 +555,7 @@ export default {
     },
     image: image("the-great-thief.png"),
   },
-  [ArcIds.TheLastRose]: {
+  TheLastRose: {
     id: ArcIds.TheLastRose,
     name: "Последняя роза",
     rankId: RankIds.S,
@@ -573,7 +573,7 @@ export default {
     },
     image: image("the-last-rose.png"),
   },
-  [ArcIds.TheRainThatShookTheWorld]: {
+  TheRainThatShookTheWorld: {
     id: ArcIds.TheRainThatShookTheWorld,
     name: "Дождь, сотрясший мир",
     rankId: RankIds.S,
@@ -589,7 +589,7 @@ export default {
     },
     image: image("the-rain-that-shook-the-world.png"),
   },
-  [ArcIds.TimeBandit]: {
+  TimeBandit: {
     id: ArcIds.TimeBandit,
     name: "Бандит времени",
     rankId: RankIds.A,
@@ -605,11 +605,11 @@ export default {
     },
     image: image("time-bandit.png"),
   },
-  [ArcIds.Umbrella]: {
+  Umbrella: {
     id: ArcIds.Umbrella,
     name: "Зонтик",
     rankId: RankIds.A,
-    typeId: ArcTypeIds.Synthesis,
+    typeId: ArcTypeIds.Condensate,
     baseATK80: 395,
     subStat: Stats.DEF,
     subStat80: "52.50%",
@@ -619,7 +619,7 @@ export default {
     },
     image: image("umbrella.png"),
   },
-  [ArcIds.Us]: {
+  Us: {
     id: ArcIds.Us,
     name: "Мы.",
     rankId: RankIds.B,
@@ -630,7 +630,7 @@ export default {
     effect: { title: "Протоядро", text: "Увеличивает урон базовых атак владельца на 12.00%." },
     image: image("us.png"),
   },
-  [ArcIds.WatchYourHeads]: {
+  WatchYourHeads: {
     id: ArcIds.WatchYourHeads,
     name: "Берегите головы!",
     rankId: RankIds.A,
@@ -645,7 +645,22 @@ export default {
     },
     image: image("watch-your-heads.png"),
   },
-  [ArcIds.YourHappinessIsPriceless]: {
+  WhatsDesired: {
+    id: ArcIds.WhatsDesired,
+    name: "Заветное желание",
+    rankId: RankIds.S,
+    typeId: ArcTypeIds.Condensate,
+    baseATK80: 570,
+    subStat: Stats.CRIT_RATE,
+    subStat80: "24.00%",
+    effect: {
+      title: "Золотое руно",
+      text: "Увеличивает урон лакшаны владельца на 20.00%. Повышает крит. урон владельца на 40.00% на 20 сек. при "
+        + "применении навыка перенаправления или сверхспособности. При повторном запуске длительность сбрасывается.",
+    },
+    image: image("whats-desired.png"),
+  },
+  YourHappinessIsPriceless: {
     id: ArcIds.YourHappinessIsPriceless,
     name: "Твое счастье бесценно",
     rankId: RankIds.S,
@@ -662,7 +677,7 @@ export default {
     },
     image: image("your-happiness-is-priceless.png"),
   },
-  [ArcIds.YouthfulFantasy]: {
+  YouthfulFantasy: {
     id: ArcIds.YouthfulFantasy,
     name: "Ребяческая фантазия",
     rankId: RankIds.S,
@@ -680,4 +695,4 @@ export default {
     },
     image: image("youthful-fantasy.png"),
   },
-} as Record<Arc["id"], Arc>;
+} as Record<keyof typeof ArcIds, Arc>;

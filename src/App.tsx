@@ -43,6 +43,11 @@ function App() {
                 <a href="https://neondoll.github.io/genshin-guides/" target="_blank">Genshin Impact Guides</a>
               </Button>
             </li>
+            <li>
+              <Button asChild size="xs" variant="link">
+                <a href="https://neondoll.github.io/endfield-guides/" target="_blank">Arknights: Endfield Guides</a>
+              </Button>
+            </li>
           </ul>
         </div>
       </footer>
