@@ -5,6 +5,8 @@ export const ArcIds = {
   BeHappy: "be-happy",
   /** Взорвать толпу (Blow up the Crowd) */
   BlowUpTheCrowd: "blow-up-the-crowd",
+  /** Алеющий мираж (Blushing Mirage) */
+  BlushingMirage: "blushing-mirage",
   /** Зов искаженного города (Call of the Twisted City) */
   CallOfTheTwistedCity: "call-of-the-twisted-city",
   /** Сообщество Камелии (Camellia Society) */

@@ -1,4 +1,6 @@
 export const ArcTypeIds = {
+  /** Гибридный (Condensate) */
+  Condensate: "condensate",
   /** Газовый (Gas) */
   Gas: "gas",
   /** Жидкий (Liquid) */
@@ -7,8 +9,4 @@ export const ArcTypeIds = {
   Plasma: "plasma",
   /** Твёрдый (Solid) */
   Solid: "solid",
-  /** Гибридный (Synthesis) */
-  Synthesis: "synthesis",
-  /** Гибридный (Condensate) */
-  Condensate: "condensate",
 } as const;

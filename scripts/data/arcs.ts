@@ -55,6 +55,22 @@ export default {
     },
     image: image("blow-up-the-crowd.png"),
   },
+  BlushingMirage: {
+    id: ArcIds.BlushingMirage,
+    name: "Алеющий мираж",
+    rankId: RankIds.S,
+    typeId: ArcTypeIds.Condensate,
+    baseATK80: 570,
+    subStat: Stats.CRIT_RATE,
+    subStat80: "24.00%",
+    effect: {
+      title: "Смена лунных фаз",
+      text: "Увеличивает атаку на 20.00%.\nПосле применения сверхспособности увеличивает наносимый владельцем урон "
+        + "космоса на 32.00%, а также позволяет владельцу игнорировать 12.00% защиты врага в течение 20 сек. При "
+        + "повторном запуске длительность сбрасывается.",
+    },
+    image: image("blushing-mirage.png"),
+  },
   CallOfTheTwistedCity: {
     id: ArcIds.CallOfTheTwistedCity,
     name: "Зов искаженного города",

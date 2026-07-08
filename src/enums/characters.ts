@@ -35,7 +35,7 @@ export const CharacterIds = {
   Nanally: "nanally",
   /** Сакири (Sakiri) */
   Sakiri: "sakiri",
-  /** (Shinku) */
+  /** Шинку (Shinku) */
   Shinku: "shinku",
   /** Ския (Skia) */
   Skia: "skia",
