@@ -1,5 +1,7 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
+import { nineHundredAndNinetyNineNightsClassesReducer } from "./999-nights-classes";
+import { nineHundredAndNinetyNineNightsEquipmentsReducer } from "./999-nights-equipments";
 import { arcTypesReducer } from "./arc-types";
 import { arcsReducer } from "./arcs";
 import { arcsGuideReducer } from "./arcs-guide";
@@ -22,6 +24,8 @@ const rootReducer = combineReducers({
   charactersBuildGuide: charactersBuildGuideReducer,
   elements: elementsReducer,
   modules: modulesReducer,
+  nineHundredAndNinetyNineNightsClasses: nineHundredAndNinetyNineNightsClassesReducer,
+  nineHundredAndNinetyNineNightsEquipments: nineHundredAndNinetyNineNightsEquipmentsReducer,
   ranks: ranksReducer,
   videoSources: videoSourcesReducer,
 });

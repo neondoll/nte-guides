@@ -29,6 +29,7 @@ function App() {
               <Route path={PATHS.Cartridge(":cartridgeId")} Component={lazy(() => import("@/pages/cartridge/page"))} />
               <Route path={PATHS.Characters} Component={lazy(() => import("@/pages/characters/page"))} />
               <Route path={PATHS.Character(":characterId")} Component={lazy(() => import("@/pages/character/page"))} />
+              <Route path={PATHS.NineHundredAndNinetyNineNights} Component={lazy(() => import("@/pages/999-nights/page"))} />
             </Routes>
           </Suspense>
         </div>

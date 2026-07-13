@@ -10,5 +10,6 @@ const PATHS = {
   Character: (characterId: CharacterId | string) => `/characters/${characterId}`,
   Characters: "/characters",
   Home: "/",
+  NineHundredAndNinetyNineNights: "/999-nights",
 };
 export default PATHS;

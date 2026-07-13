@@ -23,7 +23,7 @@ export const CharacterIds = {
   Hathor: "hathor",
   /** Хотори (Hotori) */
   Hotori: "hotori",
-  /** (Iroi) */
+  /** Ирой (Iroi) */
   Iroi: "iroi",
   /** Цзююань (Jiuyuan) */
   Jiuyuan: "jiuyuan",

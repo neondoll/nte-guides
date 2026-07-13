@@ -295,7 +295,7 @@ export default {
   },
   Iroi: {
     id: CharacterIds.Iroi,
-    name: "Iroi",
+    name: "Ирой",
     rankId: RankIds.S,
     elementId: ElementIds.Anima,
     version: "1.2",

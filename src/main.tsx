@@ -5,6 +5,7 @@ import { HashRouter } from "react-router";
 
 import App from "./App.tsx";
 import { ThemeProvider } from "./components/theme-provider";
+import { TooltipProvider } from "./components/ui/tooltip";
 import { store } from "./store";
 import "./index.css";
 
@@ -18,9 +19,11 @@ createRoot(container).render(
   <StrictMode>
     <HashRouter>
       <ThemeProvider defaultTheme="system" storageKey="nte-guide-ui-theme">
-        <Provider store={store}>
-          <App />
-        </Provider>
+        <TooltipProvider>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </TooltipProvider>
       </ThemeProvider>
     </HashRouter>
   </StrictMode>,

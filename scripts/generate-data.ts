@@ -2,6 +2,8 @@ import fs from "fs/promises";
 import path from "path";
 // import { loadEnv } from "vite";
 
+import nineHundredAndNinetyNineNightsClasses from "./data/999-nights-classes";
+import nineHundredAndNinetyNineNightsEquipments from "./data/999-nights-equipments";
 import arcTypes from "./data/arc-types";
 import arcs from "./data/arcs";
 import arcsGuide from "./data/arcs-guide";
@@ -13,6 +15,8 @@ import elements from "./data/elements";
 import modules from "./data/modules";
 import ranks from "./data/ranks";
 import videoSources from "./data/video-sources";
+import type { NineHundredAndNinetyNineNightsClass } from "../src/types/999-nights-classes";
+import type { NineHundredAndNinetyNineNightsEquipment } from "../src/types/999-nights-equipments";
 import type { ArcType } from "../src/types/arc-types";
 import type { Arc, ArcListItem } from "../src/types/arcs";
 import type { ArcGuide, ArcGuideListItem } from "../src/types/arcs-guide";
@@ -25,34 +29,38 @@ import type { Module } from "../src/types/modules";
 import type { Rank } from "../src/types/ranks";
 import type { VideoSource } from "../src/types/video-sources";
 
-type CategoryType = "arc-types" | "arcs" | "arcs-guide" | "cartridges" | "character-roles" | "characters"
-  | "characters-build-guide" | "elements" | "modules" | "ranks" | "video-sources";
+type CategoryType = "999-nights-classes" | "999-nights-equipments" | "arc-types" | "arcs" | "arcs-guide" | "cartridges"
+  | "character-roles" | "characters" | "characters-build-guide" | "elements" | "modules" | "ranks" | "video-sources";
 type DataItem<T extends CategoryType>
-  = T extends "arc-types" ? ArcType
-    : T extends "arcs" ? Arc
-      : T extends "arcs-guide" ? ArcGuide
-        : T extends "cartridges" ? Cartridge
-          : T extends "character-roles" ? CharacterRole
-            : T extends "characters" ? Character
-              : T extends "characters-build-guide" ? CharacterBuildGuide
-                : T extends "elements" ? Element
-                  : T extends "modules" ? Module
-                    : T extends "ranks" ? Rank
-                      : T extends "video-sources" ? VideoSource
-                        : never;
+  = T extends "999-nights-classes" ? NineHundredAndNinetyNineNightsClass
+    : T extends "999-nights-equipments" ? NineHundredAndNinetyNineNightsEquipment
+      : T extends "arc-types" ? ArcType
+        : T extends "arcs" ? Arc
+          : T extends "arcs-guide" ? ArcGuide
+            : T extends "cartridges" ? Cartridge
+              : T extends "character-roles" ? CharacterRole
+                : T extends "characters" ? Character
+                  : T extends "characters-build-guide" ? CharacterBuildGuide
+                    : T extends "elements" ? Element
+                      : T extends "modules" ? Module
+                        : T extends "ranks" ? Rank
+                          : T extends "video-sources" ? VideoSource
+                            : never;
 type DataListItem<T extends CategoryType>
-  = T extends "arc-types" ? ArcType
-    : T extends "arcs" ? ArcListItem
-      : T extends "arcs-guide" ? ArcGuideListItem
-        : T extends "cartridges" ? CartridgeListItem
-          : T extends "character-roles" ? CharacterRole
-            : T extends "characters" ? CharacterListItem
-              : T extends "characters-build-guide" ? CharacterBuildGuideListItem
-                : T extends "elements" ? Element
-                  : T extends "modules" ? Module
-                    : T extends "ranks" ? Rank
-                      : T extends "video-sources" ? VideoSource
-                        : never;
+  = T extends "999-nights-classes" ? NineHundredAndNinetyNineNightsClass
+    : T extends "999-nights-equipments" ? NineHundredAndNinetyNineNightsEquipment
+      : T extends "arc-types" ? ArcType
+        : T extends "arcs" ? ArcListItem
+          : T extends "arcs-guide" ? ArcGuideListItem
+            : T extends "cartridges" ? CartridgeListItem
+              : T extends "character-roles" ? CharacterRole
+                : T extends "characters" ? CharacterListItem
+                  : T extends "characters-build-guide" ? CharacterBuildGuideListItem
+                    : T extends "elements" ? Element
+                      : T extends "modules" ? Module
+                        : T extends "ranks" ? Rank
+                          : T extends "video-sources" ? VideoSource
+                            : never;
 
 interface CategoryConfig<T extends CategoryType> {
   data: DataItem<T>[];
@@ -65,6 +73,11 @@ interface CategoryConfig<T extends CategoryType> {
 const OUTPUT_DIR = path.resolve("public/data");
 
 const CATEGORIES = {
+  "999-nights-classes": { data: Object.values(nineHundredAndNinetyNineNightsClasses), transformList: item => item },
+  "999-nights-equipments": {
+    data: Object.values(nineHundredAndNinetyNineNightsEquipments),
+    transformList: item => item,
+  },
   "arc-types": { data: Object.values(arcTypes), transformList: item => item },
   "arcs": { data: Object.values(arcs), transformList: item => item },
   "arcs-guide": { data: Object.values(arcsGuide), transformList: ({ id }) => ({ id }) },
@@ -77,6 +90,8 @@ const CATEGORIES = {
   "ranks": { data: Object.values(ranks), transformList: item => item },
   "video-sources": { data: Object.values(videoSources), transformList: item => item },
 } satisfies {
+  "999-nights-classes": CategoryConfig<"999-nights-classes">;
+  "999-nights-equipments": CategoryConfig<"999-nights-equipments">;
   "arc-types": CategoryConfig<"arc-types">;
   "arcs": CategoryConfig<"arcs">;
   "arcs-guide": CategoryConfig<"arcs-guide">;
@@ -127,6 +142,8 @@ async function main() {
     console.log("Начинаем генерацию статических данных...");
     await ensureDir(OUTPUT_DIR);
 
+    await generateCategory("999-nights-classes", CATEGORIES["999-nights-classes"]);
+    await generateCategory("999-nights-equipments", CATEGORIES["999-nights-equipments"]);
     await generateCategory("arc-types", CATEGORIES["arc-types"]);
     await generateCategory("arcs", CATEGORIES["arcs"]);
     await generateCategory("arcs-guide", CATEGORIES["arcs-guide"]);
